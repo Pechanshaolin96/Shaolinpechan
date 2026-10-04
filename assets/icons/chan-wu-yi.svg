@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Círculo exterior Taiji de pincelada continua -->
+  <circle cx="12" cy="12" r="9.5" stroke-width="1.8"/>
+  <!-- Curva S dinámica interior (Yin y Yang) -->
+  <path d="M12 2.5a4.75 4.75 0 0 1 0 9.5 4.75 4.75 0 0 0 0 9.5" stroke-width="1.8" fill="currentColor" fill-opacity="0.18"/>
+  <!-- Gota de tinta Yang (ojo superior) -->
+  <circle cx="12" cy="7.25" r="1.6" fill="currentColor" stroke="none"/>
+  <!-- Gota de tinta Yin (ojo inferior) -->
+  <circle cx="12" cy="16.75" r="1.6" fill="currentColor" stroke="none"/>
+</svg>

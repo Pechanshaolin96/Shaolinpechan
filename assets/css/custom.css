@@ -1,0 +1,1208 @@
+/* assets/css/custom.css - Estilos específicos y refinamientos */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --primary: #8b181a;
+  --primary-dark: #680009;
+  --ochre: #b87314;
+  --ochre-dark: #9e650c;
+  --surface: #fcf9f8;
+  --surface-low: #f6f3f2;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: clip;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  background-color: var(--surface);
+  color: #1c1b1b;
+  overflow-x: clip;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='900' viewBox='0 0 900 900'%3E%3Cg fill='%238b181a' fill-opacity='0.055' font-family='Noto Serif SC, KaiTi, Songti SC, STKaiti, serif' font-weight='900'%3E%3Ctext x='40' y='180' font-size='160'%3E少林%3C/text%3E%3Ctext x='520' y='230' font-size='180'%3E禪%3C/text%3E%3Ctext x='300' y='460' font-size='200'%3E武%3C/text%3E%3Ctext x='680' y='520' font-size='160'%3E醫%3C/text%3E%3Ctext x='60' y='680' font-size='170'%3E太極%3C/text%3E%3Ctext x='480' y='800' font-size='150'%3E氣功%3C/text%3E%3Ctext x='360' y='240' font-size='130'%3E百禅%3C/text%3E%3Ctext x='700' y='820' font-size='130'%3E德%3C/text%3E%3C/g%3E%3C/svg%3E") !important;
+  background-repeat: repeat !important;
+  background-size: 650px 650px !important;
+  background-attachment: fixed !important;
+}
+
+/* Ocultar barra de desplazamiento manteniendo funcionalidad */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f6f3f2;
+}
+::-webkit-scrollbar-thumb {
+  background: #dcd9d9;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b87314;
+}
+
+/* Animaciones sutiles */
+@keyframes pulseSubtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.04); }
+}
+
+.pulse-badge {
+  animation: pulseSubtle 3s infinite ease-in-out;
+}
+
+/* Transiciones cinematográficas para el Hero Slider */
+.hero-slide {
+  transition: opacity 1000ms ease-in-out, transform 6500ms cubic-bezier(0.25, 1, 0.5, 1);
+  transform: scale(1);
+  will-change: opacity, transform;
+}
+
+.hero-slide.opacity-100 {
+  transform: scale(1.04);
+}
+
+/* Botón flotante de WhatsApp (Icono Circular) */
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  background-color: #25D366;
+  color: #FFFFFF;
+  border-radius: 50%;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45), 0 2px 6px rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.whatsapp-float:hover {
+  background-color: #20bd5a;
+  transform: translateY(-4px) scale(1.06);
+  box-shadow: 0 10px 28px rgba(37, 211, 102, 0.55), 0 4px 10px rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+}
+
+.whatsapp-float span.text {
+  display: none !important;
+}
+
+.whatsapp-float svg {
+  width: 30px;
+  height: 30px;
+  fill: currentColor;
+}
+
+/* Modal desplegable de WhatsApp */
+.wa-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+  z-index: 9999;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 24px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.wa-modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.wa-modal-card {
+  background: #1c1314;
+  border: 1px solid rgba(212, 160, 23, 0.3);
+  border-radius: 18px;
+  width: 100%;
+  max-width: 380px;
+  padding: 20px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(212, 160, 23, 0.15);
+  transform: translateY(20px) scale(0.95);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  color: #f5f0eb;
+}
+
+.wa-modal-overlay.active .wa-modal-card {
+  transform: translateY(0) scale(1);
+}
+
+.wa-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 12px;
+  margin-bottom: 14px;
+}
+
+.wa-modal-title-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.wa-header-icon {
+  width: 28px;
+  height: 28px;
+  color: #25D366;
+  flex-shrink: 0;
+}
+
+.wa-modal-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.wa-modal-subtitle {
+  font-size: 11px;
+  color: #d4a017;
+  margin: 2px 0 0 0;
+}
+
+.wa-modal-close {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 50%;
+  transition: color 0.2s, background-color 0.2s;
+}
+
+.wa-modal-close:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.wa-modal-prompt {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 12px;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.wa-modal-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.wa-option-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 10px 14px;
+  color: #e5dfd8;
+  font-size: 13px;
+  font-family: system-ui, -apple-system, sans-serif;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.wa-option-btn:hover {
+  background: rgba(37, 211, 102, 0.14);
+  border-color: rgba(37, 211, 102, 0.4);
+  color: #ffffff;
+  transform: translateX(4px);
+}
+
+.wa-option-icon {
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.wa-option-text {
+  flex: 1;
+  font-weight: 500;
+}
+
+@media (max-width: 640px) {
+  .wa-modal-overlay {
+    justify-content: center;
+    align-items: flex-end;
+    padding: 16px;
+  }
+  .wa-modal-card {
+    max-width: 100%;
+  }
+}
+
+/* ============================================================
+   BANNER SUPERIOR DOCTRINAL & DROPDOWNS DE NAVEGACIÓN
+   ============================================================ */
+
+/* Top Banner Cita Shi Suxi */
+.doctrinal-top-bar {
+  background: linear-gradient(90deg, #1c0305 0%, #4a0d10 40%, #4a0d10 60%, #1c0305 100%);
+  border-bottom: 1px solid rgba(184, 115, 20, 0.35);
+  font-size: 11.5px;
+  line-height: 1.4;
+  letter-spacing: 0.03em;
+}
+
+/* Logo de Marca Ampliado y Estilizado */
+.brand-logo-img {
+  width: 4.75rem; /* ~76px */
+  height: 4.75rem;
+  object-fit: contain;
+  border-radius: 9999px;
+  background-color: #ffffff;
+  padding: 3px;
+  border: 2px solid rgba(139, 24, 26, 0.28);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(139, 24, 26, 0.12);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+  flex-shrink: 0;
+}
+
+.brand-logo-img:hover {
+  transform: scale(1.05);
+  border-color: rgba(139, 24, 26, 0.7);
+  box-shadow: 0 6px 18px rgba(139, 24, 26, 0.25);
+}
+
+@media (max-width: 640px) {
+  .brand-logo-img {
+    width: 3.25rem; /* 52px en móviles */
+    height: 3.25rem;
+  }
+}
+
+/* ============================================================
+   ESTRUCTURA DE CABECERA: LOGO CENTRADO Y NAVEGACIÓN DEBAJO
+   CON ANIMACIÓN DE PULSO MTC EN EL FONDO
+   ============================================================ */
+
+.header-shaolin {
+  position: relative;
+  overflow: visible !important;
+  background-color: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+  z-index: 50;
+  will-change: transform;
+}
+
+.header-shaolin.header-hidden {
+  transform: translateY(-100%);
+  box-shadow: none;
+}
+
+.header-shaolin > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Fondo Animado de Pulso MTC en la Cabecera (Latido Rítmico Músculo/Música con Enmascaramiento Central) */
+.header-shaolin::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.45;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1600' height='60' viewBox='0 0 1600 60'%3E%3Cfilter id='glow-red' x='-20%25' y='-20%25' width='140%25' height='140%25'%3E%3CfeGaussianBlur stdDeviation='1.8' result='blur' /%3E%3CfeMerge%3E%3CfeMergeNode in='blur' /%3E%3CfeMergeNode in='SourceGraphic' /%3E%3C/feMerge%3E%3C/filter%3E%3Cpath d='M 0,30 L 70,30 C 74,30 77,12 82,6 C 86,1 91,48 95,50 C 100,53 104,-5 111,-5 C 117,-5 121,56 126,58 C 131,58 135,18 141,18 C 146,18 150,35 155,33 C 160,31 165,30 170,30 L 250,30 C 255,30 258,15 263,8 C 267,2 272,49 276,51 C 281,54 285,-3 292,-3 C 298,-3 302,57 307,58 C 312,58 316,20 322,20 C 327,20 331,34 336,32 L 400,30 L 470,30 L 480,5 L 490,55 L 500,-8 L 510,62 L 520,15 L 530,38 L 540,30 L 670,30 L 680,4 L 690,56 L 700,-10 L 710,64 L 720,12 L 730,37 L 740,30 L 800,30 L 870,30 C 880,10 890,10 900,30 C 910,50 920,50 930,30 C 940,12 950,12 960,30 C 970,48 980,48 990,30 L 1070,30 C 1080,8 1090,8 1100,30 C 1110,52 1120,52 1130,30 C 1140,10 1150,10 1160,30 C 1170,48 1180,48 1190,30 L 1200,30 L 1270,30 C 1275,30 1280,45 1285,52 C 1290,58 1295,15 1300,10 C 1305,5 1310,30 1315,30 C 1320,30 1325,48 1330,52 C 1335,55 1340,30 1345,30 L 1470,30 C 1475,30 1480,46 1485,53 C 1490,59 1495,14 1500,8 C 1505,3 1510,30 1515,30 C 1520,30 1525,49 1530,53 C 1535,56 1540,30 1545,30 L 1600,30' fill='none' stroke='%238b181a' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round' filter='url(%23glow-red)' /%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: 0 center;
+  background-size: 1600px 100%;
+  animation: mtcPulseLine 12s linear infinite, mtcHeartbeatPulse 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+  transform-origin: center center;
+  overflow: hidden;
+
+  /* MÁSCARA AMPLIA QUE ELIMINA TOTALMENTE EL PULSO DETRÁS DEL LOGO Y MARCA */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) calc(50% - 360px),
+    rgba(0, 0, 0, 0) calc(50% - 300px),
+    rgba(0, 0, 0, 0) calc(50% + 300px),
+    rgba(0, 0, 0, 1) calc(50% + 360px),
+    rgba(0, 0, 0, 1) 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) calc(50% - 360px),
+    rgba(0, 0, 0, 0) calc(50% - 300px),
+    rgba(0, 0, 0, 0) calc(50% + 300px),
+    rgba(0, 0, 0, 1) calc(50% + 360px),
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+/* Haz de Luz Terapéutico sobre Cabecera con la misma Máscara Central */
+.header-shaolin::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 50%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(90deg, transparent 0%, rgba(139, 24, 26, 0.05) 40%, rgba(184, 115, 20, 0.18) 70%, transparent 100%);
+  animation: mtcPulseSweep 3.5s ease-in-out infinite;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) calc(50% - 360px),
+    rgba(0, 0, 0, 0) calc(50% - 300px),
+    rgba(0, 0, 0, 0) calc(50% + 300px),
+    rgba(0, 0, 0, 1) calc(50% + 360px),
+    rgba(0, 0, 0, 1) 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) calc(50% - 360px),
+    rgba(0, 0, 0, 0) calc(50% - 300px),
+    rgba(0, 0, 0, 0) calc(50% + 300px),
+    rgba(0, 0, 0, 1) calc(50% + 360px),
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+@media (max-width: 768px) {
+  .header-shaolin::before,
+  .header-shaolin::after {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 1) calc(50% - 220px),
+      rgba(0, 0, 0, 0) calc(50% - 170px),
+      rgba(0, 0, 0, 0) calc(50% + 170px),
+      rgba(0, 0, 0, 1) calc(50% + 220px),
+      rgba(0, 0, 0, 1) 100%
+    );
+    mask-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 1) calc(50% - 220px),
+      rgba(0, 0, 0, 0) calc(50% - 170px),
+      rgba(0, 0, 0, 0) calc(50% + 170px),
+      rgba(0, 0, 0, 1) calc(50% + 220px),
+      rgba(0, 0, 0, 1) 100%
+    );
+  }
+}
+
+@keyframes mtcPulseLine {
+  0% {
+    background-position: 0 center;
+  }
+  100% {
+    background-position: -1600px center;
+  }
+}
+
+/* Animación de Palpitación / Latido Rítmico del Pulso (Ritmo Musical / Cardíaco "Lub-Dub") */
+@keyframes mtcHeartbeatPulse {
+  0%, 60%, 100% {
+    transform: scaleY(1) scaleX(1);
+    opacity: 0.35;
+    filter: drop-shadow(0 0 0px transparent);
+  }
+  66% { /* Primer Golpe Fuerte (LUB) - Expansión rítmica y resplandor alto */
+    transform: scaleY(1.48) scaleX(1.02);
+    opacity: 0.95;
+    filter: drop-shadow(0 0 8px rgba(139, 24, 26, 0.85));
+  }
+  73% { /* Rebote / Pausa breve inter-latido */
+    transform: scaleY(1.08) scaleX(1.005);
+    opacity: 0.52;
+    filter: drop-shadow(0 0 2px rgba(139, 24, 26, 0.3));
+  }
+  80% { /* Segundo Golpe Secundario (DUB) */
+    transform: scaleY(1.32) scaleX(1.01);
+    opacity: 0.82;
+    filter: drop-shadow(0 0 6px rgba(139, 24, 26, 0.7));
+  }
+  88% { /* Relajación post-latido */
+    transform: scaleY(1.02) scaleX(1);
+    opacity: 0.4;
+    filter: drop-shadow(0 0 1px rgba(139, 24, 26, 0.15));
+  }
+}
+
+@keyframes mtcPulseSweep {
+  0% {
+    left: -50%;
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    left: 130%;
+    opacity: 0;
+  }
+}
+
+/* Cuadros Destacados de Maestros y Discípulos (Fondo Bordó Tradicional + Sombra Pronunciada) */
+.master-feature-box {
+  background-color: #8b181a !important;
+  background-image: linear-gradient(135deg, #8b181a 0%, #680009 100%) !important;
+  color: #fff9f0 !important;
+  border: 1px solid rgba(245, 158, 11, 0.4) !important;
+  border-radius: 1rem !important;
+  padding: 1.25rem 1.5rem !important;
+  box-shadow: 0 12px 28px -6px rgba(139, 24, 26, 0.45), 0 4px 12px -2px rgba(0, 0, 0, 0.25) !important;
+  transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+}
+
+.master-feature-box:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 16px 32px -6px rgba(139, 24, 26, 0.55), 0 6px 16px -2px rgba(0, 0, 0, 0.3) !important;
+}
+
+.master-feature-box p,
+.master-feature-box span:not(.material-symbols-outlined),
+.master-feature-box h3,
+.master-feature-box h4,
+.master-feature-box li {
+  color: #fff9f0 !important;
+}
+
+.master-feature-box .material-symbols-outlined {
+  color: #fbbf24 !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Tarjeta Principal de Perfil de Maestro (Fondo Bordó Tradicional + Sombra Profunda) */
+.master-profile-panel {
+  background-color: #8b181a !important;
+  background-image: linear-gradient(145deg, #8b181a 0%, #680009 100%) !important;
+  color: #fff9f0 !important;
+  border: 1.5px solid rgba(245, 158, 11, 0.45) !important;
+  border-radius: 1.5rem !important;
+  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.5), 0 10px 25px -5px rgba(139, 24, 26, 0.6) !important;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.master-profile-panel h3,
+.master-profile-panel h3 span,
+.master-profile-panel .text-stone-900 {
+  color: #ffffff !important;
+}
+
+.master-profile-panel .text-stone-500,
+.master-profile-panel .text-stone-600,
+.master-profile-panel .text-stone-700,
+.master-profile-panel p {
+  color: #f3e8e8 !important;
+}
+
+.master-profile-panel .text-ochre-deep {
+  color: #fbbf24 !important;
+}
+
+/* El cuadro resumen interno dentro de la tarjeta bordó */
+.master-profile-panel .master-feature-box,
+.master-profile-panel .bg-stone-50\/90 {
+  background-color: rgba(0, 0, 0, 0.28) !important;
+  background-image: none !important;
+  border: 1px solid rgba(245, 158, 11, 0.35) !important;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+.master-profile-panel .master-feature-box span,
+.master-profile-panel .bg-stone-50\/90 span {
+  color: #fff9f0 !important;
+}
+
+.master-profile-panel .master-feature-box .material-symbols-outlined,
+.master-profile-panel .bg-stone-50\/90 .material-symbols-outlined {
+  color: #fbbf24 !important;
+}
+
+/* Marco de la foto del maestro */
+.master-profile-panel .bg-stone-100 {
+  background-color: #500007 !important;
+  border-color: rgba(245, 158, 11, 0.5) !important;
+}
+
+/* Fila Superior: Marca y Logotipo Centrados */
+.header-brand-row {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+  width: 100% !important;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.brand-center-link {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 14px;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+  margin: 0 auto !important;
+  position: relative !important;
+  z-index: 10 !important;
+  background-color: #ffffff !important;
+  padding: 6px 28px 18px 28px !important; /* Cuadro blanco más grande abajo para tapar el pulso completamente */
+  border-radius: 1.25rem !important;
+}
+
+.brand-center-link:hover {
+  transform: translateY(-1px);
+}
+
+/* Fila Inferior: Navegación de Páginas Centradas Debajo del Logo */
+.header-nav-row {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  padding-top: 6px;
+  padding-bottom: 3px;
+  transition: opacity 0.2s ease;
+}
+
+.desktop-nav-menu {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-wrap: wrap !important;
+  gap: 3px 6px;
+  white-space: nowrap !important;
+  width: auto;
+  max-width: 100%;
+}
+
+@media (min-width: 1200px) {
+  .desktop-nav-menu {
+    gap: 4px 10px;
+  }
+}
+
+/* Enlaces del Menú con escalabilidad automática anti-corte */
+.nav-desktop-link {
+  white-space: nowrap !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: clamp(11px, 0.8vw, 12.5px);
+  font-weight: 600;
+  letter-spacing: 0.015em;
+  padding: 4px clamp(5px, 0.5vw, 9px);
+  border-radius: 7px;
+  color: #3d3b3a;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  transition: all 0.16s ease-in-out;
+  text-decoration: none;
+  cursor: pointer;
+  line-height: 1.2;
+}
+
+.nav-desktop-link:hover {
+  color: #8b181a;
+  background-color: #f7f3f2;
+}
+
+.nav-desktop-link.active {
+  color: #8b181a;
+  background-color: rgba(139, 24, 26, 0.08);
+  font-weight: 700;
+}
+
+/* Rotación suave del icono en dropdown hover */
+.nav-dropdown-wrapper:hover .nav-desktop-link .material-symbols-outlined {
+  transform: rotate(180deg);
+}
+
+/* Botón CTA Superior */
+.nav-cta-btn {
+  white-space: nowrap !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px clamp(9px, 0.7vw, 14px);
+  border-radius: 8px;
+  background-color: #8b181a;
+  color: #ffffff !important;
+  font-size: clamp(10.5px, 0.72vw, 11.5px);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  box-shadow: 0 2px 6px rgba(139, 24, 26, 0.22);
+  transition: all 0.2s ease-in-out;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.nav-cta-btn:hover {
+  background-color: #680009;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(139, 24, 26, 0.32);
+}
+
+/* Disparador de 3 Líneas (Hamburguesa): Oculto por defecto en pantallas >= 768px */
+.mobile-menu-trigger-wrap {
+  position: absolute !important;
+  right: 0 !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  display: none !important;
+}
+
+/* En dispositivos móviles pequeños (< 768px): activar navegación móvil */
+@media (max-width: 767px) {
+  .header-nav-row {
+    display: none !important;
+  }
+  .header-brand-row {
+    padding-bottom: 0 !important;
+    border-bottom: none !important;
+    justify-content: space-between !important;
+  }
+  .brand-center-link {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
+  .mobile-menu-trigger-wrap {
+    display: flex !important;
+    position: static !important;
+    transform: none !important;
+  }
+}
+
+/* Dropdown Desktop */
+.nav-dropdown-wrapper {
+  position: relative;
+}
+
+.nav-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 250px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-top: 3px solid #8b181a;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.04);
+  padding: 8px 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 100;
+  pointer-events: none;
+}
+
+.nav-dropdown-wrapper:hover .nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.nav-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 18px;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #3d3b3a;
+  transition: all 0.15s ease-in-out;
+  border-left: 2px solid transparent;
+  text-decoration: none;
+}
+
+.nav-dropdown-item:hover {
+  background-color: #fbf7f6;
+  color: #8b181a;
+  border-left-color: #8b181a;
+  padding-left: 22px;
+}
+
+.nav-dropdown-item.active {
+  background-color: #f7edec;
+  color: #8b181a;
+  border-left-color: #8b181a;
+  font-weight: 600;
+}
+
+/* Acordeón móvil */
+.mobile-accordion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1c1b1b;
+  transition: background-color 0.15s ease;
+  cursor: pointer;
+}
+
+.mobile-accordion-header:hover {
+  background-color: #f0eded;
+}
+
+.mobile-accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  padding-left: 12px;
+  border-left: 2px solid #e5e2e1;
+  margin-left: 10px;
+}
+
+.mobile-accordion-content.open {
+  max-height: 500px;
+}
+
+.mobile-sub-link {
+  display: block;
+  padding: 7px 10px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #5d5e61;
+  border-radius: 6px;
+  transition: all 0.15s ease;
+}
+
+.mobile-sub-link:hover, .mobile-sub-link.active {
+  color: #8b181a;
+  background-color: #fbf7f6;
+}
+
+/* Insignias de categoría */
+.badge-gold {
+  background: rgba(184, 115, 20, 0.12);
+  color: #9e650c;
+  border: 1px solid rgba(184, 115, 20, 0.28);
+}
+
+.badge-red {
+  background: rgba(139, 24, 26, 0.10);
+  color: #8b181a;
+  border: 1px solid rgba(139, 24, 26, 0.22);
+}
+
+/* ========================================================
+   ICONOS ILUSTRADOS A PINCEL Y TINTA CHINA TRADICIONAL
+   Diseño sobrio, moderno y de alta fidelidad oriental
+   ======================================================== */
+.ink-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+.ink-icon svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.ink-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  background: rgba(184, 115, 20, 0.15);
+  border: 1px solid rgba(184, 115, 20, 0.32);
+  color: #D49B28;
+  flex-shrink: 0;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.2);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ink-badge:hover {
+  background: rgba(184, 115, 20, 0.25);
+  border-color: rgba(212, 155, 40, 0.55);
+  transform: translateY(-1.5px) scale(1.04);
+}
+
+.ink-badge-lg {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 0.75rem;
+}
+
+.ink-badge-lg svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* ==========================================================================
+   WIDGET FEED INSTAGRAM @shaolin_pechan
+   ========================================================================== */
+.ig-post-card {
+  position: relative;
+  display: block;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: 4px;
+  background-color: #1a1a1a;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.ig-post-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease, filter 0.3s ease;
+}
+
+.ig-post-card:hover img {
+  transform: scale(1.05);
+  filter: brightness(0.92);
+}
+
+.ig-overlay-icon {
+  position: absolute;
+  pointer-events: none;
+  z-index: 10;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.6));
+}
+
+.ig-carousel-icon {
+  top: 10px;
+  right: 10px;
+  color: #ffffff;
+}
+
+.ig-play-icon {
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.ig-play-badge {
+  width: 38px;
+  height: 38px;
+  border-radius: 9999px;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.ig-post-card:hover .ig-play-badge {
+  transform: scale(1.1);
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.ig-hover-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.25s ease;
+  z-index: 15;
+}
+
+.ig-post-card:hover .ig-hover-overlay {
+  opacity: 1;
+}
+
+@keyframes igFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: igFadeIn 0.35s ease-out forwards;
+}
+
+/* Carrusel de Maestros e Instructores */
+.carousel-track-masters {
+  display: flex;
+  position: relative;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.carousel-track-masters::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-slide-master {
+  flex: 0 0 100%;
+  max-width: 100%;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}
+
+.carousel-dot {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.carousel-dot.active {
+  background-color: var(--primary);
+  width: 2rem;
+  border-radius: 9999px;
+}
+
+/* ========================================================
+   ÁRBOL GENEALÓGICO & LÍNEA DE TIEMPO INTERACTIVA DE MAESTROS
+   ======================================================== */
+
+.lineage-tree-wrapper {
+  position: relative;
+}
+
+/* Nodos interactivos del Árbol & Timeline */
+.tree-node-master {
+  position: relative;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  user-select: none;
+}
+
+.tree-node-master:hover {
+  transform: translateY(-2px);
+}
+
+.tree-node-master.active {
+  border-color: #B87314 !important;
+  background-color: #ffffff !important;
+  box-shadow: 0 10px 25px -5px rgba(184, 115, 20, 0.2), 0 0 0 2px rgba(184, 115, 20, 0.3) !important;
+}
+
+.tree-node-master.active .node-avatar-ring {
+  border-color: #B87314 !important;
+  box-shadow: 0 0 12px rgba(184, 115, 20, 0.4);
+}
+
+.tree-node-master.active .node-active-pill {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.tree-node-master:not(.active) .node-active-pill {
+  opacity: 0;
+  transform: scale(0.6);
+}
+
+/* Paneles de Perfil de Maestros */
+.master-profile-panel {
+  display: none;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.master-profile-panel.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Track de Timeline horizontal con scroll oculto */
+.lineage-timeline-track {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.lineage-timeline-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* ============================================================
+   ESTILOS GLOBALES DEL SITIO:
+   1. CALIGRAFÍA CHINA TRADICIONAL EN SECCIONES CLARAS, BORDÓ Y OSCURAS
+   2. SOMBREADO DE ALTO RELIEVE EN TODAS LAS TARJETAS DE TODAS LAS PÁGINAS
+   ============================================================ */
+
+/* 1. Fondo de Caligrafía en Secciones Claras */
+.chinese-calligraphy-section-bg {
+  position: relative;
+  width: 100% !important;
+  background-color: transparent !important;
+  overflow: hidden;
+}
+
+.chinese-calligraphy-section-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.08;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='900' viewBox='0 0 900 900'%3E%3Cg fill='%238b181a' font-family='Noto Serif SC, KaiTi, Songti SC, STKaiti, serif' font-weight='900'%3E%3Ctext x='40' y='180' font-size='160'%3E少林%3C/text%3E%3Ctext x='520' y='230' font-size='180'%3E禪%3C/text%3E%3Ctext x='300' y='460' font-size='200'%3E武%3C/text%3E%3Ctext x='680' y='520' font-size='160'%3E醫%3C/text%3E%3Ctext x='60' y='680' font-size='170'%3E太極%3C/text%3E%3Ctext x='480' y='800' font-size='150'%3E氣功%3C/text%3E%3Ctext x='360' y='240' font-size='130'%3E百禅%3C/text%3E%3Ctext x='700' y='820' font-size='130'%3E德%3C/text%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 650px 650px;
+}
+
+.chinese-calligraphy-section-bg > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* 2. Caligrafía China Tradicional en Dorado/Ámbar sobre Secciones Bordó y Oscuras del Sitio */
+.doctrinal-top-bar,
+.bg-stone-900,
+.bg-stone-950,
+.bg-primary,
+.bg-primary-container,
+.master-profile-panel,
+section[class*="bg-[#500007]"],
+section[class*="bg-[#8b181a]"],
+section[class*="bg-stone-900"],
+section[class*="bg-stone-950"],
+footer {
+  position: relative;
+}
+
+.doctrinal-top-bar::before,
+.bg-stone-900::before,
+.bg-stone-950::before,
+.bg-primary::before,
+.bg-primary-container::before,
+.master-profile-panel::before,
+section[class*="bg-[#500007]"]::before,
+section[class*="bg-[#8b181a]"]::before,
+section[class*="bg-stone-900"]::before,
+section[class*="bg-stone-950"]::before,
+footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.085;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='900' viewBox='0 0 900 900'%3E%3Cg fill='%23fbbf24' font-family='Noto Serif SC, KaiTi, Songti SC, STKaiti, serif' font-weight='900'%3E%3Ctext x='40' y='180' font-size='160'%3E少林%3C/text%3E%3Ctext x='520' y='230' font-size='180'%3E禪%3C/text%3E%3Ctext x='300' y='460' font-size='200'%3E武%3C/text%3E%3Ctext x='680' y='520' font-size='160'%3E醫%3C/text%3E%3Ctext x='60' y='680' font-size='170'%3E太極%3C/text%3E%3Ctext x='480' y='800' font-size='150'%3E氣功%3C/text%3E%3Ctext x='360' y='240' font-size='130'%3E百禅%3C/text%3E%3Ctext x='700' y='820' font-size='130'%3E德%3C/text%3E%3C/g%3E%3C/svg%3E") !important;
+  background-repeat: repeat !important;
+  background-size: 650px 650px !important;
+}
+
+.doctrinal-top-bar > *,
+.bg-stone-900 > *,
+.bg-stone-950 > *,
+.bg-primary > *,
+.bg-primary-container > *,
+.master-profile-panel > *,
+footer > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* 3. Sombras de Alto Relieve Globales para TODAS las Tarjetas de TODAS las Páginas */
+.contact-card-shadow,
+.master-profile-panel,
+.master-feature-box,
+.bg-white.p-8,
+.bg-white.p-6,
+.bg-white.p-10,
+.bg-stone-900.p-8,
+.bg-stone-900.p-6,
+.bg-stone-100.p-6,
+.bg-stone-50.p-6,
+.bg-surface-container-lowest.p-6,
+.bg-surface-container-lowest.p-8,
+.bg-surface-container-low.p-6,
+.bg-surface-container-low.p-8,
+article.rounded-2xl,
+article.rounded-3xl,
+article[class*="rounded-"],
+div.rounded-2xl.border,
+div.rounded-3xl.border,
+div.rounded-2xl.shadow-xs,
+div.rounded-3xl.shadow-xs,
+div.rounded-2xl.shadow-md,
+div.rounded-3xl.shadow-md,
+div.rounded-2xl.bg-white,
+div.rounded-3xl.bg-white,
+div.rounded-2xl.bg-stone-900,
+div.rounded-3xl.bg-stone-900 {
+  box-shadow: 0 18px 42px -8px rgba(0, 0, 0, 0.13), 0 6px 20px -4px rgba(139, 24, 26, 0.09) !important;
+  border: 1px solid rgba(139, 24, 26, 0.14) !important;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* Excepciones para mantener botones, menúes y selects limpios */
+input, textarea, select, button:not(.master-feature-box), .nav-dropdown-menu, header, nav {
+  box-shadow: none;
+}
+
+/* Efecto hover suave al pasar el cursor sobre las tarjetas */
+.contact-card-shadow:hover,
+.master-profile-panel:hover,
+.master-feature-box:hover,
+.bg-white.p-8:hover,
+.bg-white.p-6:hover,
+.bg-white.p-10:hover,
+article.rounded-2xl:hover,
+article.rounded-3xl:hover,
+div.rounded-2xl.border:hover,
+div.rounded-3xl.border:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 24px 50px -10px rgba(0, 0, 0, 0.18), 0 8px 26px -4px rgba(139, 24, 26, 0.16) !important;
+}

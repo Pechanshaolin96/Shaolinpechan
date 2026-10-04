@@ -1,0 +1,818 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="web_standard" name="shell-type">
+<title>Tai Ji Quan &amp; MTC • Shaolin Pechan | Centro Clínico &amp; Artes Internas</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+    @layer base {
+      html, body { margin: 0; padding: 0; }
+      body { overscroll-behavior: none; }
+      main > :first-child { margin-top: 0 !important; }
+      main > :last-child { margin-bottom: 0 !important; }
+    }
+    ::-webkit-scrollbar { display: none; }
+  </style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface": "#fcf9f8",
+            "on-secondary-fixed-variant": "#454749",
+            "on-secondary-fixed": "#1a1c1e",
+            "inverse-on-surface": "#f3f0ef",
+            "surface-container-highest": "#e5e2e1",
+            "primary-container": "#8b181a",
+            "primary-fixed-dim": "#ffb3ad",
+            "secondary-fixed-dim": "#c6c6c9",
+            "on-background": "#1c1b1b",
+            "secondary-fixed": "#e2e2e5",
+            "surface-container": "#f0eded",
+            "surface-container-low": "#f6f3f2",
+            "on-primary-fixed": "#410003",
+            "outline": "#8c716e",
+            "on-secondary-container": "#636467",
+            "tertiary-container": "#4e4539",
+            "on-surface-variant": "#58413f",
+            "on-primary-fixed-variant": "#8b181a",
+            "on-error": "#ffffff",
+            "on-tertiary-container": "#c0b3a3",
+            "primary-fixed": "#ffdad6",
+            "on-primary": "#ffffff",
+            "tertiary-fixed-dim": "#d2c4b4",
+            "on-tertiary-fixed": "#221a10",
+            "secondary-container": "#e2e2e5",
+            "secondary": "#5d5e61",
+            "on-tertiary-fixed-variant": "#4f4539",
+            "surface-container-lowest": "#ffffff",
+            "background": "#fcf9f8",
+            "outline-variant": "#e0bfbc",
+            "on-secondary": "#ffffff",
+            "surface-dim": "#dcd9d9",
+            "inverse-primary": "#ffb3ad",
+            "on-primary-container": "#ff9991",
+            "on-error-container": "#93000a",
+            "tertiary": "#372f23",
+            "tertiary-fixed": "#efe0cf",
+            "error-container": "#ffdad6",
+            "surface-variant": "#e5e2e1",
+            "surface-tint": "#ac312f",
+            "surface-bright": "#fcf9f8",
+            "on-surface": "#1c1b1b",
+            "primary": "#680009",
+            "inverse-surface": "#313030",
+            "on-tertiary": "#ffffff",
+            "surface-container-high": "#eae7e7",
+            "error": "#ba1a1a"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "margin-mobile": "1.25rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "gutter": "1.5rem",
+            "space-xxl": "4rem",
+            "space-xs": "0.25rem",
+            "gutter-mobile": "1rem",
+            "space-lg": "1.5rem",
+            "margin": "3rem",
+            "space-xl": "2.5rem"
+          },
+          "fontFamily": {
+            "body-md": ["Plus Jakarta Sans", "sans-serif"],
+            "display-hero-mobile": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-sm": ["Plus Jakarta Sans", "sans-serif"],
+            "label-sm": ["Inter", "sans-serif"],
+            "headline-lg-mobile": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-lg": ["Plus Jakarta Sans", "sans-serif"],
+            "label-caps": ["Inter", "sans-serif"],
+            "display-hero": ["Plus Jakarta Sans", "sans-serif"],
+            "body-lg": ["Plus Jakarta Sans", "sans-serif"],
+            "label-md": ["Inter", "sans-serif"],
+            "headline-md": ["Plus Jakarta Sans", "sans-serif"],
+            "body-sm": ["Plus Jakarta Sans", "sans-serif"]
+          },
+          "fontSize": {
+            "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "display-hero-mobile": ["34px", { "lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "600" }],
+            "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+            "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-lg": ["38px", { "lineHeight": "46px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "600" }],
+            "display-hero": ["52px", { "lineHeight": "60px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-surface font-body-md text-body-md text-on-surface antialiased selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TOP CLINIC BAR / CREDENTIALS BADGE -->
+<div class="bg-surface-container-high text-on-surface-variant text-[12px] font-label-sm border-b border-outline-variant/30 py-1.5 px-gutter-mobile md:px-gutter">
+<div class="max-w-[1240px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-1 text-center sm:text-left">
+<div class="flex items-center gap-2">
+<span class="inline-block w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-medium text-on-surface">Unidad Clínica MTC &amp; Escuela de Artes Internas</span>
+<span class="text-outline">|</span>
+<span class="text-secondary">Colegiaturas Médicas Oficiales &amp; Linaje Directo Shaolin</span>
+</div>
+<div class="flex items-center gap-4 text-secondary">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[15px] text-primary">schedule</span> Citas: L-V 08:30 - 20:30</span>
+<span class="hidden md:inline text-outline">•</span>
+<span class="hidden md:flex items-center gap-1"><span class="material-symbols-outlined text-[15px] text-primary">call</span> (+34) 960 214 832</span>
+</div>
+</div>
+</div>
+<!-- HEADER NAVEGACIÓN -->
+<header class="sticky top-0 z-50 bg-surface/95 backdrop-blur-md border-b border-outline-variant/30">
+<div class="h-20 w-full max-w-[1240px] mx-auto px-gutter-mobile md:px-gutter flex items-center justify-between gap-space-md">
+<a class="flex items-center gap-3 shrink-0 group" href="#">
+<img alt="Shaolin Pechan Logo Emblema" class="h-11 w-11 object-contain transition-transform group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1UdDP8cW5bizOtO7QEC4gz1Go1q_sb7mIclDulCRNYShKI4mjLX-39NBCe6_QnsJ8sK1vb-X6OQVJ-vQ9vPZYBizOPXHt9CNT9v44sMI06JoDSL4krZDAhh_WnKDs-s83zMTxQUd_oR9_OR41Zp0JHwiNb1XJbGZFKVF7LbD6DgtW4tjRw0DwM-KPf_UxUYTFXCSBVZqC6tnqvm9SE-c9zOzn-fEL6qotaS1AVqRBBEJzOah3xvFumNfT8">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-[18px] font-bold tracking-tight text-on-surface">Shaolin Pechan</span>
+<span class="text-primary text-[13px] font-semibold bg-primary-fixed/40 px-1.5 py-0.2 rounded">少林百禅</span>
+</div>
+<span class="font-label-sm text-[11px] uppercase tracking-wider text-secondary">Medicina Tradicional China &amp; Artes Marciales</span>
+</div>
+</a>
+<nav class="hidden xl:flex items-center gap-6" data-active-classes="text-primary font-semibold border-b-2 border-primary">
+<a class="text-on-surface-variant hover:text-primary transition-colors text-label-md py-1" data-path="escuela" href="#">Inicio</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-label-md py-1" data-path="shaolin-kung-fu" href="#">Shaolin Kung Fu</a>
+<a aria-current="page" class="text-primary font-semibold border-b-2 border-primary text-label-md py-1" data-path="tai-ji-quan" href="#">Tai Ji Quan &amp; MTC</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-label-md py-1" data-path="medicina-china" href="#tratamientos">Tratamientos Clínicos</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-label-md py-1" data-path="linaje-maestros" href="#cuadro-medico">Equipo Facultativo</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors text-label-md py-1" data-path="sedes-horarios" href="#faq">Preguntas</a>
+</nav>
+<div class="flex items-center gap-3">
+<a class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg border border-outline/30 text-on-surface font-label-md text-label-md hover:bg-surface-container transition-colors" href="#disciplinas-internas">
+<span class="">Clases Regulares</span>
+</a>
+<a class="inline-flex items-center justify-center px-4 py-2.5 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md tracking-wide hover:bg-primary transition-all shadow-sm" href="#agenda-diagnostico">
+<span class="">Pedir Cita Diagnóstica</span>
+<span class="material-symbols-outlined text-[18px] ml-1">arrow_forward</span>
+</a>
+</div>
+</div>
+</header>
+<main class="w-full bg-surface">
+<!-- HERO CENTRADO & MODERNO -->
+<section class="relative w-full border-b border-outline-variant/30 bg-gradient-to-b from-surface-container-low via-surface to-surface pt-16 pb-20 overflow-hidden">
+<div class="w-full max-w-[1080px] mx-auto px-gutter-mobile md:px-gutter text-center relative z-10 flex flex-col items-center">
+<!-- TAGLINE PILL -->
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-lowest border border-outline-variant/50 shadow-xs mb-6">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-primary font-bold">Unidad de Salud Integral &amp; Cultivo Interno</span>
+<span class="text-outline-variant">/</span>
+<span class="font-label-sm text-label-sm text-secondary font-medium">太極拳 • 中醫診所</span>
+</div>
+<h1 class="font-headline-lg md:font-display-hero text-headline-lg-mobile md:text-display-hero text-on-surface tracking-tight max-w-4xl text-balance mb-5 font-bold">
+          Tai Ji Quan &amp; Medicina China: <br class="hidden sm:inline">
+<span class="text-primary font-extrabold">Salud Biomecánica y Equilibrio Metabólico</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl text-pretty mb-8">
+          En Shaolin Pechan conjugamos la rigurosidad clínica de la Medicina Tradicional China (acupuntura, tuina, moxibustión) con la práctica marcial interna (Taijiquan Chen y Yang, Qi Gong). Un modelo médico y preventivo basado en la evidencia tradicional y la recuperación de la vitalidad natural.
+        </p>
+<!-- CTA BOTONES -->
+<div class="flex flex-wrap items-center justify-center gap-3 mb-12">
+<a class="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md font-semibold hover:bg-primary transition-all shadow-sm" href="#agenda-diagnostico">
+<span class="material-symbols-outlined text-[19px]">stethoscope</span>
+<span class="">Solicitar Diagnóstico Diferencial</span>
+</a>
+<a class="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg bg-surface-container-lowest border border-[#C4820F]/40 text-[#9E650C] font-label-md text-label-md hover:bg-[#C4820F]/10 hover:border-[#C4820F] transition-colors shadow-xs" href="#disciplinas-internas"><span class="material-symbols-outlined text-[19px] text-[#C4820F]">fitness_center</span><span class="">Programas de Tai Ji &amp; Qi Gong</span></a>
+</div>
+<!-- 3 VALUE PILLARS HIGHLIGHT -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 w-full text-left">
+<div class="p-5 rounded-xl bg-surface-container-lowest border border-outline-variant/40 shadow-xs flex items-start gap-3.5">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[22px]">medical_services</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-[16px] text-on-surface font-bold">Diagnóstico por Pulso &amp; Lengua</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Identificación precisa del síndrome clínico de fondo (*Ben*) antes de prescribir tratamiento.</p>
+</div>
+</div>
+<div class="p-5 rounded-xl bg-surface-container-lowest border border-outline-variant/40 shadow-xs flex items-start gap-3.5">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[22px]">self_improvement</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-[16px] text-on-surface font-bold">Alineación &amp; Eje Biomecánico</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Reeducación articular y descompresión miofascial mediante Tai Ji Quan Chen y Yang clásico.</p>
+</div>
+</div>
+<div class="p-5 rounded-xl bg-surface-container-lowest border border-outline-variant/40 shadow-xs flex items-start gap-3.5">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[22px]">verified</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-[16px] text-on-surface font-bold">Facultativos Titulados y Colegiados</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Terapeutas avalados por la FEMTC y universidades oficiales de Pekín y Guangzhou.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECCIÓN 1: TAI JI QUAN TRADICIONAL & QI GONG -->
+<section class="w-full max-w-[1240px] mx-auto px-gutter-mobile md:px-gutter py-20" id="disciplinas-internas">
+<div class="text-center max-w-3xl mx-auto mb-14">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-primary font-bold">Artes Internas • Nei Jia Quan</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mt-1 font-bold">
+          Tai Ji Quan &amp; Qi Gong Terapéutico
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-3 text-pretty">
+          La rama interna de Shaolin Pechan entrena la conciencia propioceptiva, la fluidez circular (*Chan Si Gong*) y la respiración diafragmática para regular la presión arterial y serenar el sistema nervioso simpático.
+        </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+<!-- CARD PRINCIPAL: BIOMECÁNICA & CHAN SI GONG -->
+<div class="lg:col-span-7 p-8 rounded-xl bg-surface-container-lowest border border-outline-variant/50 flex flex-col justify-between shadow-xs">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="px-3 py-1 rounded bg-surface-container text-primary font-label-sm text-label-sm font-semibold tracking-wide">
+                Estilo Chen Tradicional • Lao Jia Yi Lu
+              </span>
+<span class="text-secondary font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">schedule</span> 4 Sesiones / semana
+              </span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold mb-3">
+              Fuerza Espiral (*Chan Si Gong*) y Enraizamiento Consciente
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+              El Tai Ji Quan trasciende la gimnasia suave: es un sofisticado sistema de cinética fascial. A través del principio *Song* (relajación activa sin flacidez), liberamos contracturas crónicas dorsales y lumbares mientras estabilizamos el eje central (*Zhong Ding*).
+            </p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
+<div class="p-4 rounded-lg bg-surface-container-low border border-outline-variant/30">
+<span class="font-headline-sm text-[16px] font-bold text-primary block">Song (鬆)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1 block">Apertura articular sin rigidez ni tensión muscular parasitaria.</span>
+</div>
+<div class="p-4 rounded-lg bg-surface-container-low border border-outline-variant/30">
+<span class="font-headline-sm text-[16px] font-bold text-primary block">Zhong Ding (中定)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1 block">Estabilidad y verticalidad de la columna vertebral.</span>
+</div>
+<div class="p-4 rounded-lg bg-surface-container-low border border-outline-variant/30">
+<span class="font-headline-sm text-[16px] font-bold text-primary block">Dan Tian (丹田)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-1 block">Activación hipopresiva y respiración baja profunda.</span>
+</div>
+</div>
+</div>
+<div class="pt-4 border-t border-outline-variant/30 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-medium">Niveles Iniciación, Medio y Avanzado</span>
+<a class="inline-flex items-center gap-1 text-primary font-semibold text-label-md hover:underline" href="#agenda-diagnostico">
+<span class="">Probar una clase guiada</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- FOTO ACCIÓN CONTEXTUAL -->
+<div class="lg:col-span-5 rounded-xl overflow-hidden border border-outline-variant/50 relative min-h-[380px] group shadow-xs">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Maestro maduro practicando una postura baja de Tai Ji Quan estilo Chen en un patio tradicional de monasterio con losas de piedra pulida, luz suave del amanecer y túnica holgada de lino y bermellón." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDDofeO0TUjEErp67G61yECV5w2SbaVODZSdBGol012dA_nEozARO9OPW4r7UQEGLRE_4sVWnbNbFSqSVJ4RpKiXetSHHhbpw_cn7ZZQD1mQdFVKDHPqCLcQnQX4QZFFa-s1tdmWi_sj29Yp1vKsLEn83C6fVBAi-WZ0YvQ9T5O6-RxFoZ2m-wNkkap90_Xp9z8mbVuBGN8xTPo3fg1CHlJMWKBxv7NrPatiiRrt1PmNIll1ocQxMGYg">
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/90 via-on-background/30 to-transparent"></div>
+<div class="absolute bottom-0 left-0 right-0 p-6 text-on-primary">
+<span class="px-2.5 py-0.5 rounded bg-primary text-on-primary text-[11px] font-bold uppercase tracking-wider mb-2 inline-block">Linaje de Transmisión Oficial</span>
+<h4 class="font-headline-sm text-headline-sm text-on-primary font-bold">Estilo Yang 85 &amp; Chen Lao Jia</h4>
+<p class="font-body-sm text-body-sm text-surface-container-highest/90 mt-1">Supervisión postural constante con enfoque anatómico moderno y corrección kinesiológica individual.</p>
+</div>
+</div>
+<!-- CARD 2: TUI SHOU & SENSIBILIDAD -->
+<div class="lg:col-span-6 p-7 rounded-xl bg-surface-container-lowest border border-outline-variant/50 shadow-xs flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-3 mb-3">
+<div class="w-9 h-9 rounded bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">front_hand</span>
+</div>
+<div>
+<span class="font-label-caps text-label-caps uppercase text-secondary">Interacción en Pareja</span>
+<h3 class="font-headline-sm text-[20px] font-bold text-on-surface">Tui Shou (推手) • Manos que Empujan</h3>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">
+              El Tui Shou es el método empírico para comprobar la ausencia de tensión muscular. Enseña a escuchar la fuerza entrante (*Ting Jin*), neutralizar la inercia sin choque (*Hua Jin*) y reconducir la presión ajena con un gasto biológico mínimo.
+            </p>
+<ul class="space-y-2 text-body-sm text-on-surface">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0">check</span>
+<span class="">Desarrollo de propiocepción fina y balance postural reflejo.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px] shrink-0">check</span>
+<span class="">Resolución no violenta de la confrontación kinética.</span>
+</li>
+</ul>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant/30 flex items-center justify-between text-label-sm text-secondary">
+<span class="">Horario: Martes &amp; Jueves 19:30</span>
+<span class="text-primary font-semibold">Taller Abierto</span>
+</div>
+</div>
+<!-- CARD 3: QI GONG TERAPÉUTICO (TRES CLÁSICOS) -->
+<div class="lg:col-span-6 p-7 rounded-xl bg-surface-container-lowest border border-[#C4820F]/30 shadow-xs flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-3 mb-3">
+<div class="w-9 h-9 rounded bg-[#C4820F]/15 flex items-center justify-center text-[#9E650C]">
+<span class="material-symbols-outlined text-[20px]">self_improvement</span>
+</div>
+<div>
+<span class="font-label-caps text-label-caps uppercase text-[#9E650C] font-semibold">Gimnasia Médica Tradicional</span>
+<h3 class="font-headline-sm text-[20px] font-bold text-on-surface">Qi Gong (氣功) • Los Tres Sistemas Clásicos</h3>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">
+              Secuencias de movimientos lentos combinados con sincronización respiratoria orientados a desbloquear los 12 canales principales y regular los órganos internos (*Zang Fu*).
+            </p>
+<div class="grid grid-cols-3 gap-2 text-center">
+<div class="p-2.5 rounded bg-surface-container-low border border-[#C4820F]/20">
+<span class="font-bold text-[13px] text-[#9E650C] block">Ba Duan Jin</span>
+<span class="text-[11px] text-secondary">8 Joyas del Brocado</span>
+</div>
+<div class="p-2.5 rounded bg-surface-container-low border border-primary/20">
+<span class="font-bold text-[13px] text-primary block">Yi Jin Jing</span>
+<span class="text-[11px] text-secondary">Tendón &amp; Médula</span>
+</div>
+<div class="p-2.5 rounded bg-surface-container-low border border-[#C4820F]/20">
+<span class="font-bold text-[13px] text-[#9E650C] block">Wu Qin Xi</span>
+<span class="text-[11px] text-secondary">5 Animales Hua Tuo</span>
+</div>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant/30 flex items-center justify-between text-label-sm text-secondary">
+<span class="">Matutino: Lun a Sáb 08:30 y 10:00</span>
+<span class="text-[#9E650C] font-semibold">Salud Preventiva</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECCIÓN WU XING / 5 ELEMENTOS: INFOGRAFÍA MODERNA Y MINIMALISTA -->
+<section class="w-full bg-surface-container-low border-y border-outline-variant/30 py-16">
+<div class="w-full max-w-[1240px] mx-auto px-gutter-mobile md:px-gutter">
+<div class="text-center max-w-2xl mx-auto mb-10">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-primary font-bold">Fisiología Oriental Comparada</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold mt-1">Wu Xing (五行): Las Cinco Fases Energéticas</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 text-pretty">
+            En la Medicina China clínica, los cinco elementos articulan la homeostasis corporal, correlacionando órganos diana, tejidos, estaciones y respuestas somáticas.
+          </p>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3"><!-- MADERA -->
+<div class="p-5 rounded-xl bg-surface-container-lowest border border-outline-variant/40 flex flex-col text-left hover:border-emerald-700/40 transition-colors shadow-xs">
+<div class="flex items-center justify-between mb-2">
+<span class="text-[#2d6a4f] font-bold text-lg flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-[#2d6a4f]"></span>木 Madera</span>
+<span class="font-label-caps text-[10px] text-secondary bg-surface-container px-1.5 py-0.5 rounded">Primavera</span>
+</div>
+<div class="space-y-1 text-body-sm text-on-surface">
+<p class=""><strong class="font-semibold text-on-surface">Órganos:</strong> Hígado &amp; Vesícula</p>
+<p class=""><strong class="font-semibold text-on-surface">Tejido:</strong> Tendones &amp; Fascia</p>
+<p class="text-on-surface-variant text-[12px] pt-1">Garantiza el libre curso del Qi. Su armonía previene rigideces y cefaleas tensionales.</p>
+</div>
+</div>
+<!-- FUEGO (ROJO BERMELLÓN LACRE) -->
+<div class="p-5 rounded-xl bg-surface-container-lowest border-2 border-primary/30 flex flex-col text-left hover:border-primary transition-colors shadow-xs relative overflow-hidden">
+<div class="absolute top-0 right-0 w-12 h-12 bg-primary/5 rounded-bl-full pointer-events-none"></div>
+<div class="flex items-center justify-between mb-2">
+<span class="text-primary font-bold text-lg flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-primary"></span>火 Fuego</span>
+<span class="font-label-caps text-[10px] text-on-primary-fixed bg-primary-fixed px-1.5 py-0.5 rounded font-semibold">Verano</span>
+</div>
+<div class="space-y-1 text-body-sm text-on-surface">
+<p class=""><strong class="font-semibold text-on-surface">Órganos:</strong> Corazón &amp; I. Delgado</p>
+<p class=""><strong class="font-semibold text-on-surface">Tejido:</strong> Vasos Sanguíneos</p>
+<p class="text-on-surface-variant text-[12px] pt-1">Rige la circulación y alberga el Shen (mente/espíritu). Aporta serenidad emocional.</p>
+</div>
+</div>
+<!-- TIERRA (OCRE DORADO TIERRA #C4820F / #9E650C) -->
+<div class="p-5 rounded-xl bg-surface-container-lowest border-2 border-[#C4820F]/40 flex flex-col text-left hover:border-[#C4820F] transition-colors shadow-xs relative overflow-hidden bg-gradient-to-b from-[#C4820F]/5 to-transparent">
+<div class="absolute top-0 right-0 w-12 h-12 bg-[#C4820F]/10 rounded-bl-full pointer-events-none"></div>
+<div class="flex items-center justify-between mb-2">
+<span class="text-[#9E650C] font-bold text-lg flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-[#C4820F]"></span>土 Tierra</span>
+<span class="font-label-caps text-[10px] text-[#9E650C] bg-[#C4820F]/15 px-1.5 py-0.5 rounded font-bold">Canícula</span>
+</div>
+<div class="space-y-1 text-body-sm text-on-surface">
+<p class=""><strong class="font-semibold text-on-surface">Órganos:</strong> Bazo &amp; Estómago</p>
+<p class=""><strong class="font-semibold text-on-surface">Tejido:</strong> Masa Muscular</p>
+<p class="text-on-surface-variant text-[12px] pt-1">Centro de transformación de nutrientes en Qi nutritivo (*Gu Qi*). Vital para digestiones.</p>
+</div>
+</div>
+<!-- METAL -->
+<div class="p-5 rounded-xl bg-surface-container-lowest border border-outline-variant/40 flex flex-col text-left hover:border-slate-500/40 transition-colors shadow-xs">
+<div class="flex items-center justify-between mb-2">
+<span class="text-secondary font-bold text-lg flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>金 Metal</span>
+<span class="font-label-caps text-[10px] text-secondary bg-surface-container px-1.5 py-0.5 rounded">Otoño</span>
+</div>
+<div class="space-y-1 text-body-sm text-on-surface">
+<p class=""><strong class="font-semibold text-on-surface">Órganos:</strong> Pulmón &amp; I. Grueso</p>
+<p class=""><strong class="font-semibold text-on-surface">Tejido:</strong> Piel y Vello</p>
+<p class="text-on-surface-variant text-[12px] pt-1">Regula la defensa inmunitaria externa (*Wei Qi*) y el ritmo de la respiración celular.</p>
+</div>
+</div>
+<!-- AGUA -->
+<div class="col-span-2 sm:col-span-3 lg:col-span-1 p-5 rounded-xl bg-surface-container-lowest border border-outline-variant/40 flex flex-col text-left hover:border-blue-900/40 transition-colors shadow-xs">
+<div class="flex items-center justify-between mb-2">
+<span class="text-[#1f4e78] font-bold text-lg flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-[#1f4e78]"></span>水 Agua</span>
+<span class="font-label-caps text-[10px] text-secondary bg-surface-container px-1.5 py-0.5 rounded">Invierno</span>
+</div>
+<div class="space-y-1 text-body-sm text-on-surface">
+<p class=""><strong class="font-semibold text-on-surface">Órganos:</strong> Riñón &amp; Vejiga</p>
+<p class=""><strong class="font-semibold text-on-surface">Tejido:</strong> Sistema Óseo</p>
+<p class="text-on-surface-variant text-[12px] pt-1">Depósito de la esencia primordial (*Jing*). Pilar de la longevidad y la médula espinal.</p>
+</div>
+</div></div>
+</div>
+</section>
+<!-- SECCIÓN 2: SERVICIOS CLÍNICOS MTC (MEDICAL-GRADE MODERN CARDS) -->
+<section class="w-full max-w-[1240px] mx-auto px-gutter-mobile md:px-gutter py-20" id="tratamientos">
+<div class="text-center max-w-3xl mx-auto mb-14">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-primary font-bold">Terapias Clínicas Personalizadas</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface font-bold mt-1">
+          Tratamientos en la Clínica Shaolin Pechan
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-3 text-pretty">
+          Protocolos terapéuticos individualizados con instrumental estéril de un solo uso y cumplimiento de los más altos estándares de higiene sanitaria europea.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"><!-- TERAPIA 1: ACUPUNTURA (ROJO LACRE) -->
+<div class="p-6 rounded-xl bg-surface-container-lowest border border-primary/20 shadow-xs flex flex-col justify-between hover:border-primary transition-colors group">
+<div>
+<div class="w-12 h-12 rounded-lg bg-primary-fixed/40 flex items-center justify-center text-primary mb-4 transition-transform group-hover:scale-105">
+<span class="material-symbols-outlined text-[26px]">healing</span>
+</div>
+<div class="flex items-center gap-2 mb-1">
+<span class="font-label-caps text-[11px] text-primary uppercase font-bold tracking-wider">Zhen Jiu • 针灸</span>
+</div>
+<h3 class="font-headline-sm text-[20px] font-bold text-on-surface mb-2">Acupuntura &amp; Moxibustión</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+              Inserción de microagujas indoloras de acero quirúrgico en puntos neuro-reactivos para estimular endorfinas, desinflamar y reactivar el flujo en meridianos bloqueados.
+            </p>
+</div>
+<div class="pt-4 border-t border-outline-variant/30">
+<span class="font-label-caps text-[11px] text-primary uppercase font-bold block mb-1">Indicaciones clínicas:</span>
+<span class="text-[12px] text-secondary">Hernias discales, migraña, ciática, insomnio y contracturas.</span>
+</div>
+</div>
+<!-- TERAPIA 2: TUINA (OCRE DORADO NOBLE) -->
+<div class="p-6 rounded-xl bg-surface-container-lowest border border-[#C4820F]/30 shadow-xs flex flex-col justify-between hover:border-[#C4820F] transition-colors group">
+<div>
+<div class="w-12 h-12 rounded-lg bg-[#C4820F]/15 flex items-center justify-center text-[#9E650C] mb-4 transition-transform group-hover:scale-105">
+<span class="material-symbols-outlined text-[26px]">back_hand</span>
+</div>
+<div class="flex items-center gap-2 mb-1">
+<span class="font-label-caps text-[11px] text-[#9E650C] uppercase font-bold tracking-wider">Tui Na • 推拿</span>
+</div>
+<h3 class="font-headline-sm text-[20px] font-bold text-on-surface mb-2">Masaje Terapéutico Tuina</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+              Terapia manual osteoarticular y miofascial del linaje médico Shaolin. Tracción, fricción profunda y movilización pasiva adaptada a cada rango fisiológico articular.
+            </p>
+</div>
+<div class="pt-4 border-t border-outline-variant/30">
+<span class="font-label-caps text-[11px] text-[#9E650C] uppercase font-bold block mb-1">Indicaciones clínicas:</span>
+<span class="text-[12px] text-secondary">Cervicalgias crónicas, tendinopatías, dolor lumbar y rigidez.</span>
+</div>
+</div>
+<!-- TERAPIA 3: VENTOSAS & MOXA (ROJO LACRE) -->
+<div class="p-6 rounded-xl bg-surface-container-lowest border border-primary/20 shadow-xs flex flex-col justify-between hover:border-primary transition-colors group">
+<div>
+<div class="w-12 h-12 rounded-lg bg-primary-fixed/40 flex items-center justify-center text-primary mb-4 transition-transform group-hover:scale-105">
+<span class="material-symbols-outlined text-[26px]">spa</span>
+</div>
+<div class="flex items-center gap-2 mb-1">
+<span class="font-label-caps text-[11px] text-primary uppercase font-bold tracking-wider">Ba Guan • 拔罐</span>
+</div>
+<h3 class="font-headline-sm text-[20px] font-bold text-on-surface mb-2">Ventosas de Vacío &amp; Calor</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+              Aplicación de campanas de cristal para descomprimir fascias, drenar estasis venosa profunda y facilitar la eliminación de ácido láctico acumulado por fatiga extrema.
+            </p>
+</div>
+<div class="pt-4 border-t border-outline-variant/30">
+<span class="font-label-caps text-[11px] text-primary uppercase font-bold block mb-1">Indicaciones clínicas:</span>
+<span class="text-[12px] text-secondary">Sobrecarga muscular del deportista, estancamiento y estrés.</span>
+</div>
+</div>
+<!-- TERAPIA 4: FITOTERAPIA & DIETOTERAPIA (OCRE DORADO NOBLE) -->
+<div class="p-6 rounded-xl bg-surface-container-lowest border border-[#C4820F]/30 shadow-xs flex flex-col justify-between hover:border-[#C4820F] transition-colors group">
+<div>
+<div class="w-12 h-12 rounded-lg bg-[#C4820F]/15 flex items-center justify-center text-[#9E650C] mb-4 transition-transform group-hover:scale-105">
+<span class="material-symbols-outlined text-[26px]">medication</span>
+</div>
+<div class="flex items-center gap-2 mb-1">
+<span class="font-label-caps text-[11px] text-[#9E650C] uppercase font-bold tracking-wider">Zhong Yao • 中药</span>
+</div>
+<h3 class="font-headline-sm text-[20px] font-bold text-on-surface mb-2">Fitoterapia &amp; Dietética MTC</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">
+              Prescripciones fitoterapéuticas estandarizadas de farmacopea china con registro sanitario y planes nutricionales según la naturaleza térmica (frío/calor/neutro) del paciente.
+            </p>
+</div>
+<div class="pt-4 border-t border-outline-variant/30">
+<span class="font-label-caps text-[11px] text-[#9E650C] uppercase font-bold block mb-1">Indicaciones clínicas:</span>
+<span class="text-[12px] text-secondary">Astenia, disfunciones digestivas, inmunodeficiencias y menopausia.</span>
+</div>
+</div></div>
+<!-- TALLERES FORMATIVOS & ESPACIO DE APRENDIZAJE -->
+<div class="p-8 md:p-10 rounded-2xl bg-surface-container border border-[#C4820F]/30 shadow-xs">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+<div class="lg:col-span-5">
+<span class="font-label-caps text-label-caps uppercase text-[#9E650C] bg-[#C4820F]/15 px-2.5 py-1 rounded font-bold inline-block mb-1">Seminarios Clínicos Abiertos</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold mt-2 mb-3">
+              Talleres Prácticos de Autocuidado y Salud Natural
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-5">
+              Cursos intensivos de fin de semana para aprender localización de puntos de digitopuntura, técnicas de moxa doméstica segura y dietoterapia de las 5 estaciones.
+            </p>
+<div class="space-y-3">
+<div class="flex items-center gap-3 p-3 rounded-lg bg-surface-container-lowest border border-[#C4820F]/30 shadow-xs">
+<span class="material-symbols-outlined text-[#C4820F] text-[20px]">calendar_today</span>
+<div class="text-body-sm">
+<strong class="font-semibold text-on-surface block">Próximo Taller: Digitopuntura en Lesiones Comunes</strong>
+<span class="text-secondary text-[12px]">Sábado 18 de Noviembre • 10:00 - 14:00 • 16 Plazas</span>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="rounded-xl overflow-hidden border border-outline-variant/40 h-52 relative">
+<img class="w-full h-full object-cover" data-alt="Detalle de un tratamiento sereno de acupuntura con agujas doradas en la espalda de un paciente en una camilla de madera clara, con frascos cerámicos y luz tenue." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwcB1hcGezMUz4jPXX3xDpj0nxSR5_lfxEJqKqCOlbqnYhILGoIEoCxCngpullPNEhfVPWPe-it_PbxsuwSe4RyjppGVm9QqExgv-EX8ECZzmJaj_yuvJS4WOvnBVJXD4TWaE_-0MebcYjsRFz9c3r93c2d2YfHKcdTEmucRasSzDfZNJlDVHFrl504CIjcAzXhUkMeBvBRwXwOWaZG4FhoPlpN-6VOZWWiqITo3XyTu5eDuVl-F3WEA">
+</div>
+<div class="rounded-xl overflow-hidden border border-outline-variant/40 h-52 relative">
+<img class="w-full h-full object-cover" data-alt="Sesión de masaje Tuina donde un terapeuta experto aplica presión precisa en los hombros del practicante con caligrafía china y bambú en un entorno clínico pulcro." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIOtSufsNIhlC3_3ga_isGevcn-q6327TiGlvVuNrIIpS2Az6rviYNQoj4f-MC7KarxEa5QVRdtLHD6EO9BjSoshphkdAP-wgychXHBHbyjZ4KENIgSgHmh3B3Yb4k5LeeMOcRvTaEvXZdjkZZJP3cHhfOz4AkRx1vHxJtdIxODZWMTG2gHZQExxr6hiYlDIQzKXS0FaNsxV4eBGpgot7R6lh5LXI4zOIVkEulEJm0KM6_sPMrjgX4nw">
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECCIÓN 3: CUADRO MÉDICO Y FACULTATIVO TITULADO -->
+<section class="w-full bg-surface-container-low border-y border-outline-variant/30 py-20" id="cuadro-medico">
+<div class="w-full max-w-[1240px] mx-auto px-gutter-mobile md:px-gutter">
+<div class="text-center max-w-2xl mx-auto mb-14">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-primary font-bold">Profesionales Colegiados</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface font-bold mt-1">
+            Equipo Clínico y Terapeutas MTC
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 text-pretty">
+            Experiencia acreditada con titulación superior en Medicina Tradicional China, registro oficial colegial y más de dos décadas de práctica asistencial continuada.
+          </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- TERAPEUTA 1 -->
+<div class="p-6 md:p-8 rounded-xl bg-surface-container-lowest border border-outline-variant/50 shadow-xs flex flex-col sm:flex-row gap-6 items-center sm:items-start">
+<div class="w-28 h-28 rounded-full overflow-hidden shrink-0 border-2 border-primary/20 shadow-xs">
+<img class="w-full h-full object-cover" data-alt="Retrato profesional cálido y sereno del Maestro Lin Zheng, médico acupuntor con túnica tradicional de lino color hueso, mirada apacible, fondo neutro con pergamino médico chino." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMQbx2Rs7t_F0zEPX6Fmai_poC4rWIvPIdC6bETW4X-pPjnPrkhHuSXaXF2FVQbYwrpUZaLZUBId7xBl9mhaboO5KVftHFa72aSImsqy3ogrFH9mxyl7Yfmb6ubOtG43sMy2JMTCrzpde9n7kJfuDRVLZ5HMWYNNITkOZgmXT2HQ_M9n9S8AN_C-LzDXgh0Q2BauA50ykUNB2xu_jPxcRjvr2qTrXv9yNvVToSQj2eN4CHKckXav_kUg">
+</div>
+<div class="flex flex-col text-center sm:text-left flex-1">
+<div class="flex flex-wrap items-center justify-center sm:justify-start gap-2 mb-1">
+<h3 class="font-headline-sm text-[20px] font-bold text-on-surface">Prof. Lin Zheng (林正)</h3>
+<span class="px-2 py-0.5 rounded text-[11px] font-semibold uppercase bg-primary-fixed text-on-primary-fixed">Director Clínico MTC</span>
+</div>
+<span class="text-body-sm text-secondary font-medium">Licenciado por la Universidad de MTC de Beijing • 28 años de ejercicio</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-3 mb-4">
+                Especialista en traumatología deportiva, patología de la columna vertebral y diagnóstico diferencial mediante la toma de pulso radial (*Mai Zhen*) y observación lingual.
+              </p>
+<div class="pt-3 border-t border-outline-variant/30 flex flex-wrap items-center justify-between gap-2">
+<span class="inline-flex items-center gap-1 font-label-caps text-label-caps text-primary font-bold">
+<span class="material-symbols-outlined text-[16px]">verified</span> Colegiado Nº 3482 • MTC España
+                </span>
+<span class="text-[12px] text-secondary">Citas: Lunes a Jueves</span>
+</div>
+</div>
+</div>
+<!-- TERAPEUTA 2 -->
+<div class="p-6 md:p-8 rounded-xl bg-surface-container-lowest border border-outline-variant/50 shadow-xs flex flex-col sm:flex-row gap-6 items-center sm:items-start">
+<div class="w-28 h-28 rounded-full overflow-hidden shrink-0 border-2 border-primary/20 shadow-xs">
+<img class="w-full h-full object-cover" data-alt="Retrato profesional de Elena Valero, instructora de Taijiquan y terapeuta de Medicina Tradicional China, con rostro concentrado y amable, chaleco artesanal en tono tierra." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqb0dwdZx7VP2C6b-95EnboigrpxPziSUIT2rcKdGtG1JBmgwG08eZ5rbrJglqwyJfLcKhtvTHx48cWKbY9rTg0NGiOlBwxNL4QPUS2vmcAP1jdgm1n8v7fGB385yi_P5uINJnTJ1J5Ny6BlwgJ6DVjrpGQV6ky1CO5ZHVmmsLDmFua2pyhVhsq9XSzFOQ7BHYgJWFfSo2mJFFnWgAkKfQs2asFg2gVV4X8WXfQUcZEiUBC0hfMPdFPQ">
+</div>
+<div class="flex flex-col text-center sm:text-left flex-1">
+<div class="flex flex-wrap items-center justify-center sm:justify-start gap-2 mb-1">
+<h3 class="font-headline-sm text-[20px] font-bold text-on-surface">Dra. Elena Valero</h3>
+<span class="px-2 py-0.5 rounded text-[11px] font-semibold uppercase bg-secondary-container text-on-secondary-fixed">Tuina &amp; Qi Gong Médico</span>
+</div>
+<span class="text-body-sm text-secondary font-medium">Máster en Acupuntura Bioenergética • Instructora Cinturón Negro Shaolin Pechan</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-3 mb-4">
+                Abordaje integral del dolor crónico miofascial, trastornos psicosomáticos provocados por el estrés y rehabilitación neuromuscular a través del Qi Gong médico.
+              </p>
+<div class="pt-3 border-t border-outline-variant/30 flex flex-wrap items-center justify-between gap-2">
+<span class="inline-flex items-center gap-1 font-label-caps text-label-caps text-primary font-bold">
+<span class="material-symbols-outlined text-[16px]">verified</span> Colegiada Nº 4910 • FEMTC
+                </span>
+<span class="text-[12px] text-secondary">Citas: Mar, Jue y Sáb</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECCIÓN 4: FORMULARIO DE RESERVA CLÍNICA Y DIAGNÓSTICO -->
+<section class="w-full max-w-[1240px] mx-auto px-gutter-mobile md:px-gutter py-20" id="agenda-diagnostico">
+<div class="p-8 md:p-12 rounded-2xl bg-surface-container-high border border-outline-variant/40 shadow-sm">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+<!-- INFO IZQUIERDA -->
+<div class="lg:col-span-5 flex flex-col justify-between">
+<div>
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-primary font-bold">Cita con Especialista</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold mt-1 mb-4">
+                Reserva de Primera Consulta &amp; Diagnóstico Completo
+              </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 text-pretty">
+                La primera visita tiene una duración de 75 minutos y comprende la anamnesis completa (*Wen*), exploración de pulsos y lengua (*Wang/Qie*), diagnóstico fisiopatológico y el primer tratamiento de acupuntura o tuina.
+              </p>
+<div class="p-4 rounded-xl bg-surface-container-lowest border border-[#C4820F]/30 space-y-3 mb-6 shadow-xs">
+<div class="flex items-center justify-between text-body-sm">
+<span class="font-semibold text-on-surface">Duración de la sesión:</span>
+<span class="text-primary font-bold bg-primary-fixed/40 px-2 py-0.5 rounded text-[13px]">75 minutos</span>
+</div>
+<div class="flex items-center justify-between text-body-sm">
+<span class="font-semibold text-on-surface">Tratamiento inicial:</span>
+<span class="text-[#9E650C] font-semibold bg-[#C4820F]/15 px-2 py-0.5 rounded text-[12px]">Incluido en la valoración</span>
+</div>
+<div class="flex items-center justify-between text-body-sm">
+<span class="font-semibold text-on-surface">Sede de atención:</span>
+<span class="text-secondary">Carrer de la Pau 18, Valencia</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3 text-secondary text-body-sm pt-2">
+<span class="material-symbols-outlined text-primary text-[20px]">shield</span>
+<span class="">Protección de datos clínicos RGPD y salas individualizadas insonorizadas.</span>
+</div>
+</div>
+<!-- FORMULARIO DERECHA -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-6 md:p-8 rounded-xl border border-outline-variant/40 shadow-xs">
+<form class="flex flex-col gap-4" id="clinic-booking-form" onsubmit="event.preventDefault(); document.getElementById('clinic-booking-form').classList.add('hidden'); document.getElementById('clinic-booking-success').classList.remove('hidden');">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface mb-1">Nombre y Apellidos</label>
+<input class="w-full px-3.5 py-2.5 rounded-lg border border-outline-variant/60 bg-surface text-on-surface font-body-sm focus:border-primary focus:ring-1 focus:ring-primary outline-none transition" placeholder="Ej: Roberto Ferrero" required="" type="text">
+</div>
+<div>
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface mb-1">Teléfono Móvil (WhatsApp)</label>
+<input class="w-full px-3.5 py-2.5 rounded-lg border border-outline-variant/60 bg-surface text-on-surface font-body-sm focus:border-primary focus:ring-1 focus:ring-primary outline-none transition" placeholder="+34 600 000 000" required="" type="tel">
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface mb-1">Motivo de Consulta</label>
+<select class="w-full px-3.5 py-2.5 rounded-lg border border-outline-variant/60 bg-surface text-on-surface font-body-sm focus:border-primary focus:ring-1 focus:ring-primary outline-none transition">
+<option>Dolor lumbar, cervical o articular</option>
+<option>Lesión deportiva / Rehabilitación</option>
+<option>Ansiedad, estrés o insomnio crónico</option>
+<option>Problemas digestivos o respiratorios</option>
+<option>Alineación preventiva &amp; Qi Gong terapéutico</option>
+</select>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface mb-1">Franja Horaria Preferida</label>
+<select class="w-full px-3.5 py-2.5 rounded-lg border border-outline-variant/60 bg-surface text-on-surface font-body-sm focus:border-primary focus:ring-1 focus:ring-primary outline-none transition">
+<option>Mañanas (09:00 - 13:30)</option>
+<option>Tardes (16:00 - 20:30)</option>
+<option>Sábados mañana (09:30 - 13:00)</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm font-semibold text-on-surface mb-1">Breve descripción de síntomas (opcional)</label>
+<textarea class="w-full px-3.5 py-2.5 rounded-lg border border-outline-variant/60 bg-surface text-on-surface font-body-sm focus:border-primary focus:ring-1 focus:ring-primary outline-none transition resize-none" placeholder="Indica si dispones de pruebas médicas recientes (resonancias, analíticas) o medicación en curso..." rows="3"></textarea>
+</div>
+<div class="pt-2 flex flex-col sm:flex-row items-center justify-between gap-3">
+<span class="text-[12px] text-secondary">Confirmación de cita en menos de 24 horas laborables.</span>
+<button class="w-full sm:w-auto px-6 py-3 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md font-semibold hover:bg-primary transition-all shadow-sm flex items-center justify-center gap-2 border border-primary/40" type="submit"><span class="">Solicitar Consulta Diagnóstica</span><span class="material-symbols-outlined text-[18px]">arrow_forward</span></button>
+</div>
+</form>
+<!-- MENSAJE DE CONFIRMACIÓN DE CITA -->
+<div class="hidden text-center py-10 px-4" id="clinic-booking-success">
+<div class="w-14 h-14 rounded-full bg-primary/10 text-primary flex items-center justify-center mx-auto mb-3">
+<span class="material-symbols-outlined text-[32px]">check_circle</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm font-bold text-on-surface">Petición Registrada con Éxito</h4>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mx-auto mt-2 mb-5">
+                Nuestro coordinador de clínica se pondrá en contacto contigo para verificar el horario disponible y darte las pautas previas para la consulta.
+              </p>
+<button class="px-4 py-2 rounded border border-outline-variant text-on-surface font-label-sm text-label-sm hover:bg-surface-container transition-colors" onclick="document.getElementById('clinic-booking-success').classList.add('hidden'); document.getElementById('clinic-booking-form').classList.remove('hidden');">
+                Realizar otra solicitud
+              </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECCIÓN FAQ BREVE / PREGUNTAS FRECUENTES -->
+<section class="w-full max-w-[1240px] mx-auto px-gutter-mobile md:px-gutter pb-20" id="faq">
+<div class="text-center max-w-2xl mx-auto mb-12">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-primary font-bold">Dudas Habituales</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold mt-1">Preguntas Frecuentes de Pacientes y Alumnos</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="p-6 rounded-xl bg-surface-container-low border border-outline-variant/40 flex flex-col">
+<div class="flex items-center gap-2 mb-2 text-primary font-semibold">
+<span class="material-symbols-outlined text-[20px]">help_center</span>
+<h4 class="font-headline-sm text-[16px] text-on-surface font-bold">¿Duele la acupuntura?</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            No. Las agujas tienen el grosor aproximado de un cabello. Se percibe una ligera sensación de pesadez o distensión energética (*De Qi*), pero en ningún momento sensación de dolor cortante.
+          </p>
+</div>
+<div class="p-6 rounded-xl bg-surface-container-low border border-outline-variant/40 flex flex-col">
+<div class="flex items-center gap-2 mb-2 text-primary font-semibold">
+<span class="material-symbols-outlined text-[20px]">help_center</span>
+<h4 class="font-headline-sm text-[16px] text-on-surface font-bold">¿Es compatible con fármacos?</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Completamente. La MTC actúa como una medicina integrativa coadyuvante. Nunca se solicita suspender tratamientos médicos convencionales sin el visto bueno de su facultativo.
+          </p>
+</div>
+<div class="p-6 rounded-xl bg-surface-container-low border border-outline-variant/40 flex flex-col">
+<div class="flex items-center gap-2 mb-2 text-primary font-semibold">
+<span class="material-symbols-outlined text-[20px]">help_center</span>
+<h4 class="font-headline-sm text-[16px] text-on-surface font-bold">¿Puedo iniciar Tai Ji de cero?</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Sí. Las clases están estructuradas por niveles. Cualquier persona, independientemente de su edad o condición de movilidad inicial, puede comenzar de forma segura y progresiva.
+          </p>
+</div>
+</div>
+</section>
+</main>
+<!-- FOOTER LIMPIO Y UNIFICADO -->
+<footer class="w-full bg-surface-container-high border-t border-outline-variant/40 text-on-surface">
+<div class="w-full max-w-[1240px] mx-auto px-gutter-mobile md:px-gutter pt-16 pb-12">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
+<div class="lg:col-span-2 flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<img alt="Shaolin Pechan Emblema" class="h-10 w-10 object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UdDP8cW5bizOtO7QEC4gz1Go1q_sb7mIclDulCRNYShKI4mjLX-39NBCe6_QnsJ8sK1vb-X6OQVJ-vQ9vPZYBizOPXHt9CNT9v44sMI06JoDSL4krZDAhh_WnKDs-s83zMTxQUd_oR9_OR41Zp0JHwiNb1XJbGZFKVF7LbD6DgtW4tjRw0DwM-KPf_UxUYTFXCSBVZqC6tnqvm9SE-c9zOzn-fEL6qotaS1AVqRBBEJzOah3xvFumNfT8">
+<div>
+<span class="font-headline-sm text-[18px] font-bold text-on-surface block leading-tight">Shaolin Pechan • 少林百禅</span>
+<span class="font-label-sm text-label-sm text-secondary">Centro de Medicina China &amp; Artes Marciales</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">
+            Dedicados a la preservación del linaje tradicional del Templo Shaolin y al restablecimiento del equilibrio psico-físico a través de la Medicina Tradicional China.
+          </p>
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-surface-container text-primary font-label-caps text-label-caps w-fit">
+<span class="font-bold">LINAGE OFICIAL SHAOLIN</span>
+<span class="text-outline">•</span>
+<span class="">CLÍNICA MTC HOMOLOGADA</span>
+</div>
+</div>
+<div>
+<h5 class="font-label-caps text-label-caps uppercase text-secondary font-bold tracking-wider mb-3">Artes Internas</h5>
+<ul class="space-y-2 text-body-sm text-on-surface-variant">
+<li class=""><a class="hover:text-primary transition-colors" href="#">Tai Ji Quan Chen Lao Jia</a></li>
+<li class=""><a class="hover:text-primary transition-colors" href="#">Tai Ji Quan Estilo Yang 85</a></li>
+<li class=""><a class="hover:text-primary transition-colors" href="#">Qi Gong Terapéutico Ba Duan Jin</a></li>
+<li class=""><a class="hover:text-primary transition-colors" href="#">Yi Jin Jing (Tendones de Shaolin)</a></li>
+<li class=""><a class="hover:text-primary transition-colors" href="#">Tui Shou (Manos Sensibles)</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-caps text-label-caps uppercase text-secondary font-bold tracking-wider mb-3">Clínica &amp; MTC</h5>
+<ul class="space-y-2 text-body-sm text-on-surface-variant">
+<li class=""><a class="hover:text-primary transition-colors" href="#tratamientos">Acupuntura &amp; Moxa</a></li>
+<li class=""><a class="hover:text-primary transition-colors" href="#tratamientos">Masaje Terapéutico Tuina</a></li>
+<li class=""><a class="hover:text-primary transition-colors" href="#tratamientos">Terapia con Ventosas (Ba Guan)</a></li>
+<li class=""><a class="hover:text-primary transition-colors" href="#tratamientos">Fitoterapia &amp; Dietética China</a></li>
+<li class=""><a class="hover:text-primary transition-colors" href="#agenda-diagnostico">Diagnóstico del Pulso</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-caps text-label-caps uppercase text-secondary font-bold tracking-wider mb-3">Sede &amp; Contacto</h5>
+<div class="space-y-2 text-body-sm text-on-surface-variant">
+<p class="flex items-start gap-1.5">
+<span class="material-symbols-outlined text-[17px] text-primary shrink-0">location_on</span>
+<span class="">Carrer de la Pau 18, 46003 Valencia</span>
+</p>
+<p class="flex items-start gap-1.5">
+<span class="material-symbols-outlined text-[17px] text-primary shrink-0">call</span>
+<span class="">(+34) 960 214 832</span>
+</p>
+<p class="flex items-start gap-1.5">
+<span class="material-symbols-outlined text-[17px] text-primary shrink-0">mail</span>
+<span class="">clinica@shaolinpechan.com</span>
+</p>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-outline-variant/30 flex flex-col sm:flex-row items-center justify-between gap-4 text-[12px] text-secondary">
+<div class="">
+          © 2025 Shaolin Pechan Academy &amp; Clínica MTC. Todos los derechos reservados.
+        </div>
+<div class="flex items-center gap-6">
+<a class="hover:text-primary transition-colors" href="#">Aviso Legal</a>
+<a class="hover:text-primary transition-colors" href="#">Política de Privacidad Sanitaria</a>
+<a class="hover:text-primary transition-colors" href="#">Código Deontológico</a>
+</div>
+</div>
+</div>
+</footer>
+
+
+</body></html>

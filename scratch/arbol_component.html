@@ -1,0 +1,688 @@
+    <!-- ÁRBOL GENEALÓGICO & LÍNEA DE TIEMPO INTERACTIVA DE MAESTROS SHAOLIN -->
+    <section id="arbol-maestros" class="w-full max-w-6xl mx-auto my-12" aria-label="Árbol Genealógico y Línea de Tiempo de Maestros Shaolin">
+      
+      <!-- CONTENEDOR PRINCIPAL DEL ÁRBOL & CONTROLES -->
+      <div class="bg-surface-container-lowest p-6 sm:p-8 rounded-3xl border border-surface-container-high shadow-xs mb-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-6 border-b border-surface-container">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-50 border border-amber-200/80 text-ochre-deep text-xs font-semibold uppercase tracking-wider mb-2">
+              <span class="w-2 h-2 rounded-full bg-ochre-gold animate-pulse"></span>
+              <span>Linaje Ancestral • Templo Shaolin de Songshan</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold font-display text-on-surface tracking-tight">
+              Árbol Genealógico &amp; Transmisión Marcial
+            </h2>
+            <p class="mt-2 text-xs sm:text-sm text-secondary font-body max-w-2xl">
+              Pasa el cursor por cada maestro del árbol o de la línea temporal para activar su información, historia, rol doctrinal y linaje.
+            </p>
+          </div>
+
+          <!-- Contador Dinámico y Botones de Control -->
+          <div class="flex items-center gap-3 shrink-0">
+            <div class="px-4 py-2 rounded-xl bg-surface-container border border-surface-container-high text-xs font-bold text-on-surface flex items-center gap-2 shadow-xs">
+              <span class="w-2 h-2 rounded-full bg-primary"></span>
+              <span id="lineage-counter" class="font-mono text-primary font-bold">01 / 08</span>
+              <span class="text-stone-300">|</span>
+              <span id="lineage-name-label" class="text-secondary font-medium truncate max-w-[140px] sm:max-w-[200px]">Shi Suxi Zhang Lao</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <button type="button" id="lineage-prev-btn" class="p-2 sm:p-2.5 rounded-full bg-white border border-stone-200 text-stone-700 hover:text-primary hover:border-primary hover:bg-stone-50 transition-all shadow-xs flex items-center justify-center cursor-pointer" aria-label="Maestro anterior">
+                <span class="material-symbols-outlined text-lg">chevron_left</span>
+              </button>
+              <button type="button" id="lineage-next-btn" class="p-2 sm:p-2.5 rounded-full bg-white border border-stone-200 text-stone-700 hover:text-primary hover:border-primary hover:bg-stone-50 transition-all shadow-xs flex items-center justify-center cursor-pointer" aria-label="Siguiente maestro">
+                <span class="material-symbols-outlined text-lg">chevron_right</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 1. LÍNEA DE TIEMPO INTERACTIVA (TIMELINE NAVIGATOR) -->
+        <div class="pt-6">
+          <div class="text-[11px] uppercase tracking-wider font-bold text-stone-500 mb-3 flex items-center justify-between">
+            <span class="flex items-center gap-1.5">
+              <span class="material-symbols-outlined text-ochre-gold text-sm">timeline</span>
+              Línea de Tiempo Cronológica (Pasa el cursor por cada maestro):
+            </span>
+            <span class="text-ochre-deep font-semibold hidden md:inline">30ª Gen ➔ 31ª Gen ➔ 32ª Gen ➔ Instructores &amp; Sedes</span>
+          </div>
+
+          <div class="lineage-timeline-track flex items-center gap-2 sm:gap-3 py-2 px-1 overflow-x-auto no-scrollbar" role="tablist">
+            <!-- Step 01: Shi Suxi -->
+            <button type="button" class="tree-node-master active group shrink-0 p-2 sm:p-2.5 rounded-2xl bg-white border border-stone-200 hover:border-ochre-gold text-left flex items-center gap-2.5 transition-all shadow-xs cursor-pointer focus:outline-none" data-master-idx="0" role="tab" aria-selected="true" aria-controls="master-0">
+              <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl overflow-hidden bg-stone-100 border-2 border-stone-200 group-hover:border-ochre-gold transition-colors shrink-0 node-avatar-ring relative">
+                <img src="imagenes/m_Dai-Shifu-Suxi-12.jpg" alt="Venerable Dai Shifu Shì Sùxǐ Zhang Lao" class="w-full h-full object-cover">
+              </div>
+              <div class="flex flex-col pr-1">
+                <span class="text-[9px] font-bold uppercase tracking-wider text-ochre-deep leading-none mb-0.5">30ª Gen</span>
+                <span class="text-xs font-bold text-stone-900 group-hover:text-primary transition-colors whitespace-nowrap leading-tight">Shi Suxi</span>
+              </div>
+              <span class="w-1.5 h-1.5 rounded-full bg-primary ml-1 node-active-pill transition-all"></span>
+            </button>
+            <span class="text-stone-300 shrink-0 font-light select-none">→</span>
+            <!-- Step 02: Shi De Yang -->
+            <button type="button" class="tree-node-master  group shrink-0 p-2 sm:p-2.5 rounded-2xl bg-white border border-stone-200 hover:border-ochre-gold text-left flex items-center gap-2.5 transition-all shadow-xs cursor-pointer focus:outline-none" data-master-idx="1" role="tab" aria-selected="false" aria-controls="master-1">
+              <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl overflow-hidden bg-stone-100 border-2 border-stone-200 group-hover:border-ochre-gold transition-colors shrink-0 node-avatar-ring relative">
+                <img src="imagenes/m_Da-Shifu-De-Yang-3.jpg" alt="Da Shifu Shi De Yang" class="w-full h-full object-cover">
+              </div>
+              <div class="flex flex-col pr-1">
+                <span class="text-[9px] font-bold uppercase tracking-wider text-ochre-deep leading-none mb-0.5">31ª Gen</span>
+                <span class="text-xs font-bold text-stone-900 group-hover:text-primary transition-colors whitespace-nowrap leading-tight">Shi De Yang</span>
+              </div>
+              <span class="w-1.5 h-1.5 rounded-full bg-primary ml-1 node-active-pill transition-all"></span>
+            </button>
+            <span class="text-stone-300 shrink-0 font-light select-none">→</span>
+            <!-- Step 03: Daniel Vera -->
+            <button type="button" class="tree-node-master  group shrink-0 p-2 sm:p-2.5 rounded-2xl bg-white border border-stone-200 hover:border-ochre-gold text-left flex items-center gap-2.5 transition-all shadow-xs cursor-pointer focus:outline-none" data-master-idx="2" role="tab" aria-selected="false" aria-controls="master-2">
+              <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl overflow-hidden bg-stone-100 border-2 border-stone-200 group-hover:border-ochre-gold transition-colors shrink-0 node-avatar-ring relative">
+                <img src="imagenes/m_Daniel-Vera-Shi-Xing-Wu-9.jpg" alt="Shifu Shi Xing Wu (Daniel Vera)" class="w-full h-full object-cover">
+              </div>
+              <div class="flex flex-col pr-1">
+                <span class="text-[9px] font-bold uppercase tracking-wider text-ochre-deep leading-none mb-0.5">32ª Gen</span>
+                <span class="text-xs font-bold text-stone-900 group-hover:text-primary transition-colors whitespace-nowrap leading-tight">Daniel Vera</span>
+              </div>
+              <span class="w-1.5 h-1.5 rounded-full bg-primary ml-1 node-active-pill transition-all"></span>
+            </button>
+            <span class="text-stone-300 shrink-0 font-light select-none">→</span>
+            <!-- Step 04: Yamila Melillo -->
+            <button type="button" class="tree-node-master  group shrink-0 p-2 sm:p-2.5 rounded-2xl bg-white border border-stone-200 hover:border-ochre-gold text-left flex items-center gap-2.5 transition-all shadow-xs cursor-pointer focus:outline-none" data-master-idx="3" role="tab" aria-selected="false" aria-controls="master-3">
+              <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl overflow-hidden bg-stone-100 border-2 border-stone-200 group-hover:border-ochre-gold transition-colors shrink-0 node-avatar-ring relative">
+                <img src="imagenes/m_Shi-Xing-Gong-9.jpg" alt="Shifu Shi Xing Gong (Yamila Melillo)" class="w-full h-full object-cover">
+              </div>
+              <div class="flex flex-col pr-1">
+                <span class="text-[9px] font-bold uppercase tracking-wider text-ochre-deep leading-none mb-0.5">32ª Gen</span>
+                <span class="text-xs font-bold text-stone-900 group-hover:text-primary transition-colors whitespace-nowrap leading-tight">Yamila Melillo</span>
+              </div>
+              <span class="w-1.5 h-1.5 rounded-full bg-primary ml-1 node-active-pill transition-all"></span>
+            </button>
+            <span class="text-stone-300 shrink-0 font-light select-none">→</span>
+            <!-- Step 05: Miguel López -->
+            <button type="button" class="tree-node-master  group shrink-0 p-2 sm:p-2.5 rounded-2xl bg-white border border-stone-200 hover:border-ochre-gold text-left flex items-center gap-2.5 transition-all shadow-xs cursor-pointer focus:outline-none" data-master-idx="4" role="tab" aria-selected="false" aria-controls="master-4">
+              <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl overflow-hidden bg-stone-100 border-2 border-stone-200 group-hover:border-ochre-gold transition-colors shrink-0 node-avatar-ring relative">
+                <img src="imagenes/m_Jiao-Lian-Miguel-Lopez-3.jpg" alt="Jiao Lian Shi Hing Miguel López Márquez" class="w-full h-full object-cover">
+              </div>
+              <div class="flex flex-col pr-1">
+                <span class="text-[9px] font-bold uppercase tracking-wider text-ochre-deep leading-none mb-0.5">Akarma</span>
+                <span class="text-xs font-bold text-stone-900 group-hover:text-primary transition-colors whitespace-nowrap leading-tight">Miguel López</span>
+              </div>
+              <span class="w-1.5 h-1.5 rounded-full bg-primary ml-1 node-active-pill transition-all"></span>
+            </button>
+            <span class="text-stone-300 shrink-0 font-light select-none">→</span>
+            <!-- Step 06: Carlos Vighi -->
+            <button type="button" class="tree-node-master  group shrink-0 p-2 sm:p-2.5 rounded-2xl bg-white border border-stone-200 hover:border-ochre-gold text-left flex items-center gap-2.5 transition-all shadow-xs cursor-pointer focus:outline-none" data-master-idx="5" role="tab" aria-selected="false" aria-controls="master-5">
+              <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl overflow-hidden bg-stone-100 border-2 border-stone-200 group-hover:border-ochre-gold transition-colors shrink-0 node-avatar-ring relative">
+                <img src="imagenes/m_Jiao-Lian-Carlos-Vighi-8.jpg" alt="Jiao Lian Carlos Vighi" class="w-full h-full object-cover">
+              </div>
+              <div class="flex flex-col pr-1">
+                <span class="text-[9px] font-bold uppercase tracking-wider text-ochre-deep leading-none mb-0.5">Patio Sur</span>
+                <span class="text-xs font-bold text-stone-900 group-hover:text-primary transition-colors whitespace-nowrap leading-tight">Carlos Vighi</span>
+              </div>
+              <span class="w-1.5 h-1.5 rounded-full bg-primary ml-1 node-active-pill transition-all"></span>
+            </button>
+            <span class="text-stone-300 shrink-0 font-light select-none">→</span>
+            <!-- Step 07: Javier Cuberos -->
+            <button type="button" class="tree-node-master  group shrink-0 p-2 sm:p-2.5 rounded-2xl bg-white border border-stone-200 hover:border-ochre-gold text-left flex items-center gap-2.5 transition-all shadow-xs cursor-pointer focus:outline-none" data-master-idx="6" role="tab" aria-selected="false" aria-controls="master-6">
+              <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl overflow-hidden bg-stone-100 border-2 border-stone-200 group-hover:border-ochre-gold transition-colors shrink-0 node-avatar-ring relative">
+                <img src="imagenes/m_Jiao-Lian-Javier-Cuberos-2.jpg" alt="Jiao Lian Javier Cuberos" class="w-full h-full object-cover">
+              </div>
+              <div class="flex flex-col pr-1">
+                <span class="text-[9px] font-bold uppercase tracking-wider text-ochre-deep leading-none mb-0.5">Yang Tai</span>
+                <span class="text-xs font-bold text-stone-900 group-hover:text-primary transition-colors whitespace-nowrap leading-tight">Javier Cuberos</span>
+              </div>
+              <span class="w-1.5 h-1.5 rounded-full bg-primary ml-1 node-active-pill transition-all"></span>
+            </button>
+            <span class="text-stone-300 shrink-0 font-light select-none">→</span>
+            <!-- Step 08: Pablo Encinas -->
+            <button type="button" class="tree-node-master  group shrink-0 p-2 sm:p-2.5 rounded-2xl bg-white border border-stone-200 hover:border-ochre-gold text-left flex items-center gap-2.5 transition-all shadow-xs cursor-pointer focus:outline-none" data-master-idx="7" role="tab" aria-selected="false" aria-controls="master-7">
+              <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl overflow-hidden bg-stone-100 border-2 border-stone-200 group-hover:border-ochre-gold transition-colors shrink-0 node-avatar-ring relative">
+                <img src="imagenes/Pablo_Encinas.jpg" alt="Jiaolian Pablo Encinas" class="w-full h-full object-cover">
+              </div>
+              <div class="flex flex-col pr-1">
+                <span class="text-[9px] font-bold uppercase tracking-wider text-ochre-deep leading-none mb-0.5">Pechan</span>
+                <span class="text-xs font-bold text-stone-900 group-hover:text-primary transition-colors whitespace-nowrap leading-tight">Pablo Encinas</span>
+              </div>
+              <span class="w-1.5 h-1.5 rounded-full bg-primary ml-1 node-active-pill transition-all"></span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 2. ÁRBOL GENEALÓGICO VISUAL (RAMIFICACIÓN MARCIAL) -->
+        <div class="mt-8 pt-6 border-t border-surface-container">
+          <div class="text-[11px] uppercase tracking-wider font-bold text-stone-500 mb-6 flex items-center gap-2">
+            <span class="material-symbols-outlined text-ochre-gold text-base">account_tree</span>
+            <span>Estructura Visual del Árbol de Transmisión (Hover interactivo):</span>
+          </div>
+
+          <div class="flex flex-col items-center w-full">
+            <!-- NIVEL 1: 30ª Generación (Raíz de Songshan) -->
+            <div class="flex flex-col items-center">
+              <div class="text-[10px] font-bold uppercase tracking-widest text-ochre-deep bg-amber-50 border border-amber-200 px-3 py-0.5 rounded-full mb-2">30ª Generación • Monte Songshan</div>
+              <button type="button" class="tree-node-master active group p-3 sm:p-3.5 rounded-2xl bg-white border border-stone-200 hover:border-ochre-gold flex items-center gap-3 transition-all shadow-xs cursor-pointer text-left" data-master-idx="0">
+                <div class="w-12 h-12 rounded-xl overflow-hidden border-2 border-stone-200 group-hover:border-ochre-gold node-avatar-ring shrink-0">
+                  <img src="imagenes/m_Dai-Shifu-Suxi-12.jpg" alt="Shi Suxi" class="w-full h-full object-cover">
+                </div>
+                <div>
+                  <div class="text-xs font-bold text-stone-900 group-hover:text-primary transition-colors">Venerable Dai Shifu Shì Sùxǐ</div>
+                  <div class="text-[11px] font-mono text-stone-500">1924–2006 • Líder Espiritual</div>
+                </div>
+                <span class="w-2 h-2 rounded-full bg-primary node-active-pill"></span>
+              </button>
+            </div>
+
+            <!-- Conector hacia Nivel 2 -->
+            <div class="w-px h-8 bg-gradient-to-b from-ochre-gold to-primary my-1"></div>
+
+            <!-- NIVEL 2: 31ª Generación (Transmisión Monacal Directa) -->
+            <div class="flex flex-col items-center">
+              <div class="text-[10px] font-bold uppercase tracking-widest text-ochre-deep bg-amber-50 border border-amber-200 px-3 py-0.5 rounded-full mb-2">31ª Generación • Templo Shaolin</div>
+              <button type="button" class="tree-node-master group p-3 sm:p-3.5 rounded-2xl bg-white border border-stone-200 hover:border-ochre-gold flex items-center gap-3 transition-all shadow-xs cursor-pointer text-left" data-master-idx="1">
+                <div class="w-12 h-12 rounded-xl overflow-hidden border-2 border-stone-200 group-hover:border-ochre-gold node-avatar-ring shrink-0">
+                  <img src="imagenes/m_Da-Shifu-De-Yang-3.jpg" alt="Shi De Yang" class="w-full h-full object-cover">
+                </div>
+                <div>
+                  <div class="text-xs font-bold text-stone-900 group-hover:text-primary transition-colors">Da Shifu Shi De Yang</div>
+                  <div class="text-[11px] font-serif text-ochre-deep">释德扬 • Custodio del Linaje</div>
+                </div>
+                <span class="w-2 h-2 rounded-full bg-primary node-active-pill"></span>
+              </button>
+            </div>
+
+            <!-- Conector Ramificado hacia Nivel 3 (Shaolin Argentina) -->
+            <div class="w-full max-w-lg flex flex-col items-center my-1">
+              <div class="w-px h-6 bg-gradient-to-b from-primary to-ochre-gold"></div>
+              <div class="w-3/5 h-px bg-stone-300 relative">
+                <div class="absolute -top-1 left-0 w-2 h-2 rounded-full bg-primary"></div>
+                <div class="absolute -top-1 right-0 w-2 h-2 rounded-full bg-primary"></div>
+              </div>
+              <div class="w-full flex justify-around gap-4 pt-2">
+                <!-- Daniel Vera -->
+                <div class="flex flex-col items-center">
+                  <div class="text-[9px] font-bold uppercase tracking-widest text-primary mb-1">32ª Gen • Director</div>
+                  <button type="button" class="tree-node-master group p-2.5 sm:p-3 rounded-2xl bg-white border border-stone-200 hover:border-primary flex items-center gap-2.5 transition-all shadow-xs cursor-pointer text-left" data-master-idx="2">
+                    <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl overflow-hidden border-2 border-stone-200 group-hover:border-primary node-avatar-ring shrink-0">
+                      <img src="imagenes/m_Daniel-Vera-Shi-Xing-Wu-9.jpg" alt="Daniel Vera" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                      <div class="text-xs font-bold text-stone-900 group-hover:text-primary transition-colors">Shifu Daniel Vera</div>
+                      <div class="text-[10px] text-stone-500">Shi Xing Wu (释行午)</div>
+                    </div>
+                    <span class="w-2 h-2 rounded-full bg-primary node-active-pill"></span>
+                  </button>
+                </div>
+                <!-- Yamila Melillo -->
+                <div class="flex flex-col items-center">
+                  <div class="text-[9px] font-bold uppercase tracking-widest text-primary mb-1">32ª Gen • Codirectora</div>
+                  <button type="button" class="tree-node-master group p-2.5 sm:p-3 rounded-2xl bg-white border border-stone-200 hover:border-primary flex items-center gap-2.5 transition-all shadow-xs cursor-pointer text-left" data-master-idx="3">
+                    <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl overflow-hidden border-2 border-stone-200 group-hover:border-primary node-avatar-ring shrink-0">
+                      <img src="imagenes/m_Shi-Xing-Gong-9.jpg" alt="Yamila Melillo" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                      <div class="text-xs font-bold text-stone-900 group-hover:text-primary transition-colors">Shifu Yamila Melillo</div>
+                      <div class="text-[10px] text-stone-500">Shi Xing Gong (释行宮)</div>
+                    </div>
+                    <span class="w-2 h-2 rounded-full bg-primary node-active-pill"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Conector Ramificado hacia Nivel 4 (Instructores & Sedes) -->
+            <div class="w-full max-w-5xl flex flex-col items-center mt-3">
+              <div class="w-px h-6 bg-gradient-to-b from-primary to-ochre-gold"></div>
+              <div class="w-5/6 h-px bg-stone-300 relative">
+                <div class="absolute -top-1 left-0 w-2 h-2 rounded-full bg-ochre-gold"></div>
+                <div class="absolute -top-1 left-1/3 w-2 h-2 rounded-full bg-ochre-gold"></div>
+                <div class="absolute -top-1 left-2/3 w-2 h-2 rounded-full bg-ochre-gold"></div>
+                <div class="absolute -top-1 right-0 w-2.5 h-2.5 rounded-full bg-primary ring-2 ring-primary/30"></div>
+              </div>
+              <div class="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 pt-3">
+                <!-- Miguel López -->
+                <button type="button" class="tree-node-master group p-2.5 rounded-2xl bg-white border border-stone-200 hover:border-ochre-gold flex items-center gap-2.5 transition-all shadow-xs cursor-pointer text-left" data-master-idx="4">
+                  <div class="w-10 h-10 rounded-xl overflow-hidden border border-stone-200 group-hover:border-ochre-gold node-avatar-ring shrink-0">
+                    <img src="imagenes/m_Jiao-Lian-Miguel-Lopez-3.jpg" alt="Miguel López" class="w-full h-full object-cover">
+                  </div>
+                  <div class="min-w-0">
+                    <div class="text-[10px] font-bold text-ochre-deep uppercase">Sede Akarma</div>
+                    <div class="text-xs font-bold text-stone-900 group-hover:text-primary transition-colors truncate">Miguel López Márquez</div>
+                  </div>
+                  <span class="w-1.5 h-1.5 rounded-full bg-primary node-active-pill ml-auto"></span>
+                </button>
+
+                <!-- Carlos Vighi -->
+                <button type="button" class="tree-node-master group p-2.5 rounded-2xl bg-white border border-stone-200 hover:border-ochre-gold flex items-center gap-2.5 transition-all shadow-xs cursor-pointer text-left" data-master-idx="5">
+                  <div class="w-10 h-10 rounded-xl overflow-hidden border border-stone-200 group-hover:border-ochre-gold node-avatar-ring shrink-0">
+                    <img src="imagenes/m_Jiao-Lian-Carlos-Vighi-8.jpg" alt="Carlos Vighi" class="w-full h-full object-cover">
+                  </div>
+                  <div class="min-w-0">
+                    <div class="text-[10px] font-bold text-ochre-deep uppercase">Sede Patio Sur</div>
+                    <div class="text-xs font-bold text-stone-900 group-hover:text-primary transition-colors truncate">Carlos Vighi</div>
+                  </div>
+                  <span class="w-1.5 h-1.5 rounded-full bg-primary node-active-pill ml-auto"></span>
+                </button>
+
+                <!-- Javier Cuberos -->
+                <button type="button" class="tree-node-master group p-2.5 rounded-2xl bg-white border border-stone-200 hover:border-ochre-gold flex items-center gap-2.5 transition-all shadow-xs cursor-pointer text-left" data-master-idx="6">
+                  <div class="w-10 h-10 rounded-xl overflow-hidden border border-stone-200 group-hover:border-ochre-gold node-avatar-ring shrink-0">
+                    <img src="imagenes/m_Jiao-Lian-Javier-Cuberos-2.jpg" alt="Javier Cuberos" class="w-full h-full object-cover">
+                  </div>
+                  <div class="min-w-0">
+                    <div class="text-[10px] font-bold text-ochre-deep uppercase">Sede Yang Tai</div>
+                    <div class="text-xs font-bold text-stone-900 group-hover:text-primary transition-colors truncate">Javier Cuberos</div>
+                  </div>
+                  <span class="w-1.5 h-1.5 rounded-full bg-primary node-active-pill ml-auto"></span>
+                </button>
+
+                <!-- Pablo Encinas (Sede Pechan) -->
+                <button type="button" class="tree-node-master group p-2.5 rounded-2xl bg-amber-50/50 border-2 border-primary/40 hover:border-primary flex items-center gap-2.5 transition-all shadow-xs cursor-pointer text-left" data-master-idx="7">
+                  <div class="w-10 h-10 rounded-xl overflow-hidden border-2 border-primary/50 group-hover:border-primary node-avatar-ring shrink-0">
+                    <img src="imagenes/Pablo_Encinas.jpg" alt="Pablo Encinas" class="w-full h-full object-cover">
+                  </div>
+                  <div class="min-w-0">
+                    <div class="text-[10px] font-bold text-primary uppercase flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Sede Pechan</div>
+                    <div class="text-xs font-bold text-stone-900 group-hover:text-primary transition-colors truncate">Jiaolian Pablo Encinas</div>
+                  </div>
+                  <span class="w-2 h-2 rounded-full bg-primary node-active-pill ml-auto"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. PANEL DINÁMICO DE DETALLE DEL MAESTRO (ACTIVO AL PASAR EL RATÓN O CLIC) -->
+      <div id="master-profile-showcase" class="relative">
+        <!-- Ficha 01: Venerable Dai Shifu Shì Sùxǐ Zhang Lao -->
+        <article id="master-0" class="master-profile-panel active p-6 sm:p-10 rounded-3xl bg-white border border-stone-200 shadow-md transition-all duration-300" data-panel-idx="0">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-5 flex flex-col items-center text-center">
+              <div class="relative w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 rounded-3xl overflow-hidden bg-stone-100 border-2 border-stone-200/90 shadow-md ring-4 ring-amber-500/10">
+                <img src="imagenes/m_Dai-Shifu-Suxi-12.jpg" alt="Venerable Dai Shifu Shì Sùxǐ Zhang Lao" class="w-full h-full object-cover">
+                <div class="absolute bottom-2 right-2 px-2.5 py-1 rounded-lg bg-stone-950/80 backdrop-blur-xs text-ochre-gold font-serif text-sm border border-ochre-gold/30">释素喜长老</div>
+              </div>
+              <div class="mt-4 flex flex-wrap items-center justify-center gap-2">
+                <span class="px-3 py-1 rounded-full bg-amber-100 text-ochre-deep border-amber-300 text-xs font-bold uppercase tracking-wider">30° Generación de Monjes Shaolin</span>
+              </div>
+            </div>
+            <div class="lg:col-span-7 space-y-4">
+              <div>
+                <div class="text-xs font-semibold uppercase tracking-wider text-ochre-deep mb-1">Raíz Ancestral • Abad Espiritual de Songshan</div>
+                <h3 class="text-2xl sm:text-3xl font-extrabold font-display text-stone-900 tracking-tight">
+                  Venerable Dai Shifu Shì Sùxǐ Zhang Lao
+                  <span class="text-sm font-normal text-stone-500 block sm:inline mt-0.5 sm:mt-0 font-sans">(1924–2006)</span>
+                </h3>
+              </div>
+              <p class="text-stone-700 leading-relaxed text-sm sm:text-base font-body">Perteneciente a la 30° generación de monjes Shaolin. Fue líder espiritual del Templo y contribuyó a preservar la verdadera esencia de la cultura tradicional de Shaolin en el nuevo milenio, ya que fue uno de los últimos monjes en recibir enseñanzas directas de los maestros del siglo XIX. Enseñó a la mayoría de los monjes de la generación «De» y «Xing» del Templo Shaolin.</p>
+              <div class="bg-stone-50/90 border border-stone-200/80 rounded-2xl p-4 sm:p-5 space-y-2 text-stone-700 text-xs sm:text-sm">
+                <div class="flex items-start gap-2.5">
+                  <span class="material-symbols-outlined text-ochre-deep text-base shrink-0 mt-0.5">stars</span>
+                  <span>Líder espiritual y abad del Templo Shaolin del Monte Songshan.</span>
+                </div>
+                <div class="flex items-start gap-2.5">
+                  <span class="material-symbols-outlined text-ochre-deep text-base shrink-0 mt-0.5">check_circle</span>
+                  <span>Formador directo de los monjes de la generación «De» y «Xing».</span>
+                </div>
+                <div class="flex items-start gap-2.5">
+                  <span class="material-symbols-outlined text-ochre-deep text-base shrink-0 mt-0.5">check_circle</span>
+                  <span>Custodio histórico que salvaguardó las artes tradicionales durante el siglo XX.</span>
+                </div>
+              </div>
+              <div class="pt-2 flex items-center gap-2 text-xs text-stone-500 font-medium border-t border-stone-100">
+                <span class="material-symbols-outlined text-ochre-gold text-base shrink-0">lan</span>
+                <span class="text-stone-700 font-semibold">Monte Songshan (Dengfeng, Henan) ➔ 30ª Generación Canónica</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- Ficha 02: Da Shifu Shi De Yang -->
+        <article id="master-1" class="master-profile-panel  p-6 sm:p-10 rounded-3xl bg-white border border-stone-200 shadow-md transition-all duration-300" data-panel-idx="1">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-5 flex flex-col items-center text-center">
+              <div class="relative w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 rounded-3xl overflow-hidden bg-stone-100 border-2 border-stone-200/90 shadow-md ring-4 ring-amber-500/10">
+                <img src="imagenes/m_Da-Shifu-De-Yang-3.jpg" alt="Da Shifu Shi De Yang" class="w-full h-full object-cover">
+                <div class="absolute bottom-2 right-2 px-2.5 py-1 rounded-lg bg-stone-950/80 backdrop-blur-xs text-ochre-gold font-serif text-sm border border-ochre-gold/30">释德扬</div>
+              </div>
+              <div class="mt-4 flex flex-wrap items-center justify-center gap-2">
+                <span class="px-3 py-1 rounded-full bg-amber-100 text-ochre-deep border-amber-300 text-xs font-bold uppercase tracking-wider">31° Generación de Monjes Shaolin</span>
+              </div>
+            </div>
+            <div class="lg:col-span-7 space-y-4">
+              <div>
+                <div class="text-xs font-semibold uppercase tracking-wider text-ochre-deep mb-1">Transmisión Monacal • Discípulo de Shi Suxi</div>
+                <h3 class="text-2xl sm:text-3xl font-extrabold font-display text-stone-900 tracking-tight">
+                  Da Shifu Shi De Yang
+                  <span class="text-sm font-normal text-stone-500 block sm:inline mt-0.5 sm:mt-0 font-sans">(Monje de Songshan)</span>
+                </h3>
+              </div>
+              <p class="text-stone-700 leading-relaxed text-sm sm:text-base font-body">Discípulo directo del venerable Gran Maestro Shi Suxi. Perteneciente a la 31° generación de monjes Shaolin. Mantiene su residencia en el Templo y viaja por el mundo transmitiendo la tradición de la Cultura Shaolin. Es considerado el más grande representante de los tesoros de la Cultura Shaolin en la actualidad: Budismo Chan, Shaolin Kung Fu, Shaolin Qi Gong, y el arte de la caligrafía.</p>
+              <div class="bg-stone-50/90 border border-stone-200/80 rounded-2xl p-4 sm:p-5 space-y-2 text-stone-700 text-xs sm:text-sm">
+                <div class="flex items-start gap-2.5">
+                  <span class="material-symbols-outlined text-ochre-deep text-base shrink-0 mt-0.5">stars</span>
+                  <span>Discípulo formal directo del Gran Maestro Shi Suxi Zhang Lao.</span>
+                </div>
+                <div class="flex items-start gap-2.5">
+                  <span class="material-symbols-outlined text-ochre-deep text-base shrink-0 mt-0.5">check_circle</span>
+                  <span>Máximo guardián y divulgador canónico de la triple joya: Chan, Wu y Yi.</span>
+                </div>
+                <div class="flex items-start gap-2.5">
+                  <span class="material-symbols-outlined text-ochre-deep text-base shrink-0 mt-0.5">check_circle</span>
+                  <span>Transmisor oficial del linaje monacal hacia Sudamérica y Argentina.</span>
+                </div>
+              </div>
+              <div class="pt-2 flex items-center gap-2 text-xs text-stone-500 font-medium border-t border-stone-100">
+                <span class="material-symbols-outlined text-ochre-gold text-base shrink-0">lan</span>
+                <span class="text-stone-700 font-semibold">Shi Suxi (30ª Gen) ➔ Shi De Yang (31ª Generación)</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- Ficha 03: Shifu Shi Xing Wu (Daniel Vera) -->
+        <article id="master-2" class="master-profile-panel  p-6 sm:p-10 rounded-3xl bg-white border border-stone-200 shadow-md transition-all duration-300" data-panel-idx="2">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-5 flex flex-col items-center text-center">
+              <div class="relative w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 rounded-3xl overflow-hidden bg-stone-100 border-2 border-stone-200/90 shadow-md ring-4 ring-amber-500/10">
+                <img src="imagenes/m_Daniel-Vera-Shi-Xing-Wu-9.jpg" alt="Shifu Shi Xing Wu (Daniel Vera)" class="w-full h-full object-cover">
+                <div class="absolute bottom-2 right-2 px-2.5 py-1 rounded-lg bg-stone-950/80 backdrop-blur-xs text-ochre-gold font-serif text-sm border border-ochre-gold/30">释行午</div>
+              </div>
+              <div class="mt-4 flex flex-wrap items-center justify-center gap-2">
+                <span class="px-3 py-1 rounded-full bg-primary/10 text-primary border-primary/30 text-xs font-bold uppercase tracking-wider">32º Generación de Shaolin • Director General</span>
+              </div>
+            </div>
+            <div class="lg:col-span-7 space-y-4">
+              <div>
+                <div class="text-xs font-semibold uppercase tracking-wider text-ochre-deep mb-1">Dirección Shaolin Argentina • Discípulo de Shi De Yang</div>
+                <h3 class="text-2xl sm:text-3xl font-extrabold font-display text-stone-900 tracking-tight">
+                  Shifu Shi Xing Wu (Daniel Vera)
+                  <span class="text-sm font-normal text-stone-500 block sm:inline mt-0.5 sm:mt-0 font-sans">(Director General)</span>
+                </h3>
+              </div>
+              <p class="text-stone-700 leading-relaxed text-sm sm:text-base font-body">Discípulo formal del Gran Maestro Shi De Yang y perteneciente a la 32º generación de Shaolin. Director fundador de la Escuela Shaolin Quan Fa Guan Argentina y pionero en la divulgación de las artes tradicionales de Songshan en Sudamérica.</p>
+              <div class="bg-stone-50/90 border border-stone-200/80 rounded-2xl p-4 sm:p-5 space-y-2 text-stone-700 text-xs sm:text-sm">
+                <div class="flex items-start gap-2.5">
+                  <span class="material-symbols-outlined text-ochre-deep text-base shrink-0 mt-0.5">stars</span>
+                  <span>Discípulo formal del Gran Maestro Shi De Yang (32º generación).</span>
+                </div>
+                <div class="flex items-start gap-2.5">
+                  <span class="material-symbols-outlined text-ochre-deep text-base shrink-0 mt-0.5">check_circle</span>
+                  <span>Director General de la Escuela Shaolin Quan Fa Guan Argentina.</span>
+                </div>
+                <div class="flex items-start gap-2.5">
+                  <span class="material-symbols-outlined text-ochre-deep text-base shrink-0 mt-0.5">check_circle</span>
+                  <span>Maestro de Kung Fu (5° duan), Tai Chi y Yoga.</span>
+                </div>
+                <div class="flex items-start gap-2.5">
+                  <span class="material-symbols-outlined text-ochre-deep text-base shrink-0 mt-0.5">check_circle</span>
+                  <span>Presidente de la Asociación Internacional SHAOLIN CHAN en Sudamérica (www.shaolinchan.org).</span>
+                </div>
+                <div class="flex items-start gap-2.5">
+                  <span class="material-symbols-outlined text-ochre-deep text-base shrink-0 mt-0.5">check_circle</span>
+                  <span>Presidente de la Federación Argentina de Shaolin Chan y Wushu.</span>
+                </div>
+              </div>
+              <div class="pt-2 flex items-center gap-2 text-xs text-stone-500 font-medium border-t border-stone-100">
+                <span class="material-symbols-outlined text-ochre-gold text-base shrink-0">lan</span>
+                <span class="text-stone-700 font-semibold">Shi De Yang (31ª Gen) ➔ Daniel Vera (32ª Generación)</span>
+              </div>
+              <div class="pt-3 flex flex-wrap items-center gap-3">
+                <a href="https://www.shaolin.ar" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl bg-primary text-white text-xs font-bold uppercase tracking-wider hover:bg-primary-container shadow-xs transition-all">
+                  <span>Visitar Escuela Matriz (shaolin.ar)</span>
+                  <span class="material-symbols-outlined text-sm">open_in_new</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- Ficha 04: Shifu Shi Xing Gong (Yamila Melillo) -->
+        <article id="master-3" class="master-profile-panel  p-6 sm:p-10 rounded-3xl bg-white border border-stone-200 shadow-md transition-all duration-300" data-panel-idx="3">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-5 flex flex-col items-center text-center">
+              <div class="relative w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 rounded-3xl overflow-hidden bg-stone-100 border-2 border-stone-200/90 shadow-md ring-4 ring-amber-500/10">
+                <img src="imagenes/m_Shi-Xing-Gong-9.jpg" alt="Shifu Shi Xing Gong (Yamila Melillo)" class="w-full h-full object-cover">
+                <div class="absolute bottom-2 right-2 px-2.5 py-1 rounded-lg bg-stone-950/80 backdrop-blur-xs text-ochre-gold font-serif text-sm border border-ochre-gold/30">释行宮</div>
+              </div>
+              <div class="mt-4 flex flex-wrap items-center justify-center gap-2">
+                <span class="px-3 py-1 rounded-full bg-primary/10 text-primary border-primary/30 text-xs font-bold uppercase tracking-wider">32º Generación de Shaolin • Codirectora</span>
+              </div>
+            </div>
+            <div class="lg:col-span-7 space-y-4">
+              <div>
+                <div class="text-xs font-semibold uppercase tracking-wider text-ochre-deep mb-1">Dirección Shaolin Argentina • Discípula de Shi De Yang</div>
+                <h3 class="text-2xl sm:text-3xl font-extrabold font-display text-stone-900 tracking-tight">
+                  Shifu Shi Xing Gong (Yamila Melillo)
+                  <span class="text-sm font-normal text-stone-500 block sm:inline mt-0.5 sm:mt-0 font-sans">(Codirectora General)</span>
+                </h3>
+              </div>
+              <p class="text-stone-700 leading-relaxed text-sm sm:text-base font-body">Discípula formal del Gran Maestro Shi De Yang y perteneciente a la 32º generación de Shaolin. Codirectora de la escuela matriz, líder pedagógica del programa de Kung Fu Infantil y Maestra de Reiki Usui Ryoho.</p>
+              <div class="bg-stone-50/90 border border-stone-200/80 rounded-2xl p-4 sm:p-5 space-y-2 text-stone-700 text-xs sm:text-sm">
+                <div class="flex items-start gap-2.5">
+                  <span class="material-symbols-outlined text-ochre-deep text-base shrink-0 mt-0.5">check_circle</span>
+                  <span>Discípula formal del Gran Maestro Shi De Yang (32º generación).</span>
+                </div>
+                <div class="flex items-start gap-2.5">
+                  <span class="material-symbols-outlined text-ochre-deep text-base shrink-0 mt-0.5">check_circle</span>
+                  <span>Codirectora de la Escuela Shaolin Quan Fa Guan Argentina.</span>
+                </div>
+                <div class="flex items-start gap-2.5">
+                  <span class="material-symbols-outlined text-ochre-deep text-base shrink-0 mt-0.5">check_circle</span>
+                  <span>Instructora y directora pedagógica en la Escuela de Kung Fu Chicos.</span>
+                </div>
+                <div class="flex items-start gap-2.5">
+                  <span class="material-symbols-outlined text-ochre-deep text-base shrink-0 mt-0.5">check_circle</span>
+                  <span>Instructora de Kung Fu (5° duan), Yoga y Maestra ReiKi (7° generación Usui).</span>
+                </div>
+                <div class="flex items-start gap-2.5">
+                  <span class="material-symbols-outlined text-ochre-deep text-base shrink-0 mt-0.5">check_circle</span>
+                  <span>Secretaria General de la Asociación Internacional SHAOLIN CHAN en Sudamérica.</span>
+                </div>
+              </div>
+              <div class="pt-2 flex items-center gap-2 text-xs text-stone-500 font-medium border-t border-stone-100">
+                <span class="material-symbols-outlined text-ochre-gold text-base shrink-0">lan</span>
+                <span class="text-stone-700 font-semibold">Shi De Yang (31ª Gen) ➔ Yamila Melillo (32ª Generación)</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- Ficha 05: Jiao Lian Shi Hing Miguel López Márquez -->
+        <article id="master-4" class="master-profile-panel  p-6 sm:p-10 rounded-3xl bg-white border border-stone-200 shadow-md transition-all duration-300" data-panel-idx="4">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-5 flex flex-col items-center text-center">
+              <div class="relative w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 rounded-3xl overflow-hidden bg-stone-100 border-2 border-stone-200/90 shadow-md ring-4 ring-amber-500/10">
+                <img src="imagenes/m_Jiao-Lian-Miguel-Lopez-3.jpg" alt="Jiao Lian Shi Hing Miguel López Márquez" class="w-full h-full object-cover">
+                <div class="absolute bottom-2 right-2 px-2.5 py-1 rounded-lg bg-stone-950/80 backdrop-blur-xs text-ochre-gold font-serif text-sm border border-ochre-gold/30">3° Duan Dengfeng</div>
+              </div>
+              <div class="mt-4 flex flex-wrap items-center justify-center gap-2">
+                <span class="px-3 py-1 rounded-full bg-amber-100 text-ochre-deep border-amber-300 text-xs font-bold uppercase tracking-wider">Discípulo Instructor (Jiao Lian) • 3° Duan</span>
+              </div>
+            </div>
+            <div class="lg:col-span-7 space-y-4">
+              <div>
+                <div class="text-xs font-semibold uppercase tracking-wider text-ochre-deep mb-1">Rama Instructores • Sede Akarma (Caballito)</div>
+                <h3 class="text-2xl sm:text-3xl font-extrabold font-display text-stone-900 tracking-tight">
+                  Jiao Lian Shi Hing Miguel López Márquez
+                  <span class="text-sm font-normal text-stone-500 block sm:inline mt-0.5 sm:mt-0 font-sans">(Director Sede Akarma)</span>
+                </h3>
+              </div>
+              <p class="text-stone-700 leading-relaxed text-sm sm:text-base font-body">Graduado como Laoshi en 2008 y como Faja Negra (Jiao Lian) en 2010. Director de Akarma, sede oficial de la Escuela Shaolin Argentina en el barrio de Caballito.</p>
+              <div class="bg-stone-50/90 border border-stone-200/80 rounded-2xl p-4 sm:p-5 space-y-2 text-stone-700 text-xs sm:text-sm">
+                <div class="flex items-start gap-2.5">
+                  <span class="material-symbols-outlined text-ochre-deep text-base shrink-0 mt-0.5">check_circle</span>
+                  <span>Graduado a Laoshi en 2008 y a Faja Negra (Jiao Lian) en 2010.</span>
+                </div>
+                <div class="flex items-start gap-2.5">
+                  <span class="material-symbols-outlined text-ochre-deep text-base shrink-0 mt-0.5">check_circle</span>
+                  <span>Certificado en China como 3°Duan por Dengfeng Shaolin Wushu Association of China.</span>
+                </div>
+                <div class="flex items-start gap-2.5">
+                  <span class="material-symbols-outlined text-ochre-deep text-base shrink-0 mt-0.5">check_circle</span>
+                  <span>Director de Akarma, sede de la Escuela Shaolin Argentina en Caballito.</span>
+                </div>
+              </div>
+              <div class="pt-2 flex items-center gap-2 text-xs text-stone-500 font-medium border-t border-stone-100">
+                <span class="material-symbols-outlined text-ochre-gold text-base shrink-0">lan</span>
+                <span class="text-stone-700 font-semibold">Daniel Vera (32ª Gen) ➔ Miguel López (Akarma)</span>
+              </div>
+              <div class="pt-3 flex flex-wrap items-center gap-3">
+                <a href="https://www.akarma.com.ar" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl bg-primary text-white text-xs font-bold uppercase tracking-wider hover:bg-primary-container shadow-xs transition-all">
+                  <span>Sede Akarma (akarma.com.ar)</span>
+                  <span class="material-symbols-outlined text-sm">open_in_new</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- Ficha 06: Jiao Lian Carlos Vighi -->
+        <article id="master-5" class="master-profile-panel  p-6 sm:p-10 rounded-3xl bg-white border border-stone-200 shadow-md transition-all duration-300" data-panel-idx="5">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-5 flex flex-col items-center text-center">
+              <div class="relative w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 rounded-3xl overflow-hidden bg-stone-100 border-2 border-stone-200/90 shadow-md ring-4 ring-amber-500/10">
+                <img src="imagenes/m_Jiao-Lian-Carlos-Vighi-8.jpg" alt="Jiao Lian Carlos Vighi" class="w-full h-full object-cover">
+                <div class="absolute bottom-2 right-2 px-2.5 py-1 rounded-lg bg-stone-950/80 backdrop-blur-xs text-ochre-gold font-serif text-sm border border-ochre-gold/30">2° Duan Dengfeng</div>
+              </div>
+              <div class="mt-4 flex flex-wrap items-center justify-center gap-2">
+                <span class="px-3 py-1 rounded-full bg-amber-100 text-ochre-deep border-amber-300 text-xs font-bold uppercase tracking-wider">Discípulo Instructor (Jiao Lian) • 2° Duan</span>
+              </div>
+            </div>
+            <div class="lg:col-span-7 space-y-4">
+              <div>
+                <div class="text-xs font-semibold uppercase tracking-wider text-ochre-deep mb-1">Rama Instructores • Sede Patio Sur (Valentín Alsina)</div>
+                <h3 class="text-2xl sm:text-3xl font-extrabold font-display text-stone-900 tracking-tight">
+                  Jiao Lian Carlos Vighi
+                  <span class="text-sm font-normal text-stone-500 block sm:inline mt-0.5 sm:mt-0 font-sans">(Director Sede Patio Sur)</span>
+                </h3>
+              </div>
+              <p class="text-stone-700 leading-relaxed text-sm sm:text-base font-body">Graduado a Laoshi en 2012 y a Faja Negra en 2014. Director de Patio Sur, sede oficial de la Escuela Shaolin Argentina en Valentín Alsina.</p>
+              <div class="bg-stone-50/90 border border-stone-200/80 rounded-2xl p-4 sm:p-5 space-y-2 text-stone-700 text-xs sm:text-sm">
+                <div class="flex items-start gap-2.5">
+                  <span class="material-symbols-outlined text-ochre-deep text-base shrink-0 mt-0.5">check_circle</span>
+                  <span>Graduado a Laoshi en 2012 y a Faja Negra en 2014.</span>
+                </div>
+                <div class="flex items-start gap-2.5">
+                  <span class="material-symbols-outlined text-ochre-deep text-base shrink-0 mt-0.5">check_circle</span>
+                  <span>Certificado en China como 2°Duan por Dengfeng Shaolin Wushu Association of China.</span>
+                </div>
+                <div class="flex items-start gap-2.5">
+                  <span class="material-symbols-outlined text-ochre-deep text-base shrink-0 mt-0.5">check_circle</span>
+                  <span>Director de Patio Sur, sede oficial de la Escuela Shaolin Argentina en Valentín Alsina.</span>
+                </div>
+              </div>
+              <div class="pt-2 flex items-center gap-2 text-xs text-stone-500 font-medium border-t border-stone-100">
+                <span class="material-symbols-outlined text-ochre-gold text-base shrink-0">lan</span>
+                <span class="text-stone-700 font-semibold">Daniel Vera (32ª Gen) ➔ Carlos Vighi (Patio Sur)</span>
+              </div>
+              <div class="pt-3 flex flex-wrap items-center gap-3">
+                <a href="https://www.patiosur.com.ar/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl bg-primary text-white text-xs font-bold uppercase tracking-wider hover:bg-primary-container shadow-xs transition-all">
+                  <span>Sede Patio Sur (patiosur.com.ar)</span>
+                  <span class="material-symbols-outlined text-sm">open_in_new</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- Ficha 07: Jiao Lian Javier Cuberos -->
+        <article id="master-6" class="master-profile-panel  p-6 sm:p-10 rounded-3xl bg-white border border-stone-200 shadow-md transition-all duration-300" data-panel-idx="6">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-5 flex flex-col items-center text-center">
+              <div class="relative w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 rounded-3xl overflow-hidden bg-stone-100 border-2 border-stone-200/90 shadow-md ring-4 ring-amber-500/10">
+                <img src="imagenes/m_Jiao-Lian-Javier-Cuberos-2.jpg" alt="Jiao Lian Javier Cuberos" class="w-full h-full object-cover">
+                <div class="absolute bottom-2 right-2 px-2.5 py-1 rounded-lg bg-stone-950/80 backdrop-blur-xs text-ochre-gold font-serif text-sm border border-ochre-gold/30">2° Duan Dengfeng</div>
+              </div>
+              <div class="mt-4 flex flex-wrap items-center justify-center gap-2">
+                <span class="px-3 py-1 rounded-full bg-amber-100 text-ochre-deep border-amber-300 text-xs font-bold uppercase tracking-wider">Discípulo Instructor (Jiao Lian) • 2° Duan</span>
+              </div>
+            </div>
+            <div class="lg:col-span-7 space-y-4">
+              <div>
+                <div class="text-xs font-semibold uppercase tracking-wider text-ochre-deep mb-1">Rama Instructores • Sede Yang Tai (CABA)</div>
+                <h3 class="text-2xl sm:text-3xl font-extrabold font-display text-stone-900 tracking-tight">
+                  Jiao Lian Javier Cuberos
+                  <span class="text-sm font-normal text-stone-500 block sm:inline mt-0.5 sm:mt-0 font-sans">(Director Sede Yang Tai)</span>
+                </h3>
+              </div>
+              <p class="text-stone-700 leading-relaxed text-sm sm:text-base font-body">Graduado a Laoshi en 2012 y a Faja Negra en 2014. Director de Yang Tai, sede de la Escuela Shaolin Argentina, y profesor titular del taller de Caligrafía China.</p>
+              <div class="bg-stone-50/90 border border-stone-200/80 rounded-2xl p-4 sm:p-5 space-y-2 text-stone-700 text-xs sm:text-sm">
+                <div class="flex items-start gap-2.5">
+                  <span class="material-symbols-outlined text-ochre-deep text-base shrink-0 mt-0.5">check_circle</span>
+                  <span>Graduado a Laoshi en 2012 y a Faja Negra en 2014.</span>
+                </div>
+                <div class="flex items-start gap-2.5">
+                  <span class="material-symbols-outlined text-ochre-deep text-base shrink-0 mt-0.5">check_circle</span>
+                  <span>Certificado en China como 2°Duan por Dengfeng Shaolin Wushu Association of China.</span>
+                </div>
+                <div class="flex items-start gap-2.5">
+                  <span class="material-symbols-outlined text-ochre-deep text-base shrink-0 mt-0.5">check_circle</span>
+                  <span>Director de Espacio Yang Tai y docente de Caligrafía Tradicional China.</span>
+                </div>
+              </div>
+              <div class="pt-2 flex items-center gap-2 text-xs text-stone-500 font-medium border-t border-stone-100">
+                <span class="material-symbols-outlined text-ochre-gold text-base shrink-0">lan</span>
+                <span class="text-stone-700 font-semibold">Daniel Vera (32ª Gen) ➔ Javier Cuberos (Yang Tai)</span>
+              </div>
+              <div class="pt-3 flex flex-wrap items-center gap-3">
+                <a href="https://espacioyangtai.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl bg-primary text-white text-xs font-bold uppercase tracking-wider hover:bg-primary-container shadow-xs transition-all">
+                  <span>Sede Yang Tai (espacioyangtai.com)</span>
+                  <span class="material-symbols-outlined text-sm">open_in_new</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+        <!-- Ficha 08: Jiaolian Pablo Encinas -->
+        <article id="master-7" class="master-profile-panel  p-6 sm:p-10 rounded-3xl bg-gradient-to-br from-amber-50/60 via-white to-amber-50/30 border-2 border-primary/40 shadow-lg ring-1 ring-primary/20 transition-all duration-300" data-panel-idx="7">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-5 flex flex-col items-center text-center">
+              <div class="relative w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 rounded-3xl overflow-hidden bg-stone-100 border-2 border-stone-200/90 shadow-md ring-4 ring-amber-500/10">
+                <img src="imagenes/Pablo_Encinas.jpg" alt="Jiaolian Pablo Encinas" class="w-full h-full object-cover">
+                <div class="absolute bottom-2 right-2 px-2.5 py-1 rounded-lg bg-stone-950/80 backdrop-blur-xs text-ochre-gold font-serif text-sm border border-ochre-gold/30">少林百禅</div>
+              </div>
+              <div class="mt-4 flex flex-wrap items-center justify-center gap-2">
+                <span class="px-3 py-1 rounded-full bg-primary text-white border-primary text-xs font-bold uppercase tracking-wider">Instructor Sede Pechan • Terapeuta MTC</span>
+              </div>
+            </div>
+            <div class="lg:col-span-7 space-y-4">
+              <div>
+                <div class="text-xs font-semibold uppercase tracking-wider text-ochre-deep mb-1">Rama Instructores • Sede Pechan (Parque Los Andes, Chacarita)</div>
+                <h3 class="text-2xl sm:text-3xl font-extrabold font-display text-stone-900 tracking-tight">
+                  Jiaolian Pablo Encinas
+                  <span class="text-sm font-normal text-stone-500 block sm:inline mt-0.5 sm:mt-0 font-sans">(Instructor Sede Pechan • Cinturón Negro 2026)</span>
+                </h3>
+              </div>
+              <p class="text-stone-700 leading-relaxed text-sm sm:text-base font-body">Discípulo del Maestro Daniel Vera (Shi Xing Wu). Instructor a cargo de la Sede Pechan, impartiendo Shaolin Kung Fu y Chen Taijiquan tradicional en el Mástil del Parque Los Andes (Chacarita). Formado formalmente como Terapeuta en Medicina Tradicional China (MTC) articulando biomecánica marcial y preservación de la salud.</p>
+              <div class="bg-stone-50/90 border border-stone-200/80 rounded-2xl p-4 sm:p-5 space-y-2 text-stone-700 text-xs sm:text-sm">
+                <div class="flex items-start gap-2.5">
+                  <span class="material-symbols-outlined text-primary text-base shrink-0 mt-0.5">stars</span>
+                  <span>Discípulo del Maestro Daniel Vera (Shi Xing Wu, 32ª generación).</span>
+                </div>
+                <div class="flex items-start gap-2.5">
+                  <span class="material-symbols-outlined text-primary text-base shrink-0 mt-0.5">check_circle</span>
+                  <span>Instructor de Shaolin Kung Fu y Chen Taijiquan tradicional.</span>
+                </div>
+                <div class="flex items-start gap-2.5">
+                  <span class="material-symbols-outlined text-primary text-base shrink-0 mt-0.5">check_circle</span>
+                  <span>Terapeuta formal de Medicina Tradicional China: Acupuntura, moxibustión, ventosas y fitoterapia.</span>
+                </div>
+                <div class="flex items-start gap-2.5">
+                  <span class="material-symbols-outlined text-primary text-base shrink-0 mt-0.5">check_circle</span>
+                  <span>Recibe su graduación y cinturón negro en el año 2026.</span>
+                </div>
+                <div class="flex items-start gap-2.5">
+                  <span class="material-symbols-outlined text-primary text-base shrink-0 mt-0.5">check_circle</span>
+                  <span>Instructor a cargo de Pechan, sede barrial oficial en Chacarita (entrenamientos al aire libre en Parque Los Andes).</span>
+                </div>
+              </div>
+              <div class="pt-2 flex items-center gap-2 text-xs text-stone-500 font-medium border-t border-stone-100">
+                <span class="material-symbols-outlined text-ochre-gold text-base shrink-0">lan</span>
+                <span class="text-stone-700 font-semibold">Shi Suxi (30ª) ➔ Shi De Yang (31ª) ➔ Daniel Vera (32ª) ➔ Pablo Encinas (Pechan)</span>
+              </div>
+              <div class="pt-3 flex flex-wrap items-center gap-3">
+                <a href="clases.html"  class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl bg-primary text-white text-xs font-bold uppercase tracking-wider hover:bg-primary-container shadow-xs transition-all">
+                  <span>Ver Clases & Horarios en Pechan</span>
+                  <span class="material-symbols-outlined text-sm">schedule</span>
+                </a>
+                <a href="https://wa.me/541150629554?text=Hola%20Pablo,%20quisiera%20consultar%20por%20las%20clases%20en%20Parque%20Los%20Andes" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl bg-emerald-700 text-white text-xs font-bold uppercase tracking-wider hover:bg-emerald-800 shadow-xs transition-all">
+                  <span>Consultar por WhatsApp</span>
+                  <span class="material-symbols-outlined text-sm">chat</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>

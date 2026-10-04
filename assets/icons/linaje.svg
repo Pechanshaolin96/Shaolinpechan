@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Llama Sagrada de Transmisión Ininterrumpida (Chuan Deng) -->
+  <path d="M12 2.5c1.8 2.2 4 4.5 4 7.5 0 3.2-2.3 5.5-4 5.5s-4-2.3-4-5.5c0-3 2.2-5.3 4-7.5z" fill="currentColor" fill-opacity="0.2" stroke-width="1.8"/>
+  <!-- Núcleo interior de la llama (conocimiento vivo transmitido) -->
+  <path d="M12 7c.8 1.1 1.8 2.2 1.8 3.8 0 1.5-1 2.7-1.8 2.7s-1.8-1.2-1.8-2.7c0-1.6 1-2.7 1.8-3.8z" fill="currentColor" stroke="none"/>
+  <!-- Base ceremonial del incensario / lámpara de maestros -->
+  <path d="M7 16h10c.8 0 1.5.7 1.5 1.5v1H5.5v-1c0-.8.7-1.5 1.5-1.5z" fill="currentColor" fill-opacity="0.1" stroke-width="1.6"/>
+  <!-- Soporte trípode estilizado -->
+  <path d="M8.5 18.5L7 21.5M15.5 18.5l1.5 3M12 18.5v3" stroke-width="1.8"/>
+</svg>

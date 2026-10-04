@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Arco tradicional de arquería Chan (Chan Gong) -->
+  <path d="M7 3.5c4.5 2 7 5.2 7 8.5s-2.5 6.5-7 8.5" stroke-width="2" fill="none"/>
+  <!-- Cuerda del arco tensada en calma -->
+  <path d="M7 3.5v17" stroke-width="1.2"/>
+  <!-- Flecha centrada hacia el objetivo interior (foco y corazón calmo) -->
+  <path d="M4 12h16M17 9l3 3-3 3" stroke-width="1.8" fill="currentColor" fill-opacity="0.2"/>
+</svg>

@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Reiki Usui (靈氣) • Shaolin Pechan | Sede Shaolin Argentina</title>
+  <meta name="description" content="Reiki Tradicional Usui (靈氣) en Shaolin Argentina y Sede Pechan. Sistema Usui de Curación Natural, transmisión energética por imposición de manos y 5 principios de vida.">
+  
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            surface: "#fcf9f8",
+            "surface-container": "#f0eded",
+            "surface-container-high": "#eae7e7",
+            "surface-container-highest": "#e5e2e1",
+            "on-surface": "#1c1b1b",
+            primary: "#8b181a",
+            "primary-container": "#680009",
+            "on-primary": "#ffffff",
+            secondary: "#5d5e61",
+            "ochre-gold": "#B87314",
+            "ochre-deep": "#9E650C"
+          },
+          fontFamily: {
+            sans: ["Plus Jakarta Sans", "Inter", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="icon" type="image/png" href="assets/img/logo.png">
+  <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body class="bg-surface font-sans text-on-surface antialiased">
+
+  <!-- BANNER SUPERIOR DOCTRINAL -->
+  <div class="doctrinal-top-bar text-white/90 py-2 px-4 text-center select-none">
+    <div class="max-w-[1440px] mx-auto flex items-center justify-center flex-wrap gap-x-2 gap-y-0.5">
+      <span class="font-serif tracking-widest text-amber-200/95 font-semibold text-xs sm:text-sm">少林是禅不是拳。释素喜</span>
+      <span class="hidden md:inline text-amber-400/40">•</span>
+      <span class="text-[11px] sm:text-xs text-stone-200 italic font-sans">"Shàolín shì Chán, bùshì Quán" — Shì Sùxi: "La práctica de Shaolin es el cultivo del espíritu y la meditación, por sobre la lucha y el combate."</span>
+    </div>
+  </div>
+
+  <!-- NAVEGACIÓN PRINCIPAL -->
+  <header id="site-header" class="header-shaolin sticky top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-stone-200/90 shadow-xs transition-all">
+    <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-2 sm:py-2.5 flex flex-col items-center">
+      
+            <!-- FILA SUPERIOR: Logotipo & Marca Centrados Estéticamente -->
+      <div class="header-brand-row w-full flex items-center justify-center relative pb-2 sm:pb-2.5 border-b border-stone-100">
+        
+        <!-- Logotipo e Identidad de Marca Centrado -->
+        <a class="brand-center-link flex items-center justify-center gap-3.5 group text-center mx-auto" href="index.html" title="Shaolin Pechan - Inicio">
+          <img alt="Shaolin Pechan Emblema Oficial" class="brand-logo-img" src="assets/img/logo.png">
+          <div class="flex flex-col items-center sm:items-start text-center sm:text-left">
+            <div class="flex items-center gap-2">
+              <span class="font-display font-extrabold text-xl sm:text-2xl tracking-tight text-stone-900 group-hover:text-primary transition-colors">Shaolin Pechan</span>
+              <span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary text-[10px] sm:text-[11px] font-serif font-bold tracking-widest border border-primary/20">少林百禅</span>
+            </div>
+            <span class="text-[10px] sm:text-xs font-semibold tracking-wider text-stone-500 uppercase font-sans mt-0.5">
+              Sede Oficial Shaolin Argentina • Parque Los Andes • Chacarita
+            </span>
+          </div>
+        </a>
+
+        <!-- Botón Disparador Menú (Solo Dispositivos Móviles < 768px) -->
+        <div class="mobile-menu-trigger-wrap absolute right-0 top-1/2 -translate-y-1/2 hidden md:hidden items-center gap-2">
+          <a class="nav-cta-btn hidden sm:inline-flex md:hidden text-xs py-1.5 px-3" href="contacto.html#clase-prueba">
+            Clase de Prueba
+          </a>
+          <button id="mobile-menu-btn" aria-label="Abrir menú" class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl border border-stone-200 bg-stone-50 flex items-center justify-center text-stone-700 hover:bg-stone-100 hover:text-primary transition-colors focus:outline-none shadow-xs">
+            <span class="material-symbols-outlined text-2xl">menu</span>
+          </button>
+        </div>
+
+      </div>
+
+            <!-- FILA INFERIOR: Barra Blanca de Navegación de Todas las Páginas Centradas Debajo del Logo -->
+      <div id="header-nav-row" class="header-nav-row w-full pt-2 flex items-center justify-center">
+        <nav id="desktop-nav" class="desktop-nav-menu flex items-center justify-center flex-wrap gap-1 xl:gap-2">
+          <a class="nav-desktop-link " href="index.html">INICIO</a>
+
+          <!-- 1. LA ESCUELA -->
+          <div class="nav-dropdown-wrapper">
+            <button class="nav-desktop-link " type="button">
+              <span>LA ESCUELA</span>
+              <span class="material-symbols-outlined text-[16px] transition-transform duration-200">expand_more</span>
+            </button>
+            <div class="nav-dropdown-menu">
+              <a class="nav-dropdown-item " href="maestros-shaolin.html">Maestros e Instructores Shaolin</a>
+              <a class="nav-dropdown-item " href="maestros-taiji.html">Maestros e Instructores Chen Taijiquan</a>
+              <a class="nav-dropdown-item " href="discipulos-shaolin.html">Discípulos Shaolin</a>
+              <a class="nav-dropdown-item " href="discipulos-taiji.html">Discípulos Chen Taijiquan</a>
+              <a class="nav-dropdown-item " href="viajes-china.html">Viajes a China</a>
+              <a class="nav-dropdown-item " href="clases.html">Clases &amp; Sede Pechan</a>
+            </div>
+          </div>
+
+          <!-- 2. ARTES MARCIALES & BIENESTAR -->
+          <div class="nav-dropdown-wrapper">
+            <button class="nav-desktop-link active" type="button">
+              <span>ARTES MARCIALES &amp; BIENESTAR</span>
+              <span class="material-symbols-outlined text-[16px] transition-transform duration-200">expand_more</span>
+            </button>
+            <div class="nav-dropdown-menu">
+              <a class="nav-dropdown-item " href="kung-fu.html">Shaolin Kung Fu</a>
+              <a class="nav-dropdown-item " href="taijiquan.html">Taijiquan Chen</a>
+              <a class="nav-dropdown-item " href="meditacion-chan.html">Meditación Chan</a>
+              <a class="nav-dropdown-item " href="qi-gong.html">Qi Gong (Chi Kung)</a>
+              <a class="nav-dropdown-item " href="arqueria-zen.html">Arquería Zen</a>
+              <a class="nav-dropdown-item " href="yoga.html">Yoga</a>
+              <a class="nav-dropdown-item active" href="reiki.html">Reiki</a>
+            </div>
+          </div>
+
+          <!-- 3. CULTURA TRADICIONAL -->
+          <div class="nav-dropdown-wrapper">
+            <button class="nav-desktop-link " type="button">
+              <span>CULTURA TRADICIONAL</span>
+              <span class="material-symbols-outlined text-[16px] transition-transform duration-200">expand_more</span>
+            </button>
+            <div class="nav-dropdown-menu">
+              <a class="nav-dropdown-item " href="idioma-chino.html">Idioma Chino</a>
+              <a class="nav-dropdown-item " href="cultura-te.html">Cultura del Té (Cha Dao)</a>
+              <a class="nav-dropdown-item " href="caligrafia-china.html">Caligrafía China (Shufa)</a>
+              <a class="nav-dropdown-item " href="medicina-china.html">Medicina Tradicional China</a>
+            </div>
+          </div>
+
+          <!-- 6. CONTACTO -->
+          <a class="nav-desktop-link " href="contacto.html">CONTACTO</a>
+
+          <!-- Botón de Acción -->
+          <a class="nav-cta-btn ml-1" href="contacto.html#clase-prueba">
+            Clase de Prueba
+          </a>
+        </nav>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MENÚ MÓVIL EN ACORDEÓN -->
+  <div id="mobile-drawer-backdrop" class="fixed inset-0 bg-black/50 z-50 backdrop-blur-xs opacity-0 pointer-events-none transition-opacity duration-300"></div>
+  <aside id="mobile-drawer" class="fixed top-0 right-0 w-[320px] max-w-[85vw] h-full bg-white z-50 shadow-2xl p-5 flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-in-out border-l border-stone-200 overflow-y-auto">
+    <div>
+      <div class="flex items-center justify-between pb-4 border-b border-stone-200">
+        <div class="flex items-center gap-3">
+          <img alt="Shaolin Pechan" class="w-12 h-12 rounded-full border border-stone-200 p-0.5 object-contain" src="assets/img/logo.png">
+          <div>
+            <span class="font-display font-bold text-base text-stone-900 block leading-tight">Shaolin Pechan</span>
+            <span class="text-[10px] text-primary font-bold uppercase tracking-wider">Sede Shaolin Argentina</span>
+          </div>
+        </div>
+        <button id="mobile-menu-close" aria-label="Cerrar menú" class="w-9 h-9 rounded-lg hover:bg-stone-100 flex items-center justify-center text-stone-500 hover:text-primary transition-colors">
+          <span class="material-symbols-outlined text-2xl">close</span>
+        </button>
+      </div>
+
+      <nav class="flex flex-col gap-1 mt-4">
+        <a class="mobile-nav-link px-3 py-2 rounded-lg text-sm font-semibold text-stone-700 hover:bg-stone-100" href="index.html">INICIO</a>
+        
+        <!-- ACORDEÓN 1: LA ESCUELA -->
+        <div>
+          <button class="mobile-accordion-header " type="button">
+            <span>LA ESCUELA</span>
+            <span class="material-symbols-outlined accordion-icon transition-transform duration-200" style="">expand_more</span>
+          </button>
+          <div class="mobile-accordion-content ">
+            <a class="mobile-sub-link " href="maestros-shaolin.html">• Maestros Shaolin</a>
+            <a class="mobile-sub-link " href="maestros-taiji.html">• Maestros Chen Taiji</a>
+            <a class="mobile-sub-link " href="discipulos-shaolin.html">• Discípulos Shaolin</a>
+            <a class="mobile-sub-link " href="discipulos-taiji.html">• Discípulos Chen Taiji</a>
+            <a class="mobile-sub-link " href="viajes-china.html">• Viajes a China</a>
+            <a class="mobile-sub-link " href="clases.html">• Clases &amp; Sede Pechan</a>
+          </div>
+        </div>
+
+        <!-- ACORDEÓN 2: ARTES MARCIALES & BIENESTAR -->
+        <div>
+          <button class="mobile-accordion-header text-primary font-bold" type="button">
+            <span>ARTES MARCIALES &amp; BIENESTAR</span>
+            <span class="material-symbols-outlined accordion-icon transition-transform duration-200" style="transform: rotate(180deg);">expand_more</span>
+          </button>
+          <div class="mobile-accordion-content open">
+            <a class="mobile-sub-link " href="kung-fu.html">• Shaolin Kung Fu</a>
+            <a class="mobile-sub-link " href="taijiquan.html">• Taijiquan Chen</a>
+            <a class="mobile-sub-link " href="meditacion-chan.html">• Meditación Chan</a>
+            <a class="mobile-sub-link " href="qi-gong.html">• Qi Gong (Chi Kung)</a>
+            <a class="mobile-sub-link " href="arqueria-zen.html">• Arquería Zen</a>
+            <a class="mobile-sub-link " href="yoga.html">• Yoga</a>
+            <a class="mobile-sub-link active" href="reiki.html">• Reiki</a>
+          </div>
+        </div>
+
+        <!-- ACORDEÓN 3: CULTURA TRADICIONAL -->
+        <div>
+          <button class="mobile-accordion-header " type="button">
+            <span>CULTURA TRADICIONAL</span>
+            <span class="material-symbols-outlined accordion-icon transition-transform duration-200" style="">expand_more</span>
+          </button>
+          <div class="mobile-accordion-content ">
+            <a class="mobile-sub-link " href="idioma-chino.html">• Idioma Chino</a>
+            <a class="mobile-sub-link " href="cultura-te.html">• Cultura del Té</a>
+            <a class="mobile-sub-link " href="caligrafia-china.html">• Caligrafía China</a>
+            <a class="mobile-sub-link " href="medicina-china.html">• Medicina Tradicional China</a>
+          </div>
+        </div>
+        <a class="mobile-nav-link px-3 py-2 rounded-lg text-sm font-semibold text-stone-700 hover:bg-stone-100" href="contacto.html">CONTACTO</a>
+      </nav>
+    </div>
+
+    <div class="pt-4 border-t border-stone-200 flex flex-col gap-2.5">
+      <a class="w-full py-3 rounded-xl bg-primary text-white text-xs font-bold uppercase tracking-wider text-center shadow-md hover:bg-primary-dark transition-all" href="contacto.html#clase-prueba">
+        Reservar Clase de Prueba
+      </a>
+      <span class="text-[11px] text-center text-stone-500">Parque Los Andes • Chacarita, CABA</span>
+    </div>
+  </aside>
+
+<!-- HERO SECTION -->
+  <section class="relative bg-stone-900 text-white py-20 lg:py-24 overflow-hidden">
+    <div class="absolute inset-0 z-0 opacity-30 bg-cover bg-center" style="background-image: url('imagenes/reiki_prin.jpg');"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-900/80 to-stone-900/60 z-0"></div>
+    
+    <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="mb-5 flex justify-center">
+        <img src="assets/img/icons-ink/gold/full/reiki.png" alt="Reiki 靈氣" class="h-24 sm:h-28 object-contain filter drop-shadow-[0_4px_12px_rgba(212,155,40,0.3)]">
+      </div>
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 border border-amber-400/30 text-amber-300 text-xs font-semibold uppercase tracking-wider mb-6">
+        <span class="font-serif tracking-widest">靈氣</span>
+        Sistema Usui de Curación Natural
+      </div>
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6">
+        Reiki Tradicional Usui
+      </h1>
+      <p class="text-lg sm:text-xl text-stone-300 max-w-3xl mx-auto font-light leading-relaxed">
+        Canalización de la energía vital universal para el equilibrio integral de cuerpo, mente y espíritu. Despertando la consciencia sanadora interior.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+      
+      <!-- Columna Principal -->
+      <div class="lg:col-span-8 space-y-10 text-stone-700 leading-relaxed text-base sm:text-lg">
+        
+        <div class="bg-white p-8 sm:p-10 rounded-2xl shadow-xs border border-stone-200/70 space-y-6">
+          <div class="flex items-center gap-4">
+            <span class="text-3xl font-serif text-primary font-bold">靈氣</span>
+            <div>
+              <h2 class="text-2xl sm:text-3xl font-bold text-stone-900">Sistema Usui de Curación Natural</h2>
+              <span class="text-xs uppercase tracking-wider text-stone-500 font-semibold">Del chino lingqi 靈氣 • Equilibrio &amp; Energía</span>
+            </div>
+          </div>
+          
+          <p>
+            <strong>ReiKi</strong> es una técnica milenaria para restablecer el equilibrio interno profundo. Utiliza las manos como instrumento natural para transmitir y canalizar la energía hacia el cuerpo y la mente, propiciando el proceso autocurativo del organismo.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+            <div class="p-4 rounded-xl bg-amber-50/50 border border-amber-200">
+              <span class="font-serif font-bold text-primary text-xl block mb-1">Rei 靈</span>
+              <p class="text-xs sm:text-sm text-stone-700">Palabra de origen ancestral que nombra la <strong>energía vital universal</strong>, infinita y sustentadora de la existencia.</p>
+            </div>
+            <div class="p-4 rounded-xl bg-amber-50/50 border border-amber-200">
+              <span class="font-serif font-bold text-primary text-xl block mb-1">Ki 氣</span>
+              <p class="text-xs sm:text-sm text-stone-700">Nuestro <strong>centro de energía individual</strong>, el soplo vital presente en cada célula, órgano y pensamiento.</p>
+            </div>
+          </div>
+
+          <p>
+            <strong>ReiKi</strong> es la circulación natural y armónica de la energía en nuestro cuerpo, mente y espíritu. Durante una sesión o tratamiento, la persona recibe energía en sus centros vitales (órganos, glándulas y chakras/meridianos) para restablecer su homeostasis natural.
+          </p>
+
+          <p>
+            Esta práctica ayuda a entrar en contacto íntimo con uno mismo para comprender las causas profundas del malestar, reconociendo el vínculo entre patrones emocionales negativos y dolencias somáticas, despertando la consciencia sanadora latente.
+          </p>
+        </div>
+
+        <!-- 5 Principios de Reiki -->
+        <div class="bg-stone-900 text-white p-8 sm:p-10 rounded-2xl shadow-md border border-amber-500/30 space-y-6">
+          <div class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-amber-400 text-2xl">verified</span>
+            <h3 class="text-2xl font-bold text-white tracking-wide">Los Cinco Principios de Reiki (Gokai)</h3>
+          </div>
+          <p class="text-sm text-stone-300">
+            Reglas de vida legadas por el Maestro Mikao Usui para armonizar el espíritu en el presente:
+          </p>
+
+          <div class="space-y-3 font-medium text-stone-100">
+            <div class="flex items-center gap-3 p-3 rounded-lg bg-stone-800/80 border border-stone-700">
+              <span class="text-amber-400 font-bold text-sm">一</span>
+              <span>Sólo por hoy no te enojes</span>
+            </div>
+            <div class="flex items-center gap-3 p-3 rounded-lg bg-stone-800/80 border border-stone-700">
+              <span class="text-amber-400 font-bold text-sm">二</span>
+              <span>Sólo por hoy no te preocupes</span>
+            </div>
+            <div class="flex items-center gap-3 p-3 rounded-lg bg-stone-800/80 border border-stone-700">
+              <span class="text-amber-400 font-bold text-sm">三</span>
+              <span>Honra a tus padres, maestros y ancianos</span>
+            </div>
+            <div class="flex items-center gap-3 p-3 rounded-lg bg-stone-800/80 border border-stone-700">
+              <span class="text-amber-400 font-bold text-sm">四</span>
+              <span>Sé honesto en tus ganancias y en tu labor</span>
+            </div>
+            <div class="flex items-center gap-3 p-3 rounded-lg bg-stone-800/80 border border-stone-700">
+              <span class="text-amber-400 font-bold text-sm">五</span>
+              <span>Sé agradecido con todos los seres vivos</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Orígenes e Historia de Transmisión -->
+        <div class="bg-white p-8 sm:p-10 rounded-2xl shadow-xs border border-stone-200/70 space-y-6">
+          <h3 class="text-2xl font-bold text-stone-900">Orígenes Históricos del Sistema Usui</h3>
+          
+          <p>
+            Los orígenes de Reiki se nutren de las antiguas escrituras budistas. El monje japonés <strong>Mikao Usui (1865-1926)</strong> redescubrió los símbolos y fórmulas raíz del sistema tras una prolongada meditación y ayuno de 21 días en la montaña sagrada del <strong>Monte Kurama (Kyoto)</strong>.
+          </p>
+
+          <div class="p-4 rounded-xl bg-stone-50 border border-stone-200 text-sm space-y-3">
+            <p><strong>Cadena de Transmisión Tradicional:</strong></p>
+            <ul class="list-disc list-inside space-y-1.5 text-stone-600">
+              <li><strong>Mikao Usui (1865-1926):</strong> Fundador del sistema.</li>
+              <li><strong>Dr. Chujiro Hayashi (1879-1941):</strong> Discípulo formal, fundador del primer Centro Reiki en Tokio.</li>
+              <li><strong>Hawayo Takata (1900-1980):</strong> Discípula y heredera que difundió el Reiki en Occidente.</li>
+              <li><strong>Phyllis Lei Furumoto &amp; Paul Mitchell:</strong> Continuadores de la tradición en el mundo.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Escuela Sendero Reiki -->
+        <div class="bg-white p-8 sm:p-10 rounded-2xl shadow-xs border border-stone-200/70 space-y-6">
+          <div class="flex items-center gap-4">
+            <img class="w-16 h-16 rounded-full object-cover border-2 border-primary/30" src="imagenes/reiki_7b.jpg" alt="Sendero Reiki">
+            <div>
+              <h3 class="text-xl font-bold text-stone-900">Escuela Sendero Reiki</h3>
+              <span class="text-xs text-stone-500">Transmisión iniciada por Adela Camila Botticella y continuada por Yamila Paula Melillo</span>
+            </div>
+          </div>
+          <p class="text-sm sm:text-base text-stone-600 leading-relaxed">
+            <strong>Yamila Paula Melillo</strong> inicia su recorrido en el Sistema Usui de Curación Natural en 1997 siguiendo las enseñanzas de la Maestra <strong>Adela Camila Botticella</strong>, recibiendo su Maestría en 2007. La escuela incorpora elementos formativos de expresión corporal, meditación y disciplinas orientales para enriquecer los seminarios vivenciales en Argentina e Italia.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Barra Lateral -->
+      <div class="lg:col-span-4 space-y-6">
+        
+        <!-- Información y Contacto Sede Central -->
+        <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-xs border border-stone-200 space-y-4">
+          <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-2">
+            <span class="material-symbols-outlined text-2xl">vital_signs</span>
+          </div>
+          <h3 class="text-xl font-bold text-stone-900">Reiki Usui en Sede Central</h3>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            Las sesiones, cursos e iniciaciones de <strong>Reiki Usui Ryoho</strong> son dictados directamente en nuestra <strong>Sede Central (Shaolin Argentina)</strong> por la <strong>Maestra Yamila Paula Melillo</strong>. En Sede Pechan no brindamos sesiones presenciales de Reiki; derivamos todas las consultas a nuestra Escuela Matriz.
+          </p>
+          <div class="border-t border-stone-100 pt-4 space-y-2 text-xs text-stone-600">
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+              <span>Dictado en Sede Central (Almagro)</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+              <span>A cargo de Mstra. Yamila Melillo</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-primary text-sm">check_circle</span>
+              <span>Consultas e inscripciones en Shaolin.ar</span>
+            </div>
+          </div>
+          <a class="mt-4 w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-primary text-white font-bold text-xs uppercase tracking-wider hover:bg-primary-container transition-all" href="https://www.shaolin.ar" target="_blank" rel="noopener noreferrer">
+            <span class="material-symbols-outlined text-base">open_in_new</span>
+            Ir a Shaolin.ar (Sede Central)
+          </a>
+        </div>
+
+        <!-- Módulos de Bienestar -->
+        <div class="bg-stone-50 p-6 rounded-2xl border border-stone-200">
+          <h4 class="font-bold text-stone-900 mb-3 text-sm uppercase tracking-wider">Bienestar Integral</h4>
+          <div class="space-y-2 text-sm">
+            <a href="medicina-china.html" class="flex items-center justify-between p-2 rounded-lg hover:bg-white text-stone-700 hover:text-primary transition-colors">
+              <span>Medicina Tradicional China (MTC)</span>
+              <span class="material-symbols-outlined text-xs">arrow_forward</span>
+            </a>
+            <a href="qi-gong.html" class="flex items-center justify-between p-2 rounded-lg hover:bg-white text-stone-700 hover:text-primary transition-colors">
+              <span>Qi Gong Terapéutico</span>
+              <span class="material-symbols-outlined text-xs">arrow_forward</span>
+            </a>
+            <a href="meditacion-chan.html" class="flex items-center justify-between p-2 rounded-lg hover:bg-white text-stone-700 hover:text-primary transition-colors">
+              <span>Meditación Chan</span>
+              <span class="material-symbols-outlined text-xs">arrow_forward</span>
+            </a>
+            <a href="yoga.html" class="flex items-center justify-between p-2 rounded-lg hover:bg-white text-stone-700 hover:text-primary transition-colors">
+              <span>Yoga Tradicional</span>
+              <span class="material-symbols-outlined text-xs">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+    <!-- PIE DE PÁGINA -->
+  <footer class="w-full bg-surface-container-lowest border-t border-surface-container-high text-on-surface" id="contacto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10 pb-12 border-b border-surface-container-high">
+        
+        <!-- Col 1: Marca & Linaje -->
+        <div class="lg:col-span-4 space-y-4">
+          <div class="flex items-center gap-3">
+            <img alt="Shaolin Pechan Emblema" class="h-10 w-10 rounded-full object-contain border border-stone-200 p-0.5" src="assets/img/logo.png">
+            <div>
+              <span class="font-display font-bold text-base text-on-surface block">Shaolin Pechan • 少林百禅</span>
+              <span class="text-xs text-secondary font-body">Filial Oficial Escuela Shaolin Argentina | Jiaolian Pablo Encinas</span>
+            </div>
+          </div>
+          <p class="text-xs text-secondary font-body leading-relaxed max-w-sm">
+            Preservamos la transmisión auténtica del Templo Shaolin y Chenjiagou bajo la tutela de Shifu Daniel Vera (Shi Xing Wu) y Shimu Yamila Melillo (Shi Xing Gong). Clases al aire libre en el Mástil del Parque Los Andes y Medicina Tradicional China.
+          </p>
+          <div class="flex flex-wrap items-center gap-2 pt-1">
+            <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-surface-container text-primary text-xs font-semibold">
+              <span class="text-[10px] tracking-widest uppercase">Linaje Oficial: Shi De Yang &amp; Chen Ziqiang</span>
+            </div>
+            <a href="https://www.instagram.com/shaolin_pechan/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container text-primary hover:text-primary-container text-xs font-semibold transition-colors">
+              <span class="text-[11px]">Instagram: @shaolin_pechan</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navegación -->
+        <div class="lg:col-span-2">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-on-surface mb-3 font-display">Navegación</h4>
+          <ul class="space-y-2 text-xs text-secondary font-body">
+            <li><a class="hover:text-primary transition-colors" href="index.html">Inicio</a></li>
+            <li><a class="hover:text-primary transition-colors" href="kung-fu.html">Shaolin Kung Fu</a></li>
+            <li><a class="hover:text-primary transition-colors" href="taijiquan.html">Taijiquan Chen</a></li>
+            <li><a class="hover:text-primary transition-colors" href="maestros-shaolin.html">Maestros Shaolin</a></li>
+            <li><a class="hover:text-primary transition-colors" href="clases.html">Horarios Parque Los Andes</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Todas las Sedes -->
+        <div class="lg:col-span-2">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-on-surface mb-3 font-display">Todas las Sedes</h4>
+          <ul class="space-y-2 text-xs text-secondary font-body">
+            <li>
+              <a href="clases.html" class="hover:text-primary transition-colors block">
+                <strong class="text-on-surface block text-[12px]">Sede Pechan · Chacarita</strong>
+                <span class="text-[11px] text-stone-500">Mástil Parque Los Andes</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.shaolin.ar" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors block">
+                <strong class="text-on-surface block text-[12px]">Sede Central · Almagro</strong>
+                <span class="text-[11px] text-stone-500">Fco. Acuña de Figueroa 833 (Escuela Matriz)</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://espacioyangtai.com/" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors block">
+                <strong class="text-on-surface block text-[12px]">Sede Floresta · Yang Tai</strong>
+                <span class="text-[11px] text-stone-500">Espacio Yang Tai (Baigorria 3373)</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.akarma.com.ar" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors block">
+                <strong class="text-on-surface block text-[12px]">Sede Caballito · Akarma</strong>
+                <span class="text-[11px] text-stone-500">Movimiento &amp; Salud Integrativa</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.patiosur.com.ar/" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors block">
+                <strong class="text-on-surface block text-[12px]">Sede Zona Sur · Patio Sur</strong>
+                <span class="text-[11px] text-stone-500">Valentín Alsina</span>
+              </a>
+            </li>
+            <li class="pt-1">
+              <a href="maestros-shaolin.html" class="inline-flex items-center gap-1 text-[11px] text-primary font-bold hover:underline">
+                <span>Ver Sedes &amp; Linaje Oficial</span>
+                <span class="material-symbols-outlined text-[13px]">arrow_forward</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Clínica & MTC -->
+        <div class="lg:col-span-2">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-on-surface mb-3 font-display">Clínica &amp; MTC</h4>
+          <ul class="space-y-2 text-xs text-secondary font-body">
+            <li><a class="hover:text-primary transition-colors" href="medicina-china.html">Acupuntura Clínica</a></li>
+            <li><a class="hover:text-primary transition-colors" href="medicina-china.html">Masaje Terapéutico Tuina</a></li>
+            <li><a class="hover:text-primary transition-colors" href="medicina-china.html">Moxibustión &amp; Ventosas</a></li>
+            <li><a class="hover:text-primary transition-colors" href="medicina-china.html">Fitoterapia China</a></li>
+            <li><a class="hover:text-primary transition-colors" href="contacto.html">Consultas &amp; Turnos</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 5: Ubicación & Horarios -->
+        <div class="lg:col-span-2">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-on-surface mb-3 font-display">Ubicación &amp; Horarios</h4>
+          <div class="space-y-2 text-xs text-secondary font-body">
+            <p class="flex items-start gap-1.5">
+              <span class="material-symbols-outlined text-[16px] text-primary shrink-0 mt-0.5">location_on</span>
+              <span>En el Mástil del Parque Los Andes<br>Av. Corrientes y Av. Dorrego (Chacarita, CABA)</span>
+            </p>
+            <div class="pt-1 text-[11px] text-secondary space-y-1">
+              <p><strong class="text-on-surface">Kung Fu:</strong> Mié./Vie. 08:30 • Jue. 10:30</p>
+              <p><strong class="text-on-surface">Infantil:</strong> Martes 16:30 hs</p>
+              <p><strong class="text-on-surface">Tai Chi:</strong> Lun./Jue. 08:30 hs</p>
+              <p><strong class="text-on-surface">Integrada:</strong> Domingos 11:00 AM</p>
+              <p><strong class="text-on-surface">WhatsApp:</strong> <a href="https://wa.me/541150629554" target="_blank" rel="noopener noreferrer" class="text-emerald-700 font-bold hover:underline">+54 11 5062-9554</a></p>
+            </div>
+            <p class="pt-1">
+              <a href="https://www.google.com/maps/search/?api=1&query=Mastil+Parque+Los+Andes+Chacarita+Buenos+Aires" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-[11px] text-ochre-deep font-semibold hover:underline">
+                <span class="material-symbols-outlined text-xs">open_in_new</span> Abrir en Google Maps
+              </a>
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Barra Inferior de Derechos -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-secondary font-body">
+        <div>© 2025-2026 Shaolin Pechan • Filial Oficial de la Escuela Shaolin Argentina. Todos los derechos reservados.</div>
+        <div class="flex items-center gap-6">
+          <a class="hover:text-primary transition-colors" href="https://www.shaolin.ar" target="_blank" rel="noopener noreferrer">Sede Central (shaolin.ar)</a>
+          <a class="hover:text-primary transition-colors" href="https://www.instagram.com/shaolin_pechan/" target="_blank" rel="noopener noreferrer">Instagram Oficial</a>
+          <a class="hover:text-primary transition-colors" href="contacto.html">Contacto Directo</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+  <a href="https://wa.me/541150629554?text=Hola%20Jiaolian%20Pablo,%20quisiera%20consultar%20por%20las%20clases%20en%20Shaolin%20Pechan" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current"><path d="M12.012 2c-5.506 0-9.989 4.478-9.989 9.984 0 1.76.459 3.474 1.33 4.988l-1.413 5.161 5.281-1.385c1.455.795 3.093 1.22 4.791 1.22h.004c5.504 0 9.986-4.478 9.986-9.984 0-2.668-1.039-5.176-2.926-7.062-1.887-1.887-4.394-2.924-7.064-2.924zm5.82 14.366c-.244.688-1.427 1.312-1.966 1.393-.505.076-1.156.108-1.861-.118-.431-.137-.986-.316-1.705-.626-3.003-1.3-4.962-4.34-5.112-4.54-.15-.2-1.225-1.63-1.225-3.109 0-1.48.775-2.209 1.05-2.508.275-.3.6-.375.8-.375.2 0 .4 0 .575.01.188.01.438-.071.688.528.25.6.85 2.075.925 2.225.075.15.125.325.025.525-.1.2-.15.325-.3.5-.15.175-.315.39-.45.525-.15.15-.306.315-.131.615.175.3 0.778 1.284 1.67 2.079 1.147 1.022 2.115 1.338 2.415 1.488.3.15.475.125.65-.075.175-.2.75-.875.95-1.175.2-.3.4-.25.675-.15.275.1 1.75.825 2.05.975.3.15.5.225.575.35.075.125.075.725-.169 1.413z"/></svg>
+    <span class="text">Consultar por WhatsApp</span>
+  </a>
+
+  <!-- Script global -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

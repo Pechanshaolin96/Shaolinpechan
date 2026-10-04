@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Saludo tradicional marcial Shaolin (Bao Quan Li: Puño derecho y Palma izquierda) -->
+  <!-- Palma izquierda envolvente (Virtud y Respeto De) -->
+  <path d="M13 4c2.5 0 4.5 1.5 5 4.5.3 1.8-.2 3.5-1 5l-2.5 5.5c-.4.8-1.2 1.3-2.1 1.3H9c-1.3 0-2.3-1-2.3-2.3v-4" stroke-width="1.8" fill="currentColor" fill-opacity="0.15"/>
+  <!-- Puño derecho cerrado (Fuerza y Destreza Wu) -->
+  <path d="M6.5 9h5c.8 0 1.5.7 1.5 1.5v4c0 .8-.7 1.5-1.5 1.5h-5c-.8 0-1.5-.7-1.5-1.5v-4c0-.8.7-1.5 1.5-1.5z" fill="currentColor" fill-opacity="0.25" stroke-width="1.8"/>
+  <!-- Nudillos y energía marcial -->
+  <path d="M9 9v7M11.5 9v7" stroke-width="1.2"/>
+</svg>

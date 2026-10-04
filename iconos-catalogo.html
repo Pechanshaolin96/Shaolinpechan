@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo Oficial de Iconografía y Caligrafía China • Shaolin Pechan</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Noto+Serif+SC:wght@600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/custom.css">
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .font-chinese {
+      font-family: 'Noto Serif SC', serif;
+    }
+    .bg-rice-paper {
+      background-color: #fbf7ee;
+      color: #26221f;
+    }
+    .bg-dark-zen {
+      background-color: #121110;
+      color: #f5f5f5;
+    }
+    .bg-white-clean {
+      background-color: #ffffff;
+      color: #1c1b1b;
+    }
+    .icon-card {
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+    .icon-card:hover {
+      transform: translateY(-3px);
+    }
+  </style>
+</head>
+<body class="bg-dark-zen min-h-screen p-4 sm:p-8 lg:p-12">
+  <div class="max-w-7xl mx-auto">
+
+    <!-- CABECERA -->
+    <header class="mb-10 pb-8 border-b border-white/10 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 text-amber-400 text-xs font-bold uppercase tracking-widest border border-amber-500/30 mb-3">
+          <span>Iconografía Tradicional Oficial • Shaolin Pechan</span>
+        </div>
+        <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+          Colección de Iconos: Caligrafía &amp; Tinta China (Sumi-e)
+        </h1>
+        <p class="text-stone-400 text-sm sm:text-base mt-2 max-w-3xl leading-relaxed">
+          18 iconos extraídos y vectorizados con transparencia suave de alta fidelidad, diseñados para representar las disciplinas, sedes y linajes de Shaolin Pechan con total sobriedad tradicional.
+        </p>
+      </div>
+
+      <div class="flex items-center gap-3 shrink-0">
+        <a href="index.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-amber-600 hover:bg-amber-500 text-white text-xs font-bold uppercase tracking-wider transition-all shadow-md">
+          <span>Volver al Inicio</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- PANEL DE CONTROL INTERACTIVO: COLOR, VARIANTE Y FONDO -->
+    <div class="mb-10 p-5 rounded-2xl bg-stone-900/90 border border-white/10 shadow-lg flex flex-wrap items-center justify-between gap-4">
+      
+      <!-- Selector de Paleta de Color -->
+      <div class="flex items-center gap-2">
+        <span class="text-xs font-bold uppercase tracking-wider text-stone-400 mr-1">Paleta:</span>
+        <button onclick="setColor('gold')" id="btn-gold" class="color-btn active px-3.5 py-1.5 rounded-lg text-xs font-bold uppercase border border-amber-500 bg-amber-500/20 text-amber-300">
+          Dorado Ocre (#D49B28)
+        </button>
+        <button onclick="setColor('black')" id="btn-black" class="color-btn px-3.5 py-1.5 rounded-lg text-xs font-bold uppercase border border-white/20 hover:border-white/40 text-stone-300">
+          Tinta Negra
+        </button>
+        <button onclick="setColor('white')" id="btn-white" class="color-btn px-3.5 py-1.5 rounded-lg text-xs font-bold uppercase border border-white/20 hover:border-white/40 text-stone-300">
+          Blanco Puro
+        </button>
+      </div>
+
+      <!-- Selector de Modo: Badge vs Full -->
+      <div class="flex items-center gap-2">
+        <span class="text-xs font-bold uppercase tracking-wider text-stone-400 mr-1">Composición:</span>
+        <button onclick="setMode('badge')" id="btn-badge" class="mode-btn active px-3.5 py-1.5 rounded-lg text-xs font-bold uppercase border border-amber-500 bg-amber-500/20 text-amber-300">
+          Solo Emblema (Badge)
+        </button>
+        <button onclick="setMode('full')" id="btn-full" class="mode-btn px-3.5 py-1.5 rounded-lg text-xs font-bold uppercase border border-white/20 hover:border-white/40 text-stone-300">
+          Con Caligrafía (Full)
+        </button>
+      </div>
+
+      <!-- Selector de Fondo de Prueba -->
+      <div class="flex items-center gap-2">
+        <span class="text-xs font-bold uppercase tracking-wider text-stone-400 mr-1">Fondo:</span>
+        <button onclick="setTheme('dark')" class="px-2.5 py-1 rounded text-xs bg-stone-950 text-white border border-white/20" title="Fondo Oscuro">Oscuro</button>
+        <button onclick="setTheme('rice')" class="px-2.5 py-1 rounded text-xs bg-[#fbf7ee] text-stone-900 border border-stone-300 font-semibold" title="Fondo Papel de Arroz">Papel Arroz</button>
+        <button onclick="setTheme('light')" class="px-2.5 py-1 rounded text-xs bg-white text-stone-900 border border-stone-300" title="Fondo Blanco">Blanco</button>
+      </div>
+
+    </div>
+
+    <!-- SERIE 1: CÍRCULO ENSŌ CON CALIGRAFÍA TRADICIONAL (9 ICONOS) -->
+    <section class="mb-14">
+      <div class="mb-6 flex items-center justify-between">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-amber-500">Serie 1 • Enso Monocromático</span>
+          <h2 class="text-2xl font-bold mt-0.5">Iconos de Emblema Circular con Caligrafía Clásica</h2>
+        </div>
+        <span class="text-xs text-stone-400 px-3 py-1 rounded-full bg-white/5 border border-white/10 hidden sm:inline">
+          9 Iconos Circulares
+        </span>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="grid-series-1">
+        <!-- Generados dinámicamente vía JS -->
+      </div>
+    </section>
+
+    <!-- SERIE 2: ARTE LIBRE / SILUETAS DE TINTA (9 ICONOS) -->
+    <section class="mb-14">
+      <div class="mb-6 flex items-center justify-between">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-widest text-amber-500">Serie 2 • Formas Dinámicas</span>
+          <h2 class="text-2xl font-bold mt-0.5">Composiciones Ilustrativas de Pincel y Tinta China</h2>
+        </div>
+        <span class="text-xs text-stone-400 px-3 py-1 rounded-full bg-white/5 border border-white/10 hidden sm:inline">
+          9 Iconos Dinámicos
+        </span>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="grid-series-2">
+        <!-- Generados dinámicamente vía JS -->
+      </div>
+    </section>
+
+    <!-- GUÍA DE INTEGRACIÓN RÁPIDA -->
+    <section class="p-6 sm:p-8 rounded-2xl bg-stone-900/90 border border-white/10 shadow-lg">
+      <h3 class="text-lg font-bold text-amber-400 uppercase tracking-wider mb-2">
+        ¿Cómo utilizar estos iconos en la web?
+      </h3>
+      <p class="text-xs sm:text-sm text-stone-300 mb-4 leading-relaxed">
+        Todos los iconos son imágenes PNG con transparencia alfa genuina (sin fondos blancos artificiales ni halos). Puedes insertarlos fácilmente con la etiqueta <code class="bg-black/60 px-1.5 py-0.5 rounded text-amber-300 font-mono text-xs">&lt;img&gt;</code> en cualquier tarjeta o encabezado:
+      </p>
+      <div class="bg-black/80 p-4 rounded-xl font-mono text-xs text-amber-200 overflow-x-auto border border-white/10">
+        <code>&lt;!-- En tarjetas oscuras (color dorado) --&gt;<br>&lt;img src="assets/img/icons-ink/gold/shaolin.png" alt="Shaolin Kung Fu" class="w-8 h-8 object-contain"&gt;<br><br>&lt;!-- En páginas con fondo claro (tinta negra tradicional con caligrafía) --&gt;<br>&lt;img src="assets/img/icons-ink/gold/full/shaolin.png" alt="Shaolin 少林" class="h-24 mx-auto object-contain"&gt;</code>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- SCRIPT DINÁMICO DE RENDERIZADO Y CONTROL -->
+  <script>
+    const series1 = [
+      { id: "shaolin", title: "Shaolin Kung Fu", kanji: "少林", page: "kung-fu.html", desc: "Monje en guardia tradicional ante la pagoda milenaria de Songshan." },
+      { id: "linaje", title: "Linaje & Transmisión", kanji: "傳承", page: "maestros-shaolin.html", desc: "Pergamino sagrado con caracteres dinásticos y linaje ininterrumpido." },
+      { id: "taiji", title: "Chen Taijiquan", kanji: "太極", page: "taijiquan.html", desc: "Símbolo sagrado del Yin-Yang con silueta marcial de enraizamiento." },
+      { id: "medicina-china", title: "Medicina Tradicional China", kanji: "中醫", page: "medicina-china.html", desc: "Mortero medicinal, aguja de acupuntura y hierbas fitoterapéuticas." },
+      { id: "matriz", title: "Sede Pechan / Kwoon", kanji: "武館", page: "clases.html", desc: "Pórtico Shanmen del templo de entrenamiento tradicional." },
+      { id: "cultura-te", title: "Cultura del Té (Cha Dao)", kanji: "茶道", page: "cultura-te.html", desc: "Tetera clásica de arcilla Yixing, cuenco ceremonial y hojas de té." },
+      { id: "yoga", title: "Yoga Tradicional", kanji: "瑜伽", page: "yoga.html", desc: "Yogui en postura de meditación padmasana con halo de prana." },
+      { id: "reiki", title: "Reiki Usui", kanji: "靈氣", page: "reiki.html", desc: "Manos sanadoras canalizando el vórtice de energía vital universal." },
+      { id: "meditacion", title: "Meditación Chan (Zen)", kanji: "冥想", page: "meditacion-chan.html", desc: "Flor de loto sagrada emergiendo sobre las ondas de agua de la mente serena." }
+    ];
+
+    const series2 = [
+      { id: "kungfu-kick", title: "Salto y Patada Kung Fu", kanji: "少林功夫", page: "kung-fu.html", desc: "Monje guerrero en patada voladora con pinceladas dinámicas de tinta." },
+      { id: "arbol-linaje", title: "Árbol de Transmisión", kanji: "傳承", page: "maestros-shaolin.html", desc: "Árbol de transmisión viva con la relación de maestro a discípulo." },
+      { id: "taijiquan-splash", title: "Taiji en Salpicadura", kanji: "太極拳", page: "taijiquan.html", desc: "Yin-Yang enérgico pintado a mano alzada con salpicaduras sumi-e." },
+      { id: "tcm-meridianos", title: "TCM Meridianos & Salud", kanji: "中醫 TCM", page: "medicina-china.html", desc: "Silueta humana con puntos de acupuntura, meridianos Jing Luo y plantas." },
+      { id: "escuela-templo", title: "Escuela Tradicional", kanji: "學校", page: "clases.html", desc: "Entrada del santuario y rollo de transmisión doctrinal." },
+      { id: "te-tetera", title: "Ceremonia Gongfu Cha", kanji: "茶道", page: "cultura-te.html", desc: "Tetera humeante sirviendo el té en el cuenco con caligrafía fluida." },
+      { id: "yoga-loto", title: "Flor de Loto Asana", kanji: "瑜伽", page: "yoga.html", desc: "Silueta caligráfica en postura de unión y equilibrio interior." },
+      { id: "reiki-manos", title: "Sanación por Imposición", kanji: "靈氣", page: "reiki.html", desc: "Manos abiertas irradiando energía Qi con sello de caligrafía." },
+      { id: "buda-bodhi", title: "Buda bajo el Árbol Bodhi", kanji: "冥想", page: "meditacion-chan.html", desc: "Buda en quietud profunda bajo las ramas del despertar espiritual." }
+    ];
+
+    let currentColor = 'gold';
+    let currentMode = 'badge'; // 'badge' or 'full'
+
+    function renderSeries() {
+      const g1 = document.getElementById('grid-series-1');
+      const g2 = document.getElementById('grid-series-2');
+
+      const buildCard = (item) => {
+        const imgPath = currentMode === 'full' 
+          ? `assets/img/icons-ink/${currentColor}/full/${item.id}.png`
+          : `assets/img/icons-ink/${currentColor}/${item.id}.png`;
+
+        const isLight = document.body.classList.contains('bg-white-clean') || document.body.classList.contains('bg-rice-paper');
+        const cardBg = isLight ? 'bg-white/80 border-stone-300/80 shadow-sm' : 'bg-stone-900/80 border-white/10 shadow-md';
+        const titleColor = isLight ? 'text-stone-900' : 'text-white';
+        const descColor = isLight ? 'text-stone-600' : 'text-stone-400';
+        const codeBg = isLight ? 'bg-stone-100 text-stone-800' : 'bg-black/50 text-amber-300';
+
+        return `
+          <div class="icon-card p-5 rounded-2xl border ${cardBg} flex flex-col justify-between">
+            <div>
+              <div class="h-32 flex items-center justify-center p-3 mb-4 rounded-xl ${isLight ? 'bg-stone-100/60' : 'bg-black/40'} border ${isLight ? 'border-stone-200' : 'border-white/5'}">
+                <img src="${imgPath}" alt="${item.title}" class="max-h-full max-w-full object-contain filter drop-shadow">
+              </div>
+              <div class="flex items-center justify-between gap-2">
+                <h4 class="font-bold text-base ${titleColor}">${item.title}</h4>
+                <span class="font-chinese font-bold text-sm text-amber-500">${item.kanji}</span>
+              </div>
+              <p class="text-xs ${descColor} mt-1.5 leading-relaxed">${item.desc}</p>
+            </div>
+            
+            <div class="mt-4 pt-3 border-t ${isLight ? 'border-stone-200' : 'border-white/10'} flex items-center justify-between text-[11px]">
+              <span class="font-mono text-[10px] ${codeBg} px-2 py-0.5 rounded truncate max-w-[200px]" title="${imgPath}">
+                ${imgPath}
+              </span>
+              <a href="${item.page}" class="text-amber-500 font-bold hover:underline shrink-0">Ver página &rarr;</a>
+            </div>
+          </div>
+        `;
+      };
+
+      g1.innerHTML = series1.map(buildCard).join('');
+      g2.innerHTML = series2.map(buildCard).join('');
+    }
+
+    function setColor(color) {
+      currentColor = color;
+      document.querySelectorAll('.color-btn').forEach(b => {
+        b.classList.remove('border-amber-500', 'bg-amber-500/20', 'text-amber-300');
+        b.classList.add('border-white/20', 'text-stone-300');
+      });
+      const activeBtn = document.getElementById(`btn-${color}`);
+      activeBtn.classList.remove('border-white/20', 'text-stone-300');
+      activeBtn.classList.add('border-amber-500', 'bg-amber-500/20', 'text-amber-300');
+      renderSeries();
+    }
+
+    function setMode(mode) {
+      currentMode = mode;
+      document.querySelectorAll('.mode-btn').forEach(b => {
+        b.classList.remove('border-amber-500', 'bg-amber-500/20', 'text-amber-300');
+        b.classList.add('border-white/20', 'text-stone-300');
+      });
+      const activeBtn = document.getElementById(`btn-${mode}`);
+      activeBtn.classList.remove('border-white/20', 'text-stone-300');
+      activeBtn.classList.add('border-amber-500', 'bg-amber-500/20', 'text-amber-300');
+      renderSeries();
+    }
+
+    function setTheme(theme) {
+      document.body.classList.remove('bg-dark-zen', 'bg-rice-paper', 'bg-white-clean');
+      if (theme === 'dark') document.body.classList.add('bg-dark-zen');
+      else if (theme === 'rice') document.body.classList.add('bg-rice-paper');
+      else if (theme === 'light') document.body.classList.add('bg-white-clean');
+      renderSeries();
+    }
+
+    // Inicializar
+    renderSeries();
+  </script>
+</body>
+</html>

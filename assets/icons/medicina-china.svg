@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Hoja medicinal natural / Ginseng y Mortero tradicional -->
+  <path d="M12 2C7.5 2 4 6 4 10.5c0 4.5 4 7 8 11.5 4-4.5 8-7 8-11.5C20 6 16.5 2 12 2z" fill="currentColor" fill-opacity="0.15" stroke-width="1.7"/>
+  <!-- Nervaduras y canales de meridianos energéticos (Jing Luo) -->
+  <path d="M12 5v13M9.5 8.5l2.5 2.5M14.5 8.5L12 11M9.5 13l2.5 2" stroke-width="1.4"/>
+</svg>

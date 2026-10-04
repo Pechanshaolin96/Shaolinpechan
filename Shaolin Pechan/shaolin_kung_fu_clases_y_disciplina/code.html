@@ -1,0 +1,894 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="es"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta content="web_standard" name="shell-type">
+<title>Shaolin Kung Fu • 少林拳法 | Shaolin Pechan Academy</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface": "#fcf9f8",
+            "on-secondary-fixed-variant": "#454749",
+            "on-secondary-fixed": "#1a1c1e",
+            "inverse-on-surface": "#f3f0ef",
+            "surface-container-highest": "#e5e2e1",
+            "primary-container": "#8b181a",
+            "primary-fixed-dim": "#ffb3ad",
+            "secondary-fixed-dim": "#c6c6c9",
+            "on-background": "#1c1b1b",
+            "secondary-fixed": "#e2e2e5",
+            "surface-container": "#f0eded",
+            "surface-container-low": "#f6f3f2",
+            "on-primary-fixed": "#410003",
+            "outline": "#8c716e",
+            "on-secondary-container": "#636467",
+            "tertiary-container": "#4e4539",
+            "on-surface-variant": "#58413f",
+            "on-primary-fixed-variant": "#8b181a",
+            "on-error": "#ffffff",
+            "on-tertiary-container": "#c0b3a3",
+            "primary-fixed": "#ffdad6",
+            "on-primary": "#ffffff",
+            "tertiary-fixed-dim": "#d2c4b4",
+            "on-tertiary-fixed": "#221a10",
+            "secondary-container": "#e2e2e5",
+            "secondary": "#5d5e61",
+            "on-tertiary-fixed-variant": "#4f4539",
+            "surface-container-lowest": "#ffffff",
+            "background": "#fcf9f8",
+            "outline-variant": "#e0bfbc",
+            "on-secondary": "#ffffff",
+            "surface-dim": "#dcd9d9",
+            "inverse-primary": "#ffb3ad",
+            "on-primary-container": "#ff9991",
+            "on-error-container": "#93000a",
+            "tertiary": "#372f23",
+            "tertiary-fixed": "#efe0cf",
+            "error-container": "#ffdad6",
+            "surface-variant": "#e5e2e1",
+            "surface-tint": "#ac312f",
+            "surface-bright": "#fcf9f8",
+            "on-surface": "#1c1b1b",
+            "primary": "#680009",
+            "inverse-surface": "#313030",
+            "on-tertiary": "#ffffff",
+            "surface-container-high": "#eae7e7",
+            "error": "#ba1a1a"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "margin-mobile": "1.25rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "gutter": "1.5rem",
+            "space-xxl": "4rem",
+            "space-xs": "0.25rem",
+            "gutter-mobile": "1rem",
+            "space-lg": "1.5rem",
+            "margin": "3rem",
+            "space-xl": "2.5rem"
+          },
+          "fontFamily": {
+            "body-md": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-lg": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-md": ["Plus Jakarta Sans", "sans-serif"],
+            "headline-sm": ["Plus Jakarta Sans", "sans-serif"],
+            "label-md": ["Inter", "sans-serif"],
+            "label-sm": ["Inter", "sans-serif"],
+            "label-caps": ["Inter", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    @layer base {
+      html, body { margin: 0; padding: 0; }
+      body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    }
+    ::-webkit-scrollbar { display: none; }
+  </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Header / Navigation Bar -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface/95 backdrop-blur-md border-b border-surface-container-highest">
+<div class="h-20 w-full max-w-[1320px] mx-auto px-gutter-mobile md:px-gutter lg:px-margin flex items-center justify-between gap-space-md">
+<!-- Brand Logo -->
+<a class="flex items-center gap-3 group shrink-0" href="#">
+<img alt="Shaolin Pechan Logo" class="h-11 w-11 object-contain rounded-full shadow-sm" src="https://lh3.googleusercontent.com/aida/AEtjO1UdDP8cW5bizOtO7QEC4gz1Go1q_sb7mIclDulCRNYShKI4mjLX-39NBCe6_QnsJ8sK1vb-X6OQVJ-vQ9vPZYBizOPXHt9CNT9v44sMI06JoDSL4krZDAhh_WnKDs-s83zMTxQUd_oR9_OR41Zp0JHwiNb1XJbGZFKVF7LbD6DgtW4tjRw0DwM-KPf_UxUYTFXCSBVZqC6tnqvm9SE-c9zOzn-fEL6qotaS1AVqRBBEJzOah3xvFumNfT8">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="font-bold text-[17px] tracking-tight text-on-surface">Shaolin Pechan</span>
+<span class="text-xs font-semibold text-primary px-1.5 py-0.5 rounded bg-surface-container border border-outline-variant/30">少林百禅</span>
+</div>
+<span class="text-[11px] font-medium tracking-wider uppercase text-secondary">Artes Marciales &amp; MTC</span>
+</div>
+</a>
+<!-- Center Desktop Navigation -->
+<nav class="hidden xl:flex items-center gap-space-lg text-[14px] font-medium">
+<a class="text-secondary hover:text-primary transition-colors py-1" href="#">Inicio</a>
+<a aria-current="page" class="text-primary font-semibold py-1 border-b-2 border-primary" href="#">Shaolin Kung Fu</a>
+<a class="text-secondary hover:text-primary transition-colors py-1" href="#">Tai Ji Quan</a>
+<a class="text-secondary hover:text-primary transition-colors py-1" href="#">Medicina China (MTC)</a>
+<a class="text-secondary hover:text-primary transition-colors py-1" href="#">Linaje &amp; Maestros</a>
+<a class="text-secondary hover:text-primary transition-colors py-1" href="#">Sedes &amp; Horarios</a>
+</nav>
+<!-- Action Button & Profile -->
+<div class="flex items-center gap-space-md">
+<a class="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-primary text-on-primary font-label-md text-xs font-semibold tracking-wider uppercase hover:bg-primary-container transition-all shadow-sm" href="#solicitar-prueba">
+          Clase de Prueba
+        </a>
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors border border-surface-container-highest">
+<span class="material-symbols-outlined text-[18px]">person</span>
+</div>
+</div>
+</div>
+</header>
+<main class="w-full pt-20">
+<!-- Hero Section: Modern, Centered & Athletic -->
+<section class="w-full py-16 lg:py-24 bg-surface border-b border-surface-container-highest">
+<div class="max-w-[1320px] mx-auto px-gutter-mobile md:px-gutter lg:px-margin text-center flex flex-col items-center">
+<!-- Category Pill Tag -->
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container border border-surface-container-highest mb-6">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="text-xs font-semibold uppercase tracking-wider text-secondary">Disciplina Ancestral • Linaje Songshan</span>
+</div>
+<!-- Main Title -->
+<h1 class="text-3xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-on-surface max-w-4xl">
+          Shaolin Quan Fa: Fuerza, Agilidad y Rigor Marcial
+        </h1>
+<!-- Subtitle -->
+<p class="mt-5 text-base md:text-lg text-secondary max-w-2xl font-normal leading-relaxed">
+          Un programa formativo integral concebido para desarrollar una postura inquebrantable, velocidad reactiva y control psicofísico a través de la metodología tradicional del Templo Shaolin.
+        </p>
+<!-- CTA Buttons -->
+<div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+<a class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-primary text-on-primary font-semibold text-sm hover:bg-primary-container transition-all shadow-sm gap-2" href="#solicitar-prueba">
+<span class="material-symbols-outlined text-[19px]">sports_martial_arts</span>
+            Reservar Clase de Prueba
+          </a>
+<a class="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-surface-container-lowest text-[#9E650C] font-semibold text-sm hover:bg-[#B87314]/10 transition-all border border-[#B87314]/40 shadow-sm gap-2" href="#horarios"><span class="material-symbols-outlined text-[19px] text-[#B87314]">calendar_month</span> Ver Horarios Semanales</a>
+</div>
+<!-- Metric Badges Row -->
+<div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 w-full max-w-3xl">
+<div class="p-4 rounded-xl bg-surface-container-low border border-surface-container-highest text-center">
+<span class="block text-2xl font-bold text-primary">1.500+</span>
+<span class="text-xs font-medium text-secondary">Años de Tradición Viva</span>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-low border border-surface-container-highest text-center">
+<span class="block text-2xl font-bold text-on-surface">5 Pilares</span>
+<span class="text-xs font-medium text-secondary">Ji Ben Gong, Taolu, Sanda</span>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-low border border-surface-container-highest text-center">
+<span class="block text-2xl font-bold text-on-surface">Grupos</span>
+<span class="text-xs font-medium text-secondary">Infantil &amp; Adultos</span>
+</div>
+<div class="p-4 rounded-xl bg-surface-container-low border border-surface-container-highest text-center">
+<span class="block text-2xl font-bold text-primary">100%</span>
+<span class="text-xs font-medium text-secondary">Supervisión Técnica Directa</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Metodología de Entrenamiento: 5 Pilares Fundamentales -->
+<section class="w-full py-16 lg:py-20 bg-surface-container-low border-b border-surface-container-highest">
+<div class="max-w-[1320px] mx-auto px-gutter-mobile md:px-gutter lg:px-margin">
+<!-- Centered Header -->
+<div class="text-center max-w-2xl mx-auto mb-14">
+<span class="text-xs font-bold uppercase tracking-wider text-primary">Arquitectura Técnica</span>
+<h2 class="mt-2 text-2xl md:text-4xl font-bold text-on-surface tracking-tight">Metodología de Entrenamiento Shaolin</h2>
+<p class="mt-3 text-secondary text-sm md:text-base leading-relaxed">
+            Nuestro plan pedagógico no improvisa: sigue las etapas progresivas del canon monástico para forjar el cuerpo de forma segura y duradera.
+          </p>
+</div>
+<!-- 5 Methodology Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-5"><!-- Item 1 -->
+<div class="p-6 rounded-xl bg-surface-container-lowest border border-surface-container-highest hover:border-[#B87314]/40 transition-all flex flex-col justify-between shadow-sm group">
+<div>
+<div class="w-10 h-10 rounded-lg bg-[#B87314]/10 text-[#B87314] border border-[#B87314]/25 flex items-center justify-center font-bold text-sm mb-4 transition-colors group-hover:bg-[#B87314] group-hover:text-white">
+  01
+</div>
+<h3 class="font-bold text-base text-on-surface mb-2">Ji Ben Gong (Fundamentos)</h3>
+<p class="text-xs text-secondary leading-relaxed">
+  Posturas maestras (Ma Bu, Gong Bu, Pu Bu), aperturas pélvicas y fortalecimiento de tendones y ligamentos.
+</p>
+</div>
+<span class="mt-4 pt-3 border-t border-surface-container text-[11px] font-semibold text-[#8F1D1D] uppercase tracking-wide flex items-center gap-1.5">
+  <span class="w-1.5 h-1.5 rounded-full bg-[#B87314]"></span>Base Estructural
+</span>
+</div>
+<!-- Item 2 -->
+<div class="p-6 rounded-xl bg-surface-container-lowest border border-surface-container-highest hover:border-[#B87314]/40 transition-all flex flex-col justify-between shadow-sm group">
+<div>
+<div class="w-10 h-10 rounded-lg bg-[#8F1D1D]/10 text-[#8F1D1D] border border-[#8F1D1D]/25 flex items-center justify-center font-bold text-sm mb-4 transition-colors group-hover:bg-[#8F1D1D] group-hover:text-white">
+  02
+</div>
+<h3 class="font-bold text-base text-on-surface mb-2">Acondicionamiento Físico</h3>
+<p class="text-xs text-secondary leading-relaxed">
+  Resistencia cardiovascular, potencia funcional pliométrica y elasticidad activa sin pesos lesivos.
+</p>
+</div>
+<span class="mt-4 pt-3 border-t border-surface-container text-[11px] font-semibold text-[#B87314] uppercase tracking-wide flex items-center gap-1.5">
+  <span class="w-1.5 h-1.5 rounded-full bg-[#8F1D1D]"></span>Capacidad Atlética
+</span>
+</div>
+<!-- Item 3 -->
+<div class="p-6 rounded-xl bg-surface-container-lowest border border-surface-container-highest hover:border-[#B87314]/40 transition-all flex flex-col justify-between shadow-sm group">
+<div>
+<div class="w-10 h-10 rounded-lg bg-[#B87314]/10 text-[#B87314] border border-[#B87314]/25 flex items-center justify-center font-bold text-sm mb-4 transition-colors group-hover:bg-[#B87314] group-hover:text-white">
+  03
+</div>
+<h3 class="font-bold text-base text-on-surface mb-2">Formas Tradicionales (Taolu)</h3>
+<p class="text-xs text-secondary leading-relaxed">
+  Xiao Hong Quan, Da Hong Quan y Luo Han Quan. Secuencias que integran ritmo, respiración y descarga elástica (Fa Jin).
+</p>
+</div>
+<span class="mt-4 pt-3 border-t border-surface-container text-[11px] font-semibold text-[#8F1D1D] uppercase tracking-wide flex items-center gap-1.5">
+  <span class="w-1.5 h-1.5 rounded-full bg-[#B87314]"></span>Transmisión Clásica
+</span>
+</div>
+<!-- Item 4 -->
+<div class="p-6 rounded-xl bg-surface-container-lowest border border-surface-container-highest hover:border-[#B87314]/40 transition-all flex flex-col justify-between shadow-sm group">
+<div>
+<div class="w-10 h-10 rounded-lg bg-[#8F1D1D]/10 text-[#8F1D1D] border border-[#8F1D1D]/25 flex items-center justify-center font-bold text-sm mb-4 transition-colors group-hover:bg-[#8F1D1D] group-hover:text-white">
+  04
+</div>
+<h3 class="font-bold text-base text-on-surface mb-2">Combate Real &amp; Sanda</h3>
+<p class="text-xs text-secondary leading-relaxed">
+  Golpeo de puño, patadas circulares, desequilibrios y derribos (Shuai Jiao) en un entorno de seguridad controlada.
+</p>
+</div>
+<span class="mt-4 pt-3 border-t border-surface-container text-[11px] font-semibold text-[#B87314] uppercase tracking-wide flex items-center gap-1.5">
+  <span class="w-1.5 h-1.5 rounded-full bg-[#8F1D1D]"></span>Eficacia Marcial
+</span>
+</div>
+<!-- Item 5 -->
+<div class="p-6 rounded-xl bg-surface-container-lowest border border-surface-container-highest hover:border-[#B87314]/40 transition-all flex flex-col justify-between shadow-sm group">
+<div>
+<div class="w-10 h-10 rounded-lg bg-[#B87314]/10 text-[#B87314] border border-[#B87314]/25 flex items-center justify-center font-bold text-sm mb-4 transition-colors group-hover:bg-[#B87314] group-hover:text-white">
+  05
+</div>
+<h3 class="font-bold text-base text-on-surface mb-2">Armas Ancestrales</h3>
+<p class="text-xs text-secondary leading-relaxed">
+  Palo largo (Gun), sable del norte (Dao), espada recta (Jian) y lanza. Extensión biomecánica del propio cuerpo.
+</p>
+</div>
+<span class="mt-4 pt-3 border-t border-surface-container text-[11px] font-semibold text-[#8F1D1D] uppercase tracking-wide flex items-center gap-1.5">
+  <span class="w-1.5 h-1.5 rounded-full bg-[#B87314]"></span>Destreza Instrumental
+</span>
+</div></div>
+</div>
+</section>
+<!-- Programas por Niveles y Grupos de Edad -->
+<section class="w-full py-16 lg:py-20 bg-surface border-b border-surface-container-highest">
+<div class="max-w-[1320px] mx-auto px-gutter-mobile md:px-gutter lg:px-margin">
+<div class="text-center max-w-2xl mx-auto mb-14">
+<span class="text-xs font-bold uppercase tracking-wider text-primary">Itinerario y Grupos</span>
+<h2 class="mt-2 text-2xl md:text-4xl font-bold text-on-surface tracking-tight">Programas Formativos Adaptados</h2>
+<p class="mt-3 text-secondary text-sm md:text-base leading-relaxed">
+            Planes de estudio organizados rigurosamente por edades y objetivos técnicos para garantizar un avance medible.
+          </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6"><!-- Card 1: Infantil -->
+<div class="p-8 rounded-xl bg-surface-container-lowest border border-surface-container-highest hover:border-[#B87314]/40 transition-all flex flex-col justify-between shadow-sm">
+<div>
+<div class="flex items-center justify-between gap-4 mb-4">
+<span class="px-2.5 py-1 rounded bg-[#B87314]/10 border border-[#B87314]/30 text-xs font-bold uppercase tracking-wider text-[#9E650C]">
+  5 a 13 años
+</span>
+<span class="text-xs font-semibold text-primary flex items-center gap-1">
+  <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Grupo Pequeños Dragones
+</span>
+</div>
+<h3 class="text-xl font-bold text-on-surface mb-3">Kung Fu Infantil Tradicional</h3>
+<p class="text-sm text-secondary leading-relaxed mb-6">
+  Desarrollo psicomotriz basado en la disciplina marcial. Corrige descompensaciones posturales, fomenta la concentración escolar y enseña valores de respeto y superación.
+</p>
+<ul class="space-y-2.5 text-xs text-on-surface">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#B87314] text-[18px]">check</span>
+<span class="">Coordinación vestibular, elasticidad y reflejos</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#B87314] text-[18px]">check</span>
+<span class="">Conducta ética, autocontrol y compañerismo</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#B87314] text-[18px]">check</span>
+<span class="">Graduación anual de fajas por mérito y esfuerzo</span>
+</li>
+</ul>
+</div>
+<div class="mt-8 pt-5 border-t border-surface-container flex items-center justify-between">
+<span class="text-xs text-secondary">Lunes, Miércoles y Viernes</span>
+<a class="text-xs font-bold text-[#B87314] hover:text-[#9E650C] uppercase tracking-wider flex items-center gap-1 transition-colors" href="#solicitar-prueba">
+  Probar Clase Infantil <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 2: Iniciación Adultos -->
+<div class="p-8 rounded-xl bg-surface-container-lowest border border-surface-container-highest hover:border-[#B87314]/40 transition-all flex flex-col justify-between shadow-sm">
+<div>
+<div class="flex items-center justify-between gap-4 mb-4">
+<span class="px-2.5 py-1 rounded bg-[#B87314]/10 border border-[#B87314]/30 text-xs font-bold uppercase tracking-wider text-[#9E650C]">
+  Desde los 14 años en adelante
+</span>
+<span class="text-xs font-semibold text-primary flex items-center gap-1">
+  <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Sin Experiencia Previa
+</span>
+</div>
+<h3 class="text-xl font-bold text-on-surface mb-3">Iniciación Adultos &amp; Ji Ben Gong</h3>
+<p class="text-sm text-secondary leading-relaxed mb-6">
+  El acceso directo para quienes desean comenzar de cero. Enfoque anatómico progresivo para ganar movilidad articular, corregir dolores lumbares y dominar las 5 posturas básicas.
+</p>
+<ul class="space-y-2.5 text-xs text-on-surface">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#B87314] text-[18px]">check</span>
+<span class="">Alineación vertebral y desbloqueo de cadera</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#B87314] text-[18px]">check</span>
+<span class="">Patadas lineales y transiciones biomecánicas limpias</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#B87314] text-[18px]">check</span>
+<span class="">Primera forma tradicional continua: Lian Huan Quan</span>
+</li>
+</ul>
+</div>
+<div class="mt-8 pt-5 border-t border-surface-container flex items-center justify-between">
+<span class="text-xs text-secondary">Turnos de mañana y noche</span>
+<a class="text-xs font-bold text-[#B87314] hover:text-[#9E650C] uppercase tracking-wider flex items-center gap-1 transition-colors" href="#solicitar-prueba">
+  Empezar Sin Nivel Previo <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 3: Taolu Avanzado & Armas -->
+<div class="p-8 rounded-xl bg-surface-container-lowest border border-surface-container-highest hover:border-[#B87314]/40 transition-all flex flex-col justify-between shadow-sm">
+<div>
+<div class="flex items-center justify-between gap-4 mb-4">
+<span class="px-2.5 py-1 rounded bg-[#8F1D1D]/10 border border-[#8F1D1D]/25 text-xs font-bold uppercase tracking-wider text-[#8F1D1D]">
+  Nivel Intermedio &amp; Avanzado
+</span>
+<span class="text-xs font-semibold text-[#B87314] flex items-center gap-1">
+  <span class="w-1.5 h-1.5 rounded-full bg-[#B87314]"></span>Taolu Ancestral
+</span>
+</div>
+<h3 class="text-xl font-bold text-on-surface mb-3">Formas Tradicionales &amp; Armas del Templo</h3>
+<p class="text-sm text-secondary leading-relaxed mb-6">
+  Compendio monástico completo de mano vacía y armas de la dinastía Song. Estudio de aplicaciones marciales (Qin Na) y generación de energía elástica concentrada.
+</p>
+<div class="grid grid-cols-2 gap-3 text-xs bg-surface-container-low p-3.5 rounded-lg border border-surface-container-highest mb-2">
+<div>
+<strong class="block text-[#8F1D1D] font-semibold mb-1">Mano Vacía</strong>
+<span class="text-secondary text-[11px] leading-tight block">Xiao Hong Quan, Da Hong Quan, Luo Han Shi Ba Shou</span>
+</div>
+<div>
+<strong class="block text-[#B87314] font-semibold mb-1">Armas Clásicas</strong>
+<span class="text-secondary text-[11px] leading-tight block">Palo Gun, Sable Dao, Espada Jian y Lanza Qiang</span>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-5 border-t border-surface-container flex items-center justify-between">
+<span class="text-xs text-secondary">Lunes, Miércoles y Sábados</span>
+<a class="text-xs font-bold text-primary hover:text-primary-container uppercase tracking-wider flex items-center gap-1 transition-colors" href="#solicitar-prueba">
+  Consultar Nivel <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 4: Sanda & Combate -->
+<div class="p-8 rounded-xl bg-surface-container-lowest border border-surface-container-highest hover:border-[#B87314]/40 transition-all flex flex-col justify-between shadow-sm">
+<div>
+<div class="flex items-center justify-between gap-4 mb-4">
+<span class="px-2.5 py-1 rounded bg-[#B87314]/10 border border-[#B87314]/30 text-xs font-bold uppercase tracking-wider text-[#9E650C]">
+  Contacto Técnico Supervisado
+</span>
+<span class="text-xs font-semibold text-primary flex items-center gap-1">
+  <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>Combate Deportivo &amp; Marcial
+</span>
+</div>
+<h3 class="text-xl font-bold text-on-surface mb-3">Sanda &amp; San Shou (Boxeo Chino)</h3>
+<p class="text-sm text-secondary leading-relaxed mb-6">
+  La aplicación viva del sistema marcial. Combinaciones rápidas de puño, pierna y técnicas de proyección cuerpo a cuerpo con protecciones completas homologadas.
+</p>
+<ul class="space-y-2.5 text-xs text-on-surface">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#B87314] text-[18px]">check</span>
+<span class="">Protocolos estrictos de seguridad y uso de protecciones</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#B87314] text-[18px]">check</span>
+<span class="">Temple bajo presión, reflejos dinámicos y cardio de combate</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#B87314] text-[18px]">check</span>
+<span class="">Derribos tradicionales de Shuai Jiao adaptados a tatami</span>
+</li>
+</ul>
+</div>
+<div class="mt-8 pt-5 border-t border-surface-container flex items-center justify-between">
+<span class="text-xs text-secondary">Martes y Jueves (Tardes/Noches)</span>
+<a class="text-xs font-bold text-[#B87314] hover:text-[#9E650C] uppercase tracking-wider flex items-center gap-1 transition-colors" href="#solicitar-prueba">
+  Ver Sesiones de Combate <span class="material-symbols-outlined text-[15px]">arrow_forward</span>
+</a>
+</div>
+</div></div>
+</div>
+</section>
+<!-- Visual Lineage & Dojo Snapshot -->
+<section class="w-full py-16 bg-surface-container-low border-b border-surface-container-highest">
+<div class="max-w-[1320px] mx-auto px-gutter-mobile md:px-gutter lg:px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center rounded-xl bg-surface-container-lowest border border-surface-container-highest p-6 lg:p-8">
+<div class="lg:col-span-5 overflow-hidden rounded-lg">
+<img class="w-full h-72 object-cover" data-alt="Práctica tradicional de Shaolin Kung Fu en sala silenciosa y luminosa" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOr93qmBxjI9D88_jXti03RbnnLorHc6hOgVvfnKgnI5aPu815F74khe76ECAEiDWVSE-pzg4qPNu1U1EiuMgMdsCPSzidDPKEd6cwjuXmYwt9AteFRmpfU77_Mmv1593RCefaX6KLJ1rDYltjRFNrv3dXwKqe1jIlI-zufYRrNpKYmDXL9rpTXT2soY0vsWFi61Sh2qkzMV-TXDACJsrMCBzm1s1t9AZkbHmq7GZFU9SWga0IZkUNFw">
+</div>
+<div class="lg:col-span-7 flex flex-col gap-4">
+<div class="inline-flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-primary/10 text-primary font-semibold text-xs tracking-wider uppercase">Transmisión Oral &amp; Práctica Real</span>
+</div>
+<h3 class="text-xl lg:text-2xl font-bold text-on-surface">
+              "Entrena la postura hasta que el suelo te pertenezca; aquieta la mente hasta que el golpe sea un reflejo natural del agua."
+            </h3>
+<p class="text-sm text-secondary leading-relaxed">
+              En Shaolin Pechan mantenemos la pureza de cada movimiento sin concesiones comerciales. Nuestros grupos tienen aforo controlado para garantizar correcciones posturales individualizadas y una progresión biomecánica segura en cada sesión.
+            </p>
+<div class="pt-2 flex items-center gap-4 text-xs font-semibold text-on-surface">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span class="">Instructores Certificados</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span class="">Tatami Profesional de Alto Impacto</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Horarios Semanales: Centered, Clean Table & Modern Filters -->
+<section class="w-full py-16 lg:py-20 bg-surface border-b border-surface-container-highest" id="horarios">
+<div class="max-w-[1320px] mx-auto px-gutter-mobile md:px-gutter lg:px-margin">
+<!-- Header -->
+<div class="text-center max-w-2xl mx-auto mb-10">
+<span class="text-xs font-bold uppercase tracking-wider text-primary">Planificación Semanal</span>
+<h2 class="mt-2 text-2xl md:text-4xl font-bold text-on-surface tracking-tight">Horarios de Clases de Shaolin Kung Fu</h2>
+<p class="mt-3 text-secondary text-sm md:text-base leading-relaxed">
+            Sede Central (Valencia). Flexibilidad para recuperación de sesiones perdidas y uso libre del dojo en horarios habilitados.
+          </p>
+</div>
+<!-- Filter Tags -->
+<div class="flex flex-wrap items-center justify-center gap-2.5 mb-8"><span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary text-on-primary text-xs font-semibold shadow-sm"><span class="w-2 h-2 rounded-full bg-on-primary"></span>Kung Fu Tradicional</span><span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#B87314]/10 border border-[#B87314]/40 text-[#9E650C] text-xs font-semibold"><span class="w-2 h-2 rounded-full bg-[#B87314]"></span>Infantil / Dragones</span><span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container border border-surface-container-highest text-secondary text-xs font-semibold"><span class="w-2 h-2 rounded-full bg-on-surface"></span>Sanda &amp; Combate</span><span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#B87314]/10 border border-[#B87314]/40 text-[#9E650C] text-xs font-semibold"><span class="w-2 h-2 rounded-full bg-[#B87314]"></span>Armas Clásicas</span></div>
+<!-- Timetable Card -->
+<div class="w-full overflow-x-auto rounded-xl border border-surface-container-highest bg-surface-container-lowest shadow-sm">
+<table class="w-full text-left border-collapse min-w-[760px]">
+<thead>
+<tr class="bg-surface-container-low border-b border-surface-container-highest text-on-surface text-xs font-bold uppercase tracking-wider">
+<th class="p-4 w-36">Franja Horaria</th>
+<th class="p-4">Lunes</th>
+<th class="p-4">Martes</th>
+<th class="p-4">Miércoles</th>
+<th class="p-4">Jueves</th>
+<th class="p-4">Viernes / Sáb.</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container text-xs text-on-surface"><!-- Turno Mañana -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="p-4 font-semibold text-secondary whitespace-nowrap bg-surface-container-lowest">
+  09:30 - 11:00
+</td>
+<td class="p-4">
+<div class="p-2 rounded bg-primary/10 border-l-2 border-primary">
+  <span class="font-bold text-on-surface block">Ji Ben Gong &amp; Puño</span>
+  <span class="text-secondary text-[11px]">Adultos Todos los Niveles</span>
+</div>
+</td>
+<td class="p-4 text-secondary/60 italic text-center">—</td>
+<td class="p-4">
+<div class="p-2 rounded bg-primary/10 border-l-2 border-primary">
+  <span class="font-bold text-on-surface block">Ji Ben Gong &amp; Puño</span>
+  <span class="text-secondary text-[11px]">Adultos Todos los Niveles</span>
+</div>
+</td>
+<td class="p-4 text-secondary/60 italic text-center">—</td>
+<td class="p-4">
+<div class="p-2 rounded bg-[#B87314]/10 border-l-2 border-[#B87314]">
+  <span class="font-bold text-on-surface block">Palo Shaolin (Gun)</span>
+  <span class="text-[#9E650C] text-[11px] font-medium">Sábados 10:00 - 11:30</span>
+</div>
+</td>
+</tr>
+<!-- Turno Infantil -->
+<tr class="hover:bg-surface-container-low/50 transition-colors bg-surface-container-low/30">
+<td class="p-4 font-semibold text-secondary whitespace-nowrap bg-surface-container-lowest">
+  17:30 - 18:30
+</td>
+<td class="p-4">
+<div class="p-2 rounded bg-[#B87314]/10 border-l-2 border-[#B87314]">
+  <span class="font-bold text-on-surface block">Pequeños Dragones (5-8a)</span>
+  <span class="text-secondary text-[11px]">Coordinación y bases</span>
+</div>
+</td>
+<td class="p-4">
+<div class="p-2 rounded bg-surface-container border-l-2 border-[#9E650C]">
+  <span class="font-bold text-on-surface block">Dragones Juvenil (9-13a)</span>
+  <span class="text-secondary text-[11px]">Formas básicas y saltos</span>
+</div>
+</td>
+<td class="p-4">
+<div class="p-2 rounded bg-[#B87314]/10 border-l-2 border-[#B87314]">
+  <span class="font-bold text-on-surface block">Pequeños Dragones (5-8a)</span>
+  <span class="text-secondary text-[11px]">Coordinación y respeto</span>
+</div>
+</td>
+<td class="p-4">
+<div class="p-2 rounded bg-surface-container border-l-2 border-[#9E650C]">
+  <span class="font-bold text-on-surface block">Dragones Juvenil (9-13a)</span>
+  <span class="text-secondary text-[11px]">Formas básicas y saltos</span>
+</div>
+</td>
+<td class="p-4">
+<div class="p-2 rounded bg-surface-container border-l-2 border-outline">
+  <span class="font-bold text-on-surface block">Práctica Tutelada</span>
+  <span class="text-secondary text-[11px]">Viernes 17:30 - 18:30</span>
+</div>
+</td>
+</tr>
+<!-- Turno Tarde Adultos -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="p-4 font-semibold text-secondary whitespace-nowrap bg-surface-container-lowest">
+  19:00 - 20:30
+</td>
+<td class="p-4">
+<div class="p-2 rounded bg-primary/10 border-l-2 border-primary">
+  <span class="font-bold text-on-surface block">Xiao Hong Quan</span>
+  <span class="text-secondary text-[11px]">Formas tradicionales</span>
+</div>
+</td>
+<td class="p-4">
+<div class="p-2 rounded bg-surface-container-high border-l-2 border-on-surface">
+  <span class="font-bold text-on-surface block">Sanda &amp; Combate</span>
+  <span class="text-secondary text-[11px]">Guanteo técnico y clinch</span>
+</div>
+</td>
+<td class="p-4">
+<div class="p-2 rounded bg-primary/10 border-l-2 border-primary">
+  <span class="font-bold text-on-surface block">Luo Han Quan &amp; Armas</span>
+  <span class="text-secondary text-[11px]">Espada y sable Shaolin</span>
+</div>
+</td>
+<td class="p-4">
+<div class="p-2 rounded bg-surface-container-high border-l-2 border-on-surface">
+  <span class="font-bold text-on-surface block">Sanda &amp; Derribos</span>
+  <span class="text-secondary text-[11px]">Aplicación de Shuai Jiao</span>
+</div>
+</td>
+<td class="p-4">
+<div class="p-2 rounded bg-primary/10 border-l-2 border-primary">
+  <span class="font-bold text-on-surface block">Formas Maestras</span>
+  <span class="text-secondary text-[11px]">Viernes intensivo</span>
+</div>
+</td>
+</tr>
+<!-- Turno Noche Iniciación -->
+<tr class="hover:bg-surface-container-low/50 transition-colors bg-surface-container-low/30">
+<td class="p-4 font-semibold text-secondary whitespace-nowrap bg-surface-container-lowest">
+  20:30 - 21:45
+</td>
+<td class="p-4">
+<div class="p-2 rounded bg-primary/10 border-l-2 border-primary">
+  <span class="font-bold text-on-surface block">Iniciación Adultos</span>
+  <span class="text-secondary text-[11px]">Cero experiencia</span>
+</div>
+</td>
+<td class="p-4 text-secondary/60 italic text-center">—</td>
+<td class="p-4">
+<div class="p-2 rounded bg-primary/10 border-l-2 border-primary">
+  <span class="font-bold text-on-surface block">Iniciación Adultos</span>
+  <span class="text-secondary text-[11px]">Lian Huan Quan paso a paso</span>
+</div>
+</td>
+<td class="p-4 text-secondary/60 italic text-center">—</td>
+<td class="p-4">
+<div class="p-2 rounded bg-[#B87314]/10 border-l-2 border-[#B87314]">
+  <span class="font-bold text-on-surface block">Acondicionamiento</span>
+  <span class="text-[#9E650C] text-[11px] font-medium">Flexibilidad profunda</span>
+</div>
+</td>
+</tr></tbody>
+</table>
+</div>
+<!-- Schedule helper strip -->
+<div class="mt-4 flex flex-col sm:flex-row items-center justify-between gap-3 p-4 rounded-xl bg-surface-container-low border border-surface-container-highest text-xs">
+<div class="flex items-center gap-2 text-secondary">
+<span class="material-symbols-outlined text-primary text-[18px]">info</span>
+<span class="">¿Dudas sobre el grupo idóneo según tu disponibilidad o estado físico? Te asesoramos en tu primera sesión.</span>
+</div>
+<a class="font-semibold text-[#B87314] hover:text-[#9E650C] hover:underline shrink-0 flex items-center gap-1 transition-colors" href="#solicitar-prueba">Solicitar asesoramiento y prueba gratuita →</a>
+</div>
+</div>
+</section>
+<!-- Formulario Integrado: Solicitar Clase de Prueba -->
+<section class="w-full py-16 lg:py-20 bg-surface-container-low border-b border-surface-container-highest" id="solicitar-prueba">
+<div class="max-w-[1320px] mx-auto px-gutter-mobile md:px-gutter lg:px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Left Instructions Column -->
+<div class="lg:col-span-5 flex flex-col gap-5">
+<span class="text-xs font-bold uppercase tracking-wider text-primary">Inscripción Abierta</span>
+<h2 class="text-2xl md:text-4xl font-bold text-on-surface tracking-tight">Prueba una Clase de Kung Fu Sin Compromiso</h2>
+<p class="text-sm md:text-base text-secondary leading-relaxed">
+              La mejor forma de comprobar si esta disciplina se adapta a tus metas es asistir a una sesión real. Te recibiremos de forma guiada y amigable desde el primer minuto.
+            </p>
+<div class="space-y-4 pt-2">
+<div class="flex items-start gap-3">
+<div class="w-7 h-7 rounded-lg bg-surface-container-highest border border-surface-container-high text-primary font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
+                  1
+                </div>
+<div>
+<h4 class="text-sm font-bold text-on-surface">Sin matrícula ni coste</h4>
+<p class="text-xs text-secondary leading-relaxed">La primera sesión de prueba es 100% gratuita y sin permanencia.</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-7 h-7 rounded-lg bg-surface-container-highest border border-surface-container-high text-primary font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
+                  2
+                </div>
+<div>
+<h4 class="text-sm font-bold text-on-surface">Indumentaria sencilla</h4>
+<p class="text-xs text-secondary leading-relaxed">Solo necesitas pantalón deportivo largo, camiseta cómoda y calzado de suela fina y limpia.</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<div class="w-7 h-7 rounded-lg bg-surface-container-highest border border-surface-container-high text-primary font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
+                  3
+                </div>
+<div>
+<h4 class="text-sm font-bold text-on-surface">Entrevista diagnóstica</h4>
+<p class="text-xs text-secondary leading-relaxed">Al finalizar, el Shifu resolverá tus dudas sobre objetivos de salud, defensa o acondicionamiento.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Clean Form -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-6 md:p-8 rounded-xl border border-surface-container-highest shadow-sm">
+<form class="flex flex-col gap-4" id="prueba-form" onsubmit="event.preventDefault(); document.getElementById('form-feedback').classList.remove('hidden');">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-semibold uppercase tracking-wider text-secondary">Nombre Completo *</label>
+<input class="px-3.5 py-2.5 rounded-lg border border-surface-container-highest bg-surface text-on-surface text-sm placeholder:text-secondary/50 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary" placeholder="Ej: Mateo Serrano" required="" type="text">
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-semibold uppercase tracking-wider text-secondary">Teléfono / WhatsApp *</label>
+<input class="px-3.5 py-2.5 rounded-lg border border-surface-container-highest bg-surface text-on-surface text-sm placeholder:text-secondary/50 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary" placeholder="+34 600 000 000" required="" type="tel">
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-semibold uppercase tracking-wider text-secondary">Correo Electrónico *</label>
+<input class="px-3.5 py-2.5 rounded-lg border border-surface-container-highest bg-surface text-on-surface text-sm placeholder:text-secondary/50 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary" placeholder="tu-email@dominio.com" required="" type="email">
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-semibold uppercase tracking-wider text-secondary">Grupo / Modalidad Deseada *</label>
+<select class="px-3.5 py-2.5 rounded-lg border border-surface-container-highest bg-surface text-on-surface text-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary cursor-pointer">
+<option>Iniciación Adultos (Sin experiencia)</option>
+<option>Kung Fu Infantil / Pequeños Dragones (5-13 años)</option>
+<option>Nivel Medio / Formas Tradicionales</option>
+<option>Sanda &amp; Combate Chino (San Shou)</option>
+<option>Armas Clásicas (Palo / Sable / Espada)</option>
+</select>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-semibold uppercase tracking-wider text-secondary">Horario de Preferencia</label>
+<select class="px-3.5 py-2.5 rounded-lg border border-surface-container-highest bg-surface text-on-surface text-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary cursor-pointer">
+<option>Mañanas (09:30 - 11:00)</option>
+<option>Tardes Infantil (17:30 - 18:30)</option>
+<option>Tardes Adultos (19:00 - 20:30)</option>
+<option>Noches Adultos (20:30 - 21:45)</option>
+<option>Sábados Mañanas</option>
+</select>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-semibold uppercase tracking-wider text-secondary">Experiencia Marcial Previa</label>
+<select class="px-3.5 py-2.5 rounded-lg border border-surface-container-highest bg-surface text-on-surface text-sm focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary cursor-pointer">
+<option>Ninguna (Comienzo absoluto desde cero)</option>
+<option>He practicado otros deportes / artes marciales</option>
+<option>Ya tengo experiencia en Kung Fu tradicional</option>
+</select>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-semibold uppercase tracking-wider text-secondary">Observaciones o Lesiones a Considerar</label>
+<textarea class="px-3.5 py-2.5 rounded-lg border border-surface-container-highest bg-surface text-on-surface text-sm placeholder:text-secondary/50 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary" placeholder="Indícanos si tienes alguna limitación física, lesión articular o consulta previa..." rows="3"></textarea>
+</div>
+<button class="w-full mt-2 py-3 rounded-lg bg-primary text-on-primary font-semibold text-xs uppercase tracking-wider hover:bg-primary-container transition-all shadow-sm flex items-center justify-center gap-2" type="submit">
+<span class="material-symbols-outlined text-[18px]">send</span>
+                Confirmar Solicitud de Clase Gratuita
+              </button>
+<div class="hidden p-3.5 rounded-lg bg-surface-container border border-surface-container-highest text-primary flex items-center gap-2 text-xs font-semibold" id="form-feedback">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+<span class="">¡Solicitud enviada correctamente! Nos comunicaremos vía WhatsApp o correo electrónico para confirmar tu plaza.</span>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Acordeón Moderno y Minimalista -->
+<section class="w-full py-16 lg:py-20 bg-surface border-b border-surface-container-highest">
+<div class="max-w-[1320px] mx-auto px-gutter-mobile md:px-gutter lg:px-margin">
+<div class="text-center max-w-2xl mx-auto mb-12">
+<span class="text-xs font-bold uppercase tracking-wider text-primary">Información Práctica</span>
+<h2 class="mt-2 text-2xl md:text-4xl font-bold text-on-surface tracking-tight">Preguntas Frecuentes sobre la Práctica</h2>
+<p class="mt-3 text-secondary text-sm md:text-base leading-relaxed">
+            Pautas esenciales para tu primera semana en el dojo de Shaolin Pechan.
+          </p>
+</div>
+<div class="max-w-3xl mx-auto flex flex-col gap-3">
+<!-- FAQ 1 -->
+<div class="p-5 rounded-xl border border-surface-container-highest bg-surface-container-lowest transition-all">
+<button class="w-full flex items-center justify-between text-left font-semibold text-sm md:text-base text-on-surface hover:text-primary gap-4" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('.faq-icon').classList.toggle('rotate-180');" type="button">
+<span class="">¿Cuál es la edad idónea para comenzar y existe límite de edad?</span>
+<span class="material-symbols-outlined text-secondary faq-icon transition-transform text-[20px] shrink-0">expand_more</span>
+</button>
+<div class="hidden pt-3 text-xs md:text-sm text-secondary leading-relaxed border-t border-surface-container mt-3">
+              La edad mínima en el grupo de Pequeños Dragones es de 5 años. Para los grupos de adultos no hay edad máxima: contamos con estudiantes que inician pasados los 50 y 60 años. La metodología tradicional gradúa la intensidad cuidando siempre las articulaciones.
+            </div>
+</div>
+<!-- FAQ 2 -->
+<div class="p-5 rounded-xl border border-surface-container-highest bg-surface-container-lowest transition-all">
+<button class="w-full flex items-center justify-between text-left font-semibold text-sm md:text-base text-on-surface hover:text-primary gap-4" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('.faq-icon').classList.toggle('rotate-180');" type="button">
+<span class="">¿Es necesario tener flexibilidad o preparación física previa?</span>
+<span class="material-symbols-outlined text-secondary faq-icon transition-transform text-[20px] shrink-0">expand_more</span>
+</button>
+<div class="hidden pt-3 text-xs md:text-sm text-secondary leading-relaxed border-t border-surface-container mt-3">
+              No. La flexibilidad, la coordinación y la fuerza funcional son las consecuencias del entrenamiento constante, nunca un requisito de entrada. El trabajo de Ji Ben Gong está diseñado precisamente para reacondicionar tendones y fascias paso a paso.
+            </div>
+</div>
+<!-- FAQ 3 -->
+<div class="p-5 rounded-xl border border-surface-container-highest bg-surface-container-lowest transition-all">
+<button class="w-full flex items-center justify-between text-left font-semibold text-sm md:text-base text-on-surface hover:text-primary gap-4" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('.faq-icon').classList.toggle('rotate-180');" type="button">
+<span class="">¿Qué necesito traer para el primer día de prueba?</span>
+<span class="material-symbols-outlined text-secondary faq-icon transition-transform text-[20px] shrink-0">expand_more</span>
+</button>
+<div class="hidden pt-3 text-xs md:text-sm text-secondary leading-relaxed border-t border-surface-container mt-3">
+              Únicamente ropa de entrenamiento cómoda (pantalón largo deportivo o mallas y camiseta de algodón) y calzado deportivo de suela plana y limpia (o calcetines antideslizantes). Al formalizar tu matrícula podrás adquirir el uniforme oficial de la academia.
+            </div>
+</div>
+<!-- FAQ 4 -->
+<div class="p-5 rounded-xl border border-surface-container-highest bg-surface-container-lowest transition-all">
+<button class="w-full flex items-center justify-between text-left font-semibold text-sm md:text-base text-on-surface hover:text-primary gap-4" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('.faq-icon').classList.toggle('rotate-180');" type="button">
+<span class="">¿Hay riesgo de golpes o lesiones durante las clases?</span>
+<span class="material-symbols-outlined text-secondary faq-icon transition-transform text-[20px] shrink-0">expand_more</span>
+</button>
+<div class="hidden pt-3 text-xs md:text-sm text-secondary leading-relaxed border-t border-surface-container mt-3">
+              En las clases generales de Kung Fu y formas no existe combate agresivo. En las sesiones específicas de Sanda (boxeo chino), el contacto es graduado, con protecciones reglamentarias obligatorias (casco, guantillas, bucal y espinilleras) y siempre bajo la tutela directa del instructor.
+            </div>
+</div>
+<!-- FAQ 5 -->
+<div class="p-5 rounded-xl border border-surface-container-highest bg-surface-container-lowest transition-all">
+<button class="w-full flex items-center justify-between text-left font-semibold text-sm md:text-base text-on-surface hover:text-primary gap-4" onclick="this.nextElementSibling.classList.toggle('hidden'); this.querySelector('.faq-icon').classList.toggle('rotate-180');" type="button">
+<span class="">¿Se puede compaginar el Kung Fu con Tai Ji Quan o Qi Gong?</span>
+<span class="material-symbols-outlined text-secondary faq-icon transition-transform text-[20px] shrink-0">expand_more</span>
+</button>
+<div class="hidden pt-3 text-xs md:text-sm text-secondary leading-relaxed border-t border-surface-container mt-3">
+              Es el balance óptimo según la tradición clásica: el Kung Fu aporta vigor, potencia y agilidad activa (Yang), mientras que el Tai Chi y el Qi Gong proporcionan regeneración miofascial y equilibrio interno (Yin). Disponemos de planes combinados especiales.
+            </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bottom Accent Banner -->
+<section class="w-full py-12 bg-primary text-on-primary">
+<div class="max-w-[1320px] mx-auto px-gutter-mobile md:px-gutter lg:px-margin flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+<div>
+<span class="text-xs font-bold uppercase tracking-wider text-primary-fixed">Academia Oficial Shaolin Pechan</span>
+<h3 class="text-2xl font-bold mt-1">Empieza tu camino en las artes marciales tradicionales</h3>
+<p class="text-xs md:text-sm text-primary-fixed/80 mt-1">Plazas limitadas por grupo para mantener una enseñanza personalizada.</p>
+</div>
+<a class="px-6 py-3 rounded-lg bg-surface text-primary font-bold text-xs uppercase tracking-wider hover:bg-surface-container transition-all shadow-sm shrink-0" href="#solicitar-prueba">
+          Solicitar Plaza de Prueba
+        </a>
+</div>
+</section>
+</main>
+<!-- Modern Clean Footer -->
+<footer class="w-full bg-surface-container-low border-t border-surface-container-highest text-on-surface">
+<div class="w-full max-w-[1320px] mx-auto px-gutter-mobile md:px-gutter lg:px-margin pt-16 pb-12">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
+<!-- Brand Info -->
+<div class="lg:col-span-2 flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<img alt="Shaolin Pechan Logo" class="h-9 w-9 object-contain rounded-full" src="https://lh3.googleusercontent.com/aida/AEtjO1UdDP8cW5bizOtO7QEC4gz1Go1q_sb7mIclDulCRNYShKI4mjLX-39NBCe6_QnsJ8sK1vb-X6OQVJ-vQ9vPZYBizOPXHt9CNT9v44sMI06JoDSL4krZDAhh_WnKDs-s83zMTxQUd_oR9_OR41Zp0JHwiNb1XJbGZFKVF7LbD6DgtW4tjRw0DwM-KPf_UxUYTFXCSBVZqC6tnqvm9SE-c9zOzn-fEL6qotaS1AVqRBBEJzOah3xvFumNfT8">
+<div>
+<span class="font-bold text-base text-on-surface block">Shaolin Pechan • 少林百禅</span>
+<span class="text-xs text-secondary">Academia Tradicional &amp; Centro MTC</span>
+</div>
+</div>
+<p class="text-xs text-secondary leading-relaxed max-w-sm">
+            Preservando el linaje marcial del Templo Shaolin, el cultivo interno a través de Taijiquan y Qi Gong, y el bienestar holístico mediante la Medicina Tradicional China.
+          </p>
+<div class="flex items-center gap-2 pt-1">
+<span class="text-[11px] font-semibold text-primary px-2 py-0.5 rounded bg-surface-container border border-surface-container-highest uppercase tracking-wider">Linaje Verificado</span>
+<span class="text-xs text-secondary">Songshan Shaolin Quan Fa</span>
+</div>
+</div>
+<!-- Col 2: Disciplinas -->
+<div>
+<h4 class="font-bold text-xs uppercase tracking-wider text-on-surface mb-3">Disciplinas</h4>
+<ul class="flex flex-col gap-2 text-xs text-secondary">
+<li class=""><a class="hover:text-primary transition-colors" href="#">Shaolin Kung Fu Tradicional</a></li>
+<li class=""><a class="hover:text-primary transition-colors" href="#">Tai Ji Quan (Chen &amp; Yang)</a></li>
+<li class=""><a class="hover:text-primary transition-colors" href="#">Qi Gong &amp; Baduanjin</a></li>
+<li class=""><a class="hover:text-primary transition-colors" href="#">Sanda &amp; San Shou</a></li>
+<li class=""><a class="hover:text-primary transition-colors" href="#">Armas de los 18 Brazos</a></li>
+</ul>
+</div>
+<!-- Col 3: MTC -->
+<div>
+<h4 class="font-bold text-xs uppercase tracking-wider text-on-surface mb-3">Salud &amp; MTC</h4>
+<ul class="flex flex-col gap-2 text-xs text-secondary">
+<li class=""><a class="hover:text-primary transition-colors" href="#">Acupuntura &amp; Moxibustión</a></li>
+<li class=""><a class="hover:text-primary transition-colors" href="#">Masaje Tuina Terapéutico</a></li>
+<li class=""><a class="hover:text-primary transition-colors" href="#">Fitoterapia Tradicional</a></li>
+<li class=""><a class="hover:text-primary transition-colors" href="#">Diagnóstico del Pulso</a></li>
+<li class=""><a class="hover:text-primary transition-colors" href="#">Dietoterapia Energética</a></li>
+</ul>
+</div>
+<!-- Col 4: Sedes -->
+<div>
+<h4 class="font-bold text-xs uppercase tracking-wider text-on-surface mb-3">Contacto &amp; Sedes</h4>
+<div class="flex flex-col gap-2.5 text-xs text-secondary">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[17px] text-primary shrink-0">location_on</span>
+<span class="">Carrer de la Pau 18, Valencia</span>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[17px] text-primary shrink-0">schedule</span>
+<span class="">Lunes a Sábado: 07:30 - 21:30</span>
+</div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[17px] text-primary shrink-0">mail</span>
+<span class="">info@shaolinpechan.com</span>
+</div>
+<div class="flex items-center gap-2 pt-2">
+<a aria-label="Instagram" class="w-7 h-7 rounded bg-surface-container flex items-center justify-center text-secondary hover:text-primary hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined text-[16px]">photo_camera</span>
+</a>
+<a aria-label="YouTube" class="w-7 h-7 rounded bg-surface-container flex items-center justify-center text-secondary hover:text-primary hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined text-[16px]">smart_display</span>
+</a>
+<a aria-label="Telegram" class="w-7 h-7 rounded bg-surface-container flex items-center justify-center text-secondary hover:text-primary hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined text-[16px]">forum</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Credits Strip -->
+<div class="pt-8 border-t border-surface-container-highest flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-secondary">
+<div class="">© 2025 Academia Shaolin Pechan. Todos los derechos reservados.</div>
+<div class="flex items-center gap-4">
+<a class="hover:text-primary transition-colors" href="#">Aviso Legal</a>
+<a class="hover:text-primary transition-colors" href="#">Política de Privacidad</a>
+<a class="hover:text-primary transition-colors" href="#">Código Deontológico</a>
+</div>
+</div>
+</div>
+</footer>
+
+
+</body></html>

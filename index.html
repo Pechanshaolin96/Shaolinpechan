@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Pechan • Sede de la Escuela Shaolin Argentina | Parque Los Andes</title>
+  <meta name="description" content="Pechan, sede oficial de la Escuela Shaolin Argentina en Buenos Aires. Jiaolian Pablo Encinas (discípulo del Mtro. Daniel Vera). Shaolin Kung Fu, Tai Ji Quan y Medicina Tradicional China al aire libre en el Mástil del Parque Los Andes.">
+  
+  <!-- Tipografías e Iconografía -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS & Configuración -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            surface: "#fcf9f8",
+            "surface-dim": "#dcd9d9",
+            "surface-bright": "#fcf9f8",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f6f3f2",
+            "surface-container": "#f0eded",
+            "surface-container-high": "#eae7e7",
+            "surface-container-highest": "#e5e2e1",
+            "on-surface": "#1c1b1b",
+            "on-surface-variant": "#58413f",
+            primary: "#8b181a",
+            "primary-container": "#680009",
+            "on-primary": "#ffffff",
+            secondary: "#5d5e61",
+            "secondary-container": "#e2e2e5",
+            "on-secondary": "#ffffff",
+            "ochre-gold": "#B87314",
+            "ochre-deep": "#9E650C",
+            "ochre-amber": "#D49B28",
+            "ochre-subtle": "rgba(184, 115, 20, 0.10)",
+            "ochre-border": "rgba(184, 115, 20, 0.28)"
+          },
+          fontFamily: {
+            sans: ["Plus Jakarta Sans", "Inter", "sans-serif"],
+            display: ["Plus Jakarta Sans"],
+            body: ["Plus Jakarta Sans"]
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="icon" type="image/png" href="assets/img/logo.png">
+  <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body class="bg-surface font-sans text-on-surface antialiased selection:bg-primary/20 selection:text-primary">
+
+  <!-- BANNER SUPERIOR DOCTRINAL -->
+  <div class="doctrinal-top-bar text-white/90 py-2 px-4 text-center select-none">
+    <div class="max-w-[1440px] mx-auto flex items-center justify-center flex-wrap gap-x-2 gap-y-0.5">
+      <span class="font-serif tracking-widest text-amber-200/95 font-semibold text-xs sm:text-sm">少林是禅不是拳。释素喜</span>
+      <span class="hidden md:inline text-amber-400/40">•</span>
+      <span class="text-[11px] sm:text-xs text-stone-200 italic font-sans">"Shàolín shì Chán, bùshì Quán" — Shì Sùxi: "La práctica de Shaolin es el cultivo del espíritu y la meditación, por sobre la lucha y el combate."</span>
+    </div>
+  </div>
+
+  <!-- NAVEGACIÓN PRINCIPAL -->
+  <!-- NAVEGACIÓN PRINCIPAL -->
+  <header id="site-header" class="header-shaolin sticky top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-stone-200/90 shadow-xs transition-all">
+    <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-2 sm:py-2.5 flex flex-col items-center">
+      
+            <!-- FILA SUPERIOR: Logotipo & Marca Centrados Estéticamente -->
+      <div class="header-brand-row w-full flex items-center justify-center relative pb-2 sm:pb-2.5 border-b border-stone-100">
+        
+        <!-- Logotipo e Identidad de Marca Centrado -->
+        <a class="brand-center-link flex items-center justify-center gap-3.5 group text-center mx-auto" href="index.html" title="Shaolin Pechan - Inicio">
+          <img alt="Shaolin Pechan Emblema Oficial" class="brand-logo-img" src="assets/img/logo.png">
+          <div class="flex flex-col items-center sm:items-start text-center sm:text-left">
+            <div class="flex items-center gap-2">
+              <span class="font-display font-extrabold text-xl sm:text-2xl tracking-tight text-stone-900 group-hover:text-primary transition-colors">Shaolin Pechan</span>
+              <span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary text-[10px] sm:text-[11px] font-serif font-bold tracking-widest border border-primary/20">少林百禅</span>
+            </div>
+            <span class="text-[10px] sm:text-xs font-semibold tracking-wider text-stone-500 uppercase font-sans mt-0.5">
+              Sede Oficial Shaolin Argentina • Parque Los Andes • Chacarita
+            </span>
+          </div>
+        </a>
+
+        <!-- Botón Disparador Menú (Solo Dispositivos Móviles < 768px) -->
+        <div class="mobile-menu-trigger-wrap absolute right-0 top-1/2 -translate-y-1/2 hidden md:hidden items-center gap-2">
+          <a class="nav-cta-btn hidden sm:inline-flex md:hidden text-xs py-1.5 px-3" href="contacto.html#clase-prueba">
+            Clase de Prueba
+          </a>
+          <button id="mobile-menu-btn" aria-label="Abrir menú" class="w-10 h-10 sm:w-11 sm:h-11 rounded-xl border border-stone-200 bg-stone-50 flex items-center justify-center text-stone-700 hover:bg-stone-100 hover:text-primary transition-colors focus:outline-none shadow-xs">
+            <span class="material-symbols-outlined text-2xl">menu</span>
+          </button>
+        </div>
+
+      </div>
+
+            <!-- FILA INFERIOR: Barra Blanca de Navegación de Todas las Páginas Centradas Debajo del Logo -->
+      <div id="header-nav-row" class="header-nav-row w-full pt-2 flex items-center justify-center">
+        <nav id="desktop-nav" class="desktop-nav-menu flex items-center justify-center flex-wrap gap-1 xl:gap-2">
+          <a class="nav-desktop-link active" href="index.html">INICIO</a>
+
+          <!-- 1. LA ESCUELA -->
+          <div class="nav-dropdown-wrapper">
+            <button class="nav-desktop-link " type="button">
+              <span>LA ESCUELA</span>
+              <span class="material-symbols-outlined text-[16px] transition-transform duration-200">expand_more</span>
+            </button>
+            <div class="nav-dropdown-menu">
+              <a class="nav-dropdown-item " href="maestros-shaolin.html">Maestros e Instructores Shaolin</a>
+              <a class="nav-dropdown-item " href="maestros-taiji.html">Maestros e Instructores Chen Taijiquan</a>
+              <a class="nav-dropdown-item " href="discipulos-shaolin.html">Discípulos Shaolin</a>
+              <a class="nav-dropdown-item " href="discipulos-taiji.html">Discípulos Chen Taijiquan</a>
+              <a class="nav-dropdown-item " href="viajes-china.html">Viajes a China</a>
+              <a class="nav-dropdown-item " href="clases.html">Clases &amp; Sede Pechan</a>
+            </div>
+          </div>
+
+          <!-- 2. ARTES MARCIALES & BIENESTAR -->
+          <div class="nav-dropdown-wrapper">
+            <button class="nav-desktop-link " type="button">
+              <span>ARTES MARCIALES &amp; BIENESTAR</span>
+              <span class="material-symbols-outlined text-[16px] transition-transform duration-200">expand_more</span>
+            </button>
+            <div class="nav-dropdown-menu">
+              <a class="nav-dropdown-item " href="kung-fu.html">Shaolin Kung Fu</a>
+              <a class="nav-dropdown-item " href="taijiquan.html">Taijiquan Chen</a>
+              <a class="nav-dropdown-item " href="meditacion-chan.html">Meditación Chan</a>
+              <a class="nav-dropdown-item " href="qi-gong.html">Qi Gong (Chi Kung)</a>
+              <a class="nav-dropdown-item " href="arqueria-zen.html">Arquería Zen</a>
+              <a class="nav-dropdown-item " href="yoga.html">Yoga</a>
+              <a class="nav-dropdown-item " href="reiki.html">Reiki</a>
+            </div>
+          </div>
+
+          <!-- 3. CULTURA TRADICIONAL -->
+          <div class="nav-dropdown-wrapper">
+            <button class="nav-desktop-link " type="button">
+              <span>CULTURA TRADICIONAL</span>
+              <span class="material-symbols-outlined text-[16px] transition-transform duration-200">expand_more</span>
+            </button>
+            <div class="nav-dropdown-menu">
+              <a class="nav-dropdown-item " href="idioma-chino.html">Idioma Chino</a>
+              <a class="nav-dropdown-item " href="cultura-te.html">Cultura del Té (Cha Dao)</a>
+              <a class="nav-dropdown-item " href="caligrafia-china.html">Caligrafía China (Shufa)</a>
+              <a class="nav-dropdown-item " href="medicina-china.html">Medicina Tradicional China</a>
+            </div>
+          </div>
+
+          <!-- 6. CONTACTO -->
+          <a class="nav-desktop-link " href="contacto.html">CONTACTO</a>
+
+          <!-- Botón de Acción -->
+          <a class="nav-cta-btn ml-1" href="contacto.html#clase-prueba">
+            Clase de Prueba
+          </a>
+        </nav>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MENÚ MÓVIL EN ACORDEÓN -->
+  <div id="mobile-drawer-backdrop" class="fixed inset-0 bg-black/50 z-50 backdrop-blur-xs opacity-0 pointer-events-none transition-opacity duration-300"></div>
+  <aside id="mobile-drawer" class="fixed top-0 right-0 w-[320px] max-w-[85vw] h-full bg-white z-50 shadow-2xl p-5 flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-in-out border-l border-stone-200 overflow-y-auto">
+    <div>
+      <div class="flex items-center justify-between pb-4 border-b border-stone-200">
+        <div class="flex items-center gap-3">
+          <img alt="Shaolin Pechan" class="w-12 h-12 rounded-full border border-stone-200 p-0.5 object-contain" src="assets/img/logo.png">
+          <div>
+            <span class="font-display font-bold text-base text-stone-900 block leading-tight">Shaolin Pechan</span>
+            <span class="text-[10px] text-primary font-bold uppercase tracking-wider">Sede Shaolin Argentina</span>
+          </div>
+        </div>
+        <button id="mobile-menu-close" aria-label="Cerrar menú" class="w-9 h-9 rounded-lg hover:bg-stone-100 flex items-center justify-center text-stone-500 hover:text-primary transition-colors">
+          <span class="material-symbols-outlined text-2xl">close</span>
+        </button>
+      </div>
+
+      <nav class="flex flex-col gap-1 mt-4">
+        <a class="mobile-nav-link px-3 py-2 rounded-lg text-sm font-semibold text-primary bg-primary/10" href="index.html">INICIO</a>
+        
+        <!-- ACORDEÓN 1: LA ESCUELA -->
+        <div>
+          <button class="mobile-accordion-header " type="button">
+            <span>LA ESCUELA</span>
+            <span class="material-symbols-outlined accordion-icon transition-transform duration-200" style="">expand_more</span>
+          </button>
+          <div class="mobile-accordion-content ">
+            <a class="mobile-sub-link " href="maestros-shaolin.html">• Maestros Shaolin</a>
+            <a class="mobile-sub-link " href="maestros-taiji.html">• Maestros Chen Taiji</a>
+            <a class="mobile-sub-link " href="discipulos-shaolin.html">• Discípulos Shaolin</a>
+            <a class="mobile-sub-link " href="discipulos-taiji.html">• Discípulos Chen Taiji</a>
+            <a class="mobile-sub-link " href="viajes-china.html">• Viajes a China</a>
+            <a class="mobile-sub-link " href="clases.html">• Clases &amp; Sede Pechan</a>
+          </div>
+        </div>
+
+        <!-- ACORDEÓN 2: ARTES MARCIALES & BIENESTAR -->
+        <div>
+          <button class="mobile-accordion-header " type="button">
+            <span>ARTES MARCIALES &amp; BIENESTAR</span>
+            <span class="material-symbols-outlined accordion-icon transition-transform duration-200" style="">expand_more</span>
+          </button>
+          <div class="mobile-accordion-content ">
+            <a class="mobile-sub-link " href="kung-fu.html">• Shaolin Kung Fu</a>
+            <a class="mobile-sub-link " href="taijiquan.html">• Taijiquan Chen</a>
+            <a class="mobile-sub-link " href="meditacion-chan.html">• Meditación Chan</a>
+            <a class="mobile-sub-link " href="qi-gong.html">• Qi Gong (Chi Kung)</a>
+            <a class="mobile-sub-link " href="arqueria-zen.html">• Arquería Zen</a>
+            <a class="mobile-sub-link " href="yoga.html">• Yoga</a>
+            <a class="mobile-sub-link " href="reiki.html">• Reiki</a>
+          </div>
+        </div>
+
+        <!-- ACORDEÓN 3: CULTURA TRADICIONAL -->
+        <div>
+          <button class="mobile-accordion-header " type="button">
+            <span>CULTURA TRADICIONAL</span>
+            <span class="material-symbols-outlined accordion-icon transition-transform duration-200" style="">expand_more</span>
+          </button>
+          <div class="mobile-accordion-content ">
+            <a class="mobile-sub-link " href="idioma-chino.html">• Idioma Chino</a>
+            <a class="mobile-sub-link " href="cultura-te.html">• Cultura del Té</a>
+            <a class="mobile-sub-link " href="caligrafia-china.html">• Caligrafía China</a>
+            <a class="mobile-sub-link " href="medicina-china.html">• Medicina Tradicional China</a>
+          </div>
+        </div>
+        <a class="mobile-nav-link px-3 py-2 rounded-lg text-sm font-semibold text-stone-700 hover:bg-stone-100" href="contacto.html">CONTACTO</a>
+      </nav>
+    </div>
+
+    <div class="pt-4 border-t border-stone-200 flex flex-col gap-2.5">
+      <a class="w-full py-3 rounded-xl bg-primary text-white text-xs font-bold uppercase tracking-wider text-center shadow-md hover:bg-primary-dark transition-all" href="contacto.html#clase-prueba">
+        Reservar Clase de Prueba
+      </a>
+      <span class="text-[11px] text-center text-stone-500">Parque Los Andes • Chacarita, CABA</span>
+    </div>
+  </aside>
+
+<main class="w-full">
+    <!-- HERO PRINCIPAL CON SLIDESHOW DINÁMICO CADA 5 SEGUNDOS -->
+    <section class="relative min-h-[720px] lg:min-h-[820px] flex flex-col justify-center items-center overflow-hidden border-b border-surface-container py-16 md:py-24">
+      
+      <!-- CONTENEDOR DE SLIDES DE FONDO AUTOMÁTICOS (Cambio cada 5 segundos) -->
+      <div id="hero-slider" class="absolute inset-0 z-0 overflow-hidden bg-stone-950">
+        <!-- Slide 1: Templo Shaolin (Monte Songshan) -->
+        <div class="hero-slide active opacity-100 z-10 absolute inset-0" data-caption="Templo Shaolin • Monte Songshan" data-subcaption="Cuna milenaria del Kung Fu y la Meditación Chan (Dengfeng, Henan, China)">
+          <img src="assets/img/hero/shaolin-temple-main.jpg" alt="Templo Shaolin en Monte Songshan" class="w-full h-full object-cover object-center filter brightness-90">
+        </div>
+
+        <!-- Slide 2: Gran Maestro Shi De Yang -->
+        <div class="hero-slide opacity-0 absolute inset-0 pointer-events-none" data-caption="Gran Maestro Shi De Yang (释德扬)" data-subcaption="31ª Generación del Templo Shaolin • Linaje Tradicional y Transmisión Marcial Directa">
+          <img src="assets/img/hero/shi-de-yang.jpg" alt="Gran Maestro Shi De Yang" class="w-full h-full object-cover object-top filter brightness-85">
+        </div>
+
+        <!-- Slide 3: Aldea Chenjiagou (Cuna del Taiji) -->
+        <div class="hero-slide opacity-0 absolute inset-0 pointer-events-none" data-caption="Aldea Chenjiagou (陈家沟)" data-subcaption="Cuna Ancestral y Origen Histórico del Tai Ji Quan (Wenxian, Henan, China)">
+          <img src="imagenes/slide-taiji-chen.jpg" alt="Chenjiagou Cuna Ancestral del Taiji" class="w-full h-full object-cover object-center filter brightness-90">
+        </div>
+
+        <!-- Slide 4: Bosque de Pagodas Shaolin -->
+        <div class="hero-slide opacity-0 absolute inset-0 pointer-events-none" data-caption="Bosque de Pagodas del Templo Shaolin (Tǎlín)" data-subcaption="Monumento Histórico Sagrado de Homenaje a los Maestros Milenarios del Monte Songshan">
+          <img src="assets/img/hero/bosque-pagodas-shaolin.jpg" alt="Bosque de Pagodas Shaolin" class="w-full h-full object-cover object-center filter brightness-85">
+        </div>
+
+        <!-- Slide 5: Práctica de Taiji al aire libre (Escuela Shaolin Pechan) -->
+        <div class="hero-slide opacity-0 absolute inset-0 pointer-events-none" data-caption="Escuela Shaolin Pechan • Tai Ji Quan" data-subcaption="Práctica al Aire Libre, Cultivo del Aliento y Armonía Energética • Parque Los Andes">
+          <img src="assets/img/hero/escuela-taiji.jpg" alt="Alumnos Shaolin Pechan practicando Tai Ji" class="w-full h-full object-cover object-center filter brightness-90">
+        </div>
+
+        <!-- Slide 6: Salto y Potencia Marcial Shaolin -->
+        <div class="hero-slide opacity-0 absolute inset-0 pointer-events-none" data-caption="Shaolin Kung Fu Tradicional" data-subcaption="Fuerza, Destreza Física y Agilidad Marcial en Cada Movimiento • Alumnos y Maestros">
+          <img src="assets/img/hero/shaolin-salto.jpg" alt="Salto y Patada Kung Fu Tradicional Shaolin Pechan" class="w-full h-full object-cover object-center filter brightness-90">
+        </div>
+
+        <!-- Slide 7: Comunidad Shaolin Pechan -->
+        <div class="hero-slide opacity-0 absolute inset-0 pointer-events-none" data-caption="Comunidad Shaolin Pechan" data-subcaption="Clases al aire libre en el Mástil del Parque Los Andes • Chacarita, Buenos Aires">
+          <img src="assets/img/hero/comunidad-shaolin.jpg" alt="Comunidad de Practicantes Shaolin Pechan" class="w-full h-full object-cover object-center filter brightness-85">
+        </div>
+
+        <!-- Slide 8: Meditación Chan y Medicina China -->
+        <div class="hero-slide opacity-0 absolute inset-0 pointer-events-none" data-caption="Meditación Chan &amp; Medicina Tradicional China" data-subcaption="Serenidad Interior, Salud Integral y la Vía del Despertar">
+          <img src="assets/img/hero/buda-meditacion.jpg" alt="Meditación y Espiritualidad Chan Shaolin Pechan" class="w-full h-full object-cover object-center filter brightness-85">
+        </div>
+      </div>
+
+      <!-- CAPAS DE CONTRASTE Y OSCURECIMIENTO ELEGANTE PARA LEGIBILIDAD ÓPTIMA -->
+      <div class="absolute inset-0 z-10 bg-gradient-to-t from-stone-950/95 via-stone-950/70 to-stone-950/80 pointer-events-none"></div>
+      <div class="absolute inset-0 z-10 bg-black/30 pointer-events-none"></div>
+
+      <!-- CONTENIDO PRINCIPAL DEL HERO (Z-20) -->
+      <div class="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center my-auto">
+        <!-- Título Principal -->
+        <h1 class="font-display font-extrabold text-3xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight text-white max-w-4xl leading-[1.12] drop-shadow-md">
+          Artes Marciales Tradicionales y Salud Integral
+        </h1>
+        
+        <!-- Subtítulo -->
+        <p class="mt-6 text-base sm:text-xl text-neutral-200 max-w-3xl font-body font-normal leading-relaxed drop-shadow-sm">
+          Enseñanza rigurosa de <span class="font-bold text-white">Shaolin Kung Fu tradicional</span>, <span class="font-bold text-white">Chen Taijiquan</span> y <span class="font-bold text-white">cultivo interno (Qi Gong y Chan)</span>. Guiados por la transmisión ininterrumpida de los templos históricos y articulados con la <span class="font-bold text-ochre-gold">Medicina Tradicional China</span>, cultivamos el cuerpo, la calma mental y el espíritu en contacto directo con la naturaleza en <span class="font-bold text-white">Parque Los Andes</span>.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- CINTILLO DOCTRINAL DE LAS NUEVE DISCIPLINAS TRADICIONALES (CALIGRAFÍA Y PINCEL CHINO) -->
+    <section class="w-full bg-stone-950 border-y border-stone-800/80 py-5 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between gap-1 sm:gap-2 overflow-x-auto no-scrollbar py-1">
+          <a href="kung-fu.html" class="flex flex-col items-center group shrink-0 px-2 sm:px-3 py-1.5 rounded-xl hover:bg-white/5 transition-all text-center">
+            <img src="assets/img/icons-ink/gold/shaolin.png" alt="Shaolin Kung Fu" class="w-9 h-9 sm:w-10 sm:h-10 object-contain group-hover:scale-110 transition-transform">
+            <span class="text-[11px] font-bold text-stone-200 group-hover:text-ochre-amber mt-1 whitespace-nowrap">Kung Fu</span>
+            <span class="text-[9px] font-serif text-ochre-gold/80 tracking-widest">少林</span>
+          </a>
+          <div class="w-px h-8 bg-stone-800 shrink-0 hidden md:block"></div>
+          <a href="taijiquan.html" class="flex flex-col items-center group shrink-0 px-2 sm:px-3 py-1.5 rounded-xl hover:bg-white/5 transition-all text-center">
+            <img src="assets/img/icons-ink/gold/taiji.png" alt="Chen Taijiquan" class="w-9 h-9 sm:w-10 sm:h-10 object-contain group-hover:scale-110 transition-transform">
+            <span class="text-[11px] font-bold text-stone-200 group-hover:text-ochre-amber mt-1 whitespace-nowrap">Taijiquan</span>
+            <span class="text-[9px] font-serif text-ochre-gold/80 tracking-widest">太極</span>
+          </a>
+          <div class="w-px h-8 bg-stone-800 shrink-0 hidden md:block"></div>
+          <a href="meditacion-chan.html" class="flex flex-col items-center group shrink-0 px-2 sm:px-3 py-1.5 rounded-xl hover:bg-white/5 transition-all text-center">
+            <img src="assets/img/icons-ink/gold/meditacion.png" alt="Meditación Chan" class="w-9 h-9 sm:w-10 sm:h-10 object-contain group-hover:scale-110 transition-transform">
+            <span class="text-[11px] font-bold text-stone-200 group-hover:text-ochre-amber mt-1 whitespace-nowrap">Meditación</span>
+            <span class="text-[9px] font-serif text-ochre-gold/80 tracking-widest">冥想</span>
+          </a>
+          <div class="w-px h-8 bg-stone-800 shrink-0 hidden md:block"></div>
+          <a href="medicina-china.html" class="flex flex-col items-center group shrink-0 px-2 sm:px-3 py-1.5 rounded-xl hover:bg-white/5 transition-all text-center">
+            <img src="assets/img/icons-ink/gold/medicina-china.png" alt="Medicina China" class="w-9 h-9 sm:w-10 sm:h-10 object-contain group-hover:scale-110 transition-transform">
+            <span class="text-[11px] font-bold text-stone-200 group-hover:text-ochre-amber mt-1 whitespace-nowrap">Medicina China</span>
+            <span class="text-[9px] font-serif text-ochre-gold/80 tracking-widest">中醫</span>
+          </a>
+          <div class="w-px h-8 bg-stone-800 shrink-0 hidden md:block"></div>
+          <a href="clases.html" class="flex flex-col items-center group shrink-0 px-2 sm:px-3 py-1.5 rounded-xl hover:bg-white/5 transition-all text-center">
+            <img src="assets/img/icons-ink/gold/matriz.png" alt="Sede Pechan" class="w-9 h-9 sm:w-10 sm:h-10 object-contain group-hover:scale-110 transition-transform">
+            <span class="text-[11px] font-bold text-stone-200 group-hover:text-ochre-amber mt-1 whitespace-nowrap">Sede Pechan</span>
+            <span class="text-[9px] font-serif text-ochre-gold/80 tracking-widest">武館</span>
+          </a>
+          <div class="w-px h-8 bg-stone-800 shrink-0 hidden md:block"></div>
+          <a href="cultura-te.html" class="flex flex-col items-center group shrink-0 px-2 sm:px-3 py-1.5 rounded-xl hover:bg-white/5 transition-all text-center">
+            <img src="assets/img/icons-ink/gold/cultura-te.png" alt="Cultura del Té" class="w-9 h-9 sm:w-10 sm:h-10 object-contain group-hover:scale-110 transition-transform">
+            <span class="text-[11px] font-bold text-stone-200 group-hover:text-ochre-amber mt-1 whitespace-nowrap">Cultura del Té</span>
+            <span class="text-[9px] font-serif text-ochre-gold/80 tracking-widest">茶道</span>
+          </a>
+          <div class="w-px h-8 bg-stone-800 shrink-0 hidden md:block"></div>
+          <a href="yoga.html" class="flex flex-col items-center group shrink-0 px-2 sm:px-3 py-1.5 rounded-xl hover:bg-white/5 transition-all text-center">
+            <img src="assets/img/icons-ink/gold/yoga.png" alt="Yoga Tradicional" class="w-9 h-9 sm:w-10 sm:h-10 object-contain group-hover:scale-110 transition-transform">
+            <span class="text-[11px] font-bold text-stone-200 group-hover:text-ochre-amber mt-1 whitespace-nowrap">Yoga</span>
+            <span class="text-[9px] font-serif text-ochre-gold/80 tracking-widest">瑜伽</span>
+          </a>
+          <div class="w-px h-8 bg-stone-800 shrink-0 hidden md:block"></div>
+          <a href="reiki.html" class="flex flex-col items-center group shrink-0 px-2 sm:px-3 py-1.5 rounded-xl hover:bg-white/5 transition-all text-center">
+            <img src="assets/img/icons-ink/gold/reiki.png" alt="Reiki Usui" class="w-9 h-9 sm:w-10 sm:h-10 object-contain group-hover:scale-110 transition-transform">
+            <span class="text-[11px] font-bold text-stone-200 group-hover:text-ochre-amber mt-1 whitespace-nowrap">Reiki</span>
+            <span class="text-[9px] font-serif text-ochre-gold/80 tracking-widest">靈氣</span>
+          </a>
+          <div class="w-px h-8 bg-stone-800 shrink-0 hidden md:block"></div>
+          <a href="maestros-shaolin.html" class="flex flex-col items-center group shrink-0 px-2 sm:px-3 py-1.5 rounded-xl hover:bg-white/5 transition-all text-center">
+            <img src="assets/img/icons-ink/gold/linaje.png" alt="Linaje Tradicional" class="w-9 h-9 sm:w-10 sm:h-10 object-contain group-hover:scale-110 transition-transform">
+            <span class="text-[11px] font-bold text-stone-200 group-hover:text-ochre-amber mt-1 whitespace-nowrap">Linaje</span>
+            <span class="text-[9px] font-serif text-ochre-gold/80 tracking-widest">傳承</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- LAS CUATRO VÍAS DE FORMACIÓN -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28" id="vias-formacion">
+                  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- TÓPICO 1: SHAOLIN KUNG FU -->
+        <div class="group bg-surface-container-lowest rounded-xl border border-surface-container-high hover:border-primary/40 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col overflow-hidden">
+          <div class="relative h-60 sm:h-64 overflow-hidden bg-surface-container">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" style="object-position: center;" alt="Shaolin Kung Fu Tradicional" src="imagenes/yo/pablo-kung-fu-espada.jpg" loading="lazy">
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2.5 mb-1.5">
+                <img src="assets/img/icons-ink/gold/shaolin.png" alt="Shaolin" class="w-7 h-7 object-contain group-hover:scale-110 transition-transform">
+                <h3 class="text-lg font-bold font-display text-on-surface group-hover:text-primary transition-colors">Shaolin Kung Fu</h3>
+              </div>
+              <p class="mt-2 text-xs leading-relaxed text-secondary font-body">Fundamentos (Jiben Gong: Ma Bu, Gong Bu, Xu Bu), formas tradicionales (Taolu), sistema de los Cinco Animales de Jue Yuan, armas monacales (bastón Gun, sable Dao) y combate tradicional Sanda.</p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-surface-container flex items-center justify-between text-xs">
+              <span class="font-semibold text-secondary">Adultos &amp; Jóvenes</span>
+              <a href="kung-fu.html" class="text-primary font-bold inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">Ver temario <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- TÓPICO 2: CHEN TAIJIQUAN -->
+        <div class="group bg-surface-container-lowest rounded-xl border border-surface-container-high hover:border-primary/40 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col overflow-hidden">
+          <div class="relative h-60 sm:h-64 overflow-hidden bg-surface-container">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" style="object-position: center;" alt="Chen Taijiquan Tradicional" src="imagenes/yo/pablo-chen-taijiquan.jpg" loading="lazy">
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2.5 mb-1.5">
+                <img src="assets/img/icons-ink/gold/taiji.png" alt="Taiji" class="w-7 h-7 object-contain group-hover:scale-110 transition-transform">
+                <h3 class="text-lg font-bold font-display text-on-surface group-hover:text-primary transition-colors">Chen Taijiquan</h3>
+              </div>
+              <p class="mt-2 text-xs leading-relaxed text-secondary font-body">La raíz viva de Chenjiagou. Fuerza y suavidad en armonía (Gang Rou Xiang Ji), devanado de seda (Chan Si Gong), formas Laojia Yi Lu, trabajo de Dantian y enraizamiento postural profundo.</p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-surface-container flex items-center justify-between text-xs">
+              <span class="font-semibold text-secondary">Linaje Chen Ziqiang</span>
+              <a href="taijiquan.html" class="text-primary font-bold inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">Ver temario <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- TÓPICO 3: KUNG FU INFANTIL -->
+        <div class="group bg-surface-container-lowest rounded-xl border border-surface-container-high hover:border-primary/40 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col overflow-hidden">
+          <div class="relative h-48 overflow-hidden bg-surface-container">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Shaolin Kung Fu Infantil para Niños" src="imagenes/actividad-kung-fu-chicos.jpg" loading="lazy">
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2.5 mb-1.5">
+                <img src="assets/img/icons-ink/gold/kungfu-kick.png" alt="Kung Fu Infantil" class="w-7 h-7 object-contain group-hover:scale-110 transition-transform">
+                <h3 class="text-lg font-bold font-display text-on-surface group-hover:text-primary transition-colors">Kung Fu Infantil</h3>
+              </div>
+              <p class="mt-2 text-xs leading-relaxed text-secondary font-body">Clases formativas para niños a partir de los 6 años. Desarrollo psicomotriz, disciplina marcial, respeto mutuo, concentración y autoconfianza a través del juego pedagógico tradicional.</p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-surface-container flex items-center justify-between text-xs">
+              <span class="font-semibold text-secondary">Niños (6 a 12 años)</span>
+              <a href="kung-fu.html#infantil" class="text-primary font-bold inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">Ver programa <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- TÓPICO 4: MEDITACIÓN CHAN -->
+        <div class="group bg-surface-container-lowest rounded-xl border border-surface-container-high hover:border-primary/40 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col overflow-hidden">
+          <div class="relative h-48 overflow-hidden bg-surface-container">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" style="object-position: center 35%;" alt="Gran Maestro Shi De Yang en Meditación Chan" src="imagenes/Da-Shifu-De-Yang-5.jpg" loading="lazy">
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2.5 mb-1.5">
+                <img src="assets/img/icons-ink/gold/meditacion.png" alt="Meditación" class="w-7 h-7 object-contain group-hover:scale-110 transition-transform">
+                <h3 class="text-lg font-bold font-display text-on-surface group-hover:text-primary transition-colors">Meditación Chan</h3>
+              </div>
+              <p class="mt-2 text-xs leading-relaxed text-secondary font-body">La raíz contemplativa del templo Shaolin (Zuochan 坐禅). Práctica de atención plena, postura sentada en quietud, respiración diafragmática profunda y desapego de la agitación mental urbana.</p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-surface-container flex items-center justify-between text-xs">
+              <span class="font-semibold text-secondary">Quietud &amp; Calma Mental</span>
+              <a href="meditacion-chan.html" class="text-primary font-bold inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">Ver práctica <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- TÓPICO 5: QI GONG (CHI KUNG) -->
+        <div class="group bg-surface-container-lowest rounded-xl border border-surface-container-high hover:border-primary/40 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col overflow-hidden">
+          <div class="relative h-48 overflow-hidden bg-surface-container">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" style="object-position: center top;" alt="Qi Gong Cultivo de la Energía Vital" src="imagenes/qi-gong11.jpg" loading="lazy">
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2.5 mb-1.5">
+                <img src="assets/img/icons-ink/gold/buda-bodhi.png" alt="Qi Gong" class="w-7 h-7 object-contain group-hover:scale-110 transition-transform">
+                <h3 class="text-lg font-bold font-display text-on-surface group-hover:text-primary transition-colors">Qi Gong (Chi Kung)</h3>
+              </div>
+              <p class="mt-2 text-xs leading-relaxed text-secondary font-body">Tratados energéticos de Bodhidharma (Ba Duan Jin, Yi Jin Jing, Shi Ba Luo Han Gong). Movimientos fluidos y respiración para desbloquear meridianos, nutrir el Qi y fortalecer órganos vitales.</p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-surface-container flex items-center justify-between text-xs">
+              <span class="font-semibold text-secondary">Salud &amp; Energía Vital</span>
+              <a href="qi-gong.html" class="text-primary font-bold inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">Ver métodos <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- TÓPICO 6: MEDICINA TRADICIONAL CHINA -->
+        <div class="group bg-surface-container-lowest rounded-xl border border-surface-container-high hover:border-primary/40 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col overflow-hidden">
+          <div class="relative h-48 overflow-hidden bg-surface-container">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" style="object-position: 60% 35%;" alt="Medicina Tradicional China y Acupuntura" src="imagenes/medicina7.jpg" loading="lazy">
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2.5 mb-1.5">
+                <img src="assets/img/icons-ink/gold/medicina-china.png" alt="MTC" class="w-7 h-7 object-contain group-hover:scale-110 transition-transform">
+                <h3 class="text-lg font-bold font-display text-on-surface group-hover:text-primary transition-colors">Medicina China (MTC)</h3>
+              </div>
+              <p class="mt-2 text-xs leading-relaxed text-secondary font-body">Gabinete terapéutico conducido por Pablo Encinas. Acupuntura clínica, moxibustión, ventosas Ba Guan, masaje terapéutico Tuina y fitoterapia para el restablecimiento del equilibrio integral.</p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-surface-container flex items-center justify-between text-xs">
+              <span class="font-semibold text-secondary">Turno individual previo</span>
+              <a href="medicina-china.html" class="text-primary font-bold inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">Consultar clínica <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- TÓPICO 7: ARQUERÍA ZEN (CHAN GONG) -->
+        <div class="group bg-surface-container-lowest rounded-xl border border-surface-container-high hover:border-primary/40 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col overflow-hidden">
+          <div class="relative h-48 overflow-hidden bg-surface-container">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Shaolin Chan Gong Arquería Zen" src="imagenes/actividad-chan-gong.jpg" loading="lazy">
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2.5 mb-1.5">
+                <img src="assets/img/icons-ink/gold/taijiquan-splash.png" alt="Arquería Zen" class="w-7 h-7 object-contain group-hover:scale-110 transition-transform">
+                <h3 class="text-lg font-bold font-display text-on-surface group-hover:text-primary transition-colors">Arquería Zen (Chan Gong)</h3>
+              </div>
+              <p class="mt-2 text-xs leading-relaxed text-secondary font-body">La unión del tiro con arco tradicional y el cultivo Chan (禅弓). Disciplina de calma interior, respiración consciente, postura de arraigo y concentración total en el instante previo al disparo.</p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-surface-container flex items-center justify-between text-xs">
+              <span class="font-semibold text-secondary">Foco, Templanza &amp; Arco</span>
+              <a href="arqueria-zen.html" class="text-primary font-bold inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">Ver práctica <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- TÓPICO 8: YOGA INTEGRAL -->
+        <div class="group bg-surface-container-lowest rounded-xl border border-surface-container-high hover:border-primary/40 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col overflow-hidden">
+          <div class="relative h-48 overflow-hidden bg-surface-container">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Yoga Integral Tradicional" src="imagenes/yoga-profesional.jpg" loading="lazy">
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2.5 mb-1.5">
+                <img src="assets/img/icons-ink/gold/yoga.png" alt="Yoga" class="w-7 h-7 object-contain group-hover:scale-110 transition-transform">
+                <h3 class="text-lg font-bold font-display text-on-surface group-hover:text-primary transition-colors">Yoga Integral</h3>
+              </div>
+              <p class="mt-2 text-xs leading-relaxed text-secondary font-body">Integración armónica de asanas, respiración consciente (Pranayama) y meditación. Trabajo postural suave y profundo enfocado en la flexibilidad articular, el equilibrio bioenergético y la serenidad.</p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-surface-container flex items-center justify-between text-xs">
+              <span class="font-semibold text-secondary">Flexibilidad &amp; Respiración</span>
+              <a href="yoga.html" class="text-primary font-bold inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">Ver práctica <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- TÓPICO 9: REIKI USUI RYOHO -->
+        <div class="group bg-surface-container-lowest rounded-xl border border-surface-container-high hover:border-primary/40 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col overflow-hidden">
+          <div class="relative h-48 overflow-hidden bg-surface-container">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Reiki Usui Tradicional" src="imagenes/reiki_2.jpg" loading="lazy">
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2.5 mb-1.5">
+                <img src="assets/img/icons-ink/gold/reiki.png" alt="Reiki" class="w-7 h-7 object-contain group-hover:scale-110 transition-transform">
+                <h3 class="text-lg font-bold font-display text-on-surface group-hover:text-primary transition-colors">Reiki Usui Ryoho</h3>
+              </div>
+              <p class="mt-2 text-xs leading-relaxed text-secondary font-body">Sistema tradicional de armonización bioenergética y canalización de la energía vital (Reiki 靈氣). Sesiones e iniciaciones a cargo de Mstra. Yamila Melillo en Sede Central.</p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-surface-container flex items-center justify-between text-xs">
+              <span class="font-semibold text-secondary">Sede Central • Shaolin.ar</span>
+              <a href="https://www.shaolin.ar" target="_blank" rel="noopener noreferrer" class="text-primary font-bold inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">Ver en Shaolin.ar <span class="material-symbols-outlined text-sm">open_in_new</span></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- TÓPICO 10: CULTURA DEL TÉ (CHA DAO) -->
+        <div class="group bg-surface-container-lowest rounded-xl border border-surface-container-high hover:border-primary/40 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col overflow-hidden">
+          <div class="relative h-48 overflow-hidden bg-surface-container">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Cultura del Té Gongfu Cha" src="imagenes/actividad-cultura-te-full.jpg" loading="lazy">
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2.5 mb-1.5">
+                <img src="assets/img/icons-ink/gold/cultura-te.png" alt="Cultura del Té" class="w-7 h-7 object-contain group-hover:scale-110 transition-transform">
+                <h3 class="text-lg font-bold font-display text-on-surface group-hover:text-primary transition-colors">Cultura del Té (Cha Dao)</h3>
+              </div>
+              <p class="mt-2 text-xs leading-relaxed text-secondary font-body">El cultivo de la serenidad y la presencia a través del arte milenario del té (Cha Dao 禅茶一味). Actividades, degustaciones y ceremonias Gongfu Cha dictadas en Sede Central.</p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-surface-container flex items-center justify-between text-xs">
+              <span class="font-semibold text-secondary">Sede Central • Shaolin.ar</span>
+              <a href="https://www.shaolin.ar" target="_blank" rel="noopener noreferrer" class="text-primary font-bold inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">Ver en Shaolin.ar <span class="material-symbols-outlined text-sm">open_in_new</span></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- TÓPICO 11: CALIGRAFÍA CHINA (SHŪ FǍ) -->
+        <div class="group bg-surface-container-lowest rounded-xl border border-surface-container-high hover:border-primary/40 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col overflow-hidden">
+          <div class="relative h-48 overflow-hidden bg-surface-container">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Caligrafía China Shufa" src="imagenes/actividad-caligrafia-idioma7.jpg" loading="lazy">
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2.5 mb-1.5">
+                <img src="assets/img/icons-ink/gold/te-tetera.png" alt="Caligrafía" class="w-7 h-7 object-contain group-hover:scale-110 transition-transform">
+                <h3 class="text-lg font-bold font-display text-on-surface group-hover:text-primary transition-colors">Caligrafía China (Shū Fǎ)</h3>
+              </div>
+              <p class="mt-2 text-xs leading-relaxed text-secondary font-body">El arte supremo del trazo vivo (書法 – Shū Fǎ) donde confluyen respiración, intención y presencia. Clases, talleres y seminarios dictados en Espacio Yang Tai.</p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-surface-container flex items-center justify-between text-xs">
+              <span class="font-semibold text-secondary">Espacio Yang Tai • espacioyangtai.com</span>
+              <a href="https://espacioyangtai.com/" target="_blank" rel="noopener noreferrer" class="text-primary font-bold inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">Ver en Yang Tai <span class="material-symbols-outlined text-sm">open_in_new</span></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- TÓPICO 12: IDIOMA CHINO (MANDARÍN) -->
+        <div class="group bg-surface-container-lowest rounded-xl border border-surface-container-high hover:border-primary/40 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col overflow-hidden">
+          <div class="relative h-48 overflow-hidden bg-surface-container">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Idioma Chino Mandarín" src="imagenes/actividad-idioma-chino-full.jpg" loading="lazy">
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2.5 mb-1.5">
+                <img src="assets/img/icons-ink/gold/escuela-templo.png" alt="Idioma Chino" class="w-7 h-7 object-contain group-hover:scale-110 transition-transform">
+                <h3 class="text-lg font-bold font-display text-on-surface group-hover:text-primary transition-colors">Idioma Chino (Mandarín)</h3>
+              </div>
+              <p class="mt-2 text-xs leading-relaxed text-secondary font-body">Espacio formativo lingüístico (Hanyu 汉语) dictado en Sede Akarma (Caballito) por el Prof. Miguel López Márquez. Vocabulario marcial clásico, fonética Pinyin y cosmovisión oriental.</p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-surface-container flex items-center justify-between text-xs">
+              <span class="font-semibold text-secondary">Dictado en Sede Akarma</span>
+              <a href="idioma-chino.html" class="text-primary font-bold inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">Ver sede &amp; info <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- TÓPICO 13: SEDE PECHAN & CLASES -->
+        <div class="group bg-surface-container-lowest rounded-xl border border-surface-container-high hover:border-primary/40 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col overflow-hidden">
+          <div class="relative h-48 overflow-hidden bg-surface-container">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Clases al aire libre en Parque Los Andes" src="assets/img/hero/comunidad-shaolin.jpg" loading="lazy">
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2.5 mb-1.5">
+                <img src="assets/img/icons-ink/gold/matriz.png" alt="Sede Pechan" class="w-7 h-7 object-contain group-hover:scale-110 transition-transform">
+                <h3 class="text-lg font-bold font-display text-on-surface group-hover:text-primary transition-colors">Sede Pechan (Clases)</h3>
+              </div>
+              <p class="mt-2 text-xs leading-relaxed text-secondary font-body">Práctica y entrenamiento al aire libre en el Mástil del Parque Los Andes (Chacarita, CABA). Clases matutinas y vespertinas de Kung Fu tradicional, Taijiquan y Qi Gong en contacto directo con la naturaleza.</p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-surface-container flex items-center justify-between text-xs">
+              <span class="font-semibold text-secondary">Parque Los Andes • Chacarita</span>
+              <a href="clases.html" class="text-primary font-bold inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">Ver horarios <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- TÓPICO 14: LINAJE & SEDES OFICIALES -->
+        <div class="group bg-surface-container-lowest rounded-xl border border-surface-container-high hover:border-primary/40 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col overflow-hidden">
+          <div class="relative h-48 overflow-hidden bg-surface-container">
+            <img class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" alt="Gran Maestro Shi De Yang y Linaje Tradicional" src="assets/img/hero/shi-de-yang.jpg" loading="lazy">
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2.5 mb-1.5">
+                <img src="assets/img/icons-ink/gold/linaje.png" alt="Linaje" class="w-7 h-7 object-contain group-hover:scale-110 transition-transform">
+                <h3 class="text-lg font-bold font-display text-on-surface group-hover:text-primary transition-colors">Linaje &amp; Sedes</h3>
+              </div>
+              <p class="mt-2 text-xs leading-relaxed text-secondary font-body">Transmisión ancestral directa de los templos de Songshan y Chenjiagou. Filial oficial de la Escuela Shaolin Quan Fa Guan Argentina bajo la guía de los Grandes Maestros Shi De Yang y Daniel Vera.</p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-surface-container flex items-center justify-between text-xs">
+              <span class="font-semibold text-secondary">Songshan &amp; Chenjiagou</span>
+              <a href="maestros-shaolin.html" class="text-primary font-bold inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">Conocer linaje <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- TÓPICO 15: VIAJES A CHINA -->
+        <div class="group bg-surface-container-lowest rounded-xl border border-surface-container-high hover:border-primary/40 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col overflow-hidden">
+          <div class="relative h-48 overflow-hidden bg-surface-container">
+            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Viajes a China y Peregrinación a Templos" src="imagenes/la_escuela_Templo-Shaolin.jpg" loading="lazy">
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-2.5 mb-1.5">
+                <img src="assets/img/icons-ink/gold/arbol-linaje.png" alt="Viajes a China" class="w-7 h-7 object-contain group-hover:scale-110 transition-transform">
+                <h3 class="text-lg font-bold font-display text-on-surface group-hover:text-primary transition-colors">Viajes a China</h3>
+              </div>
+              <p class="mt-2 text-xs leading-relaxed text-secondary font-body">Peregrinaciones y entrenamientos intensivos en los monasterios matrices del monte Songshan y la aldea de Chenjiagou. Intercambio cultural, práctica con monjes maestros y vivencia directa en China.</p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-surface-container flex items-center justify-between text-xs">
+              <span class="font-semibold text-secondary">Peregrinación a Templos</span>
+              <a href="viajes-china.html" class="text-primary font-bold inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">Ver itinerarios <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RED DE SEDES OFICIALES DE LA ESCUELA SHAOLIN ARGENTINA -->
+    <section class="w-full py-16 md:py-20 bg-primary text-white border-t border-red-950/40" id="sedes-escuela">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <h2 class="text-2xl sm:text-3xl font-extrabold font-display text-white tracking-tight">
+            Sedes Oficiales de la Escuela Shaolin Argentina
+          </h2>
+          <p class="mt-2 text-sm text-[#ffdad6] font-body">
+            Espacios homologados y sedes autorizadas para la práctica y el cultivo de las artes tradicionales bajo la tutela de la sede central.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 items-stretch">
+          <!-- Sede Central Shaolin.ar -->
+          <a href="https://www.shaolin.ar" target="_blank" rel="noopener noreferrer" class="h-full bg-white p-5 rounded-xl border border-white/20 hover:border-amber-300 transition-all shadow-md hover:shadow-xl group flex flex-col justify-between">
+            <div class="flex flex-col justify-between flex-1">
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-primary text-white">Sede Central</span>
+                <span class="material-symbols-outlined text-primary text-xl">temple_buddhist</span>
+              </div>
+              <h3 class="text-base font-bold font-display text-stone-900 group-hover:text-primary transition-colors">Shaolin Argentina</h3>
+              <p class="text-xs text-ochre-deep font-semibold mt-0.5">Almagro, CABA</p>
+              <p class="text-xs text-stone-600 mt-2 leading-relaxed min-h-[2.5rem]">Sede central matriz conducida por Shifu Daniel Vera y Shimu Yamila Melillo.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-stone-200 flex items-center justify-between text-xs text-primary font-bold shrink-0">
+              <span>shaolin.ar</span>
+              <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">open_in_new</span>
+            </div>
+          </a>
+
+          <!-- Akarma -->
+          <a href="https://www.akarma.com.ar" target="_blank" rel="noopener noreferrer" class="h-full bg-white p-5 rounded-xl border border-white/20 hover:border-ochre-gold transition-all shadow-md hover:shadow-xl group flex flex-col justify-between">
+            <div class="flex flex-col justify-between flex-1">
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-ochre-gold/15 text-ochre-deep border border-ochre-border">Caballito</span>
+                <span class="material-symbols-outlined text-ochre-deep text-xl">self_improvement</span>
+              </div>
+              <h3 class="text-base font-bold font-display text-stone-900 group-hover:text-ochre-deep transition-colors">Akarma</h3>
+              <p class="text-xs text-stone-600 font-semibold mt-0.5">Caballito, CABA</p>
+              <p class="text-xs text-stone-600 mt-2 leading-relaxed min-h-[2.5rem]">Centro integral de movimiento: Shaolin Kung Fu, Tai Chi Chen, Yoga y salud integrativa.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-stone-200 flex items-center justify-between text-xs text-ochre-deep font-bold shrink-0">
+              <span>akarma.com.ar</span>
+              <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">open_in_new</span>
+            </div>
+          </a>
+
+          <!-- Espacio Yang Tai -->
+          <a href="https://espacioyangtai.com/" target="_blank" rel="noopener noreferrer" class="h-full bg-white p-5 rounded-xl border border-white/20 hover:border-ochre-gold transition-all shadow-md hover:shadow-xl group flex flex-col justify-between">
+            <div class="flex flex-col justify-between flex-1">
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-ochre-gold/15 text-ochre-deep border border-ochre-border">Cultura Oriental</span>
+                <span class="material-symbols-outlined text-ochre-deep text-xl">brush</span>
+              </div>
+              <h3 class="text-base font-bold font-display text-stone-900 group-hover:text-ochre-deep transition-colors">Espacio Yang Tai</h3>
+              <p class="text-xs text-stone-600 font-semibold mt-0.5">CABA</p>
+              <p class="text-xs text-stone-600 mt-2 leading-relaxed min-h-[2.5rem]">Puente de culturas: Kung Fu tradicional de Shaolin, Tai Chi, Yoga y Caligrafía China.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-stone-200 flex items-center justify-between text-xs text-ochre-deep font-bold shrink-0">
+              <span>espacioyangtai.com</span>
+              <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">open_in_new</span>
+            </div>
+          </a>
+
+          <!-- Patio Sur -->
+          <a href="https://www.patiosur.com.ar/" target="_blank" rel="noopener noreferrer" class="h-full bg-white p-5 rounded-xl border border-white/20 hover:border-primary transition-all shadow-md hover:shadow-xl group flex flex-col justify-between">
+            <div class="flex flex-col justify-between flex-1">
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-primary/10 text-primary border border-primary/20">Zona Sur</span>
+                <span class="material-symbols-outlined text-primary text-xl">sports_martial_arts</span>
+              </div>
+              <h3 class="text-base font-bold font-display text-stone-900 group-hover:text-primary transition-colors">Patio Sur</h3>
+              <p class="text-xs text-stone-600 font-semibold mt-0.5">Valentín Alsina</p>
+              <p class="text-xs text-stone-600 mt-2 leading-relaxed min-h-[2.5rem]">Shaolin Kung Fu (adultos y niños), Chen Taijiquan, Qi Gong y Meditación Chan.</p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-stone-200 flex items-center justify-between text-xs text-primary font-bold shrink-0">
+              <span>patiosur.com.ar</span>
+              <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">open_in_new</span>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECCIÓN FEED DE INSTAGRAM OFICIAL @shaolin_pechan -->
+    <section class="w-full py-14 md:py-20 bg-white border-t border-surface-container" id="instagram-feed">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header del Feed: Avatar Oficial + Username @shaolin_pechan -->
+        <div class="mb-5 flex items-center">
+          <a href="https://www.instagram.com/shaolin_pechan/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3.5 group" title="Ver Instagram Oficial de Shaolin Pechan">
+            <div class="w-12 h-12 rounded-full overflow-hidden border border-neutral-300 group-hover:border-primary transition-all p-0.5 bg-white shadow-xs shrink-0">
+              <img src="assets/img/instagram/profile.jpg" alt="@shaolin_pechan" class="w-full h-full object-cover rounded-full">
+            </div>
+            <div class="flex flex-col">
+              <span class="font-bold text-base md:text-lg text-neutral-900 group-hover:text-primary transition-colors tracking-tight">
+                shaolin_pechan
+              </span>
+            </div>
+          </a>
+        </div>
+
+        <!-- Grilla de 6 Columnas (Responsive: 6 desktop, 3 tablet, 2 mobile) con las últimas publicaciones auténticas -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4" id="ig-grid-container">
+          
+          <!-- Post 1 (Reel: Medicina Tradicional China / Acupuntura) -->
+          <a href="https://www.instagram.com/shaolin_pechan/" target="_blank" rel="noopener noreferrer" class="ig-post-card group" title="Medicina Tradicional China y Puntos de Acupuntura • @shaolin_pechan">
+            <img src="assets/img/instagram/post_1.jpg" alt="Medicina Tradicional China y Puntos de Acupuntura" loading="lazy">
+            <div class="ig-overlay-icon ig-play-icon">
+              <div class="ig-play-badge">
+                <svg class="w-4 h-4 fill-current ml-0.5" viewBox="0 0 448 512" aria-hidden="true"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path></svg>
+              </div>
+            </div>
+            <div class="ig-hover-overlay">
+              <span class="text-white text-xs font-semibold flex items-center gap-1.5 text-center">
+                Ver Reel en IG
+              </span>
+            </div>
+          </a>
+
+          <!-- Post 2 (Reel: Clases al aire libre en Parque Los Andes) -->
+          <a href="https://www.instagram.com/shaolin_pechan/" target="_blank" rel="noopener noreferrer" class="ig-post-card group" title="Clases de Shaolin Kung Fu al aire libre • Parque Los Andes">
+            <img src="assets/img/instagram/post_2.jpg" alt="Clases de Shaolin Kung Fu al aire libre en Parque Los Andes" loading="lazy">
+            <div class="ig-overlay-icon ig-play-icon">
+              <div class="ig-play-badge">
+                <svg class="w-4 h-4 fill-current ml-0.5" viewBox="0 0 448 512" aria-hidden="true"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path></svg>
+              </div>
+            </div>
+            <div class="ig-hover-overlay">
+              <span class="text-white text-xs font-semibold flex items-center gap-1.5 text-center">
+                Ver Reel en IG
+              </span>
+            </div>
+          </a>
+
+          <!-- Post 3 (Carousel: Monjes Shaolin y delegación tradicional) -->
+          <a href="https://www.instagram.com/shaolin_pechan/" target="_blank" rel="noopener noreferrer" class="ig-post-card group" title="Monjes del Templo Shaolin y Delegación Tradicional • @shaolin_pechan">
+            <img src="assets/img/instagram/post_3.jpg" alt="Monjes del Templo Shaolin y Delegación Tradicional" loading="lazy">
+            <div class="ig-overlay-icon ig-carousel-icon">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 512 512" aria-hidden="true"><path d="M464 0H144c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h320c26.51 0 48-21.49 48-48v-48h48c26.51 0 48-21.49 48-48V48c0-26.51-21.49-48-48-48zM362 464H54a6 6 0 0 1-6-6V150a6 6 0 0 1 6-6h42v224c0 26.51 21.49 48 48 48h224v42a6 6 0 0 1-6 6zm96-96H150a6 6 0 0 1-6-6V54a6 6 0 0 1 6-6h308a6 6 0 0 1 6 6v308a6 6 0 0 1-6 6z"></path></svg>
+            </div>
+            <div class="ig-hover-overlay">
+              <span class="text-white text-xs font-semibold flex items-center gap-1.5 text-center">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>
+                Ver en Instagram
+              </span>
+            </div>
+          </a>
+
+          <!-- Post 4 (Carousel: Seminario Historias de China e India - Monje Xuanzang) -->
+          <a href="https://www.instagram.com/shaolin_pechan/" target="_blank" rel="noopener noreferrer" class="ig-post-card group" title="Seminario: Historias de China e India y el Monje Xuanzang • @shaolin_pechan">
+            <img src="assets/img/instagram/post_4.jpg" alt="Seminario Historias de China e India - Monje Xuanzang" loading="lazy">
+            <div class="ig-overlay-icon ig-carousel-icon">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 512 512" aria-hidden="true"><path d="M464 0H144c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h320c26.51 0 48-21.49 48-48v-48h48c26.51 0 48-21.49 48-48V48c0-26.51-21.49-48-48-48zM362 464H54a6 6 0 0 1-6-6V150a6 6 0 0 1 6-6h42v224c0 26.51 21.49 48 48 48h224v42a6 6 0 0 1-6 6zm96-96H150a6 6 0 0 1-6-6V54a6 6 0 0 1 6-6h308a6 6 0 0 1 6 6v308a6 6 0 0 1-6 6z"></path></svg>
+            </div>
+            <div class="ig-hover-overlay">
+              <span class="text-white text-xs font-semibold flex items-center gap-1.5 text-center">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>
+                Ver en Instagram
+              </span>
+            </div>
+          </a>
+
+          <!-- Post 5 (Reel: Entrenamiento con Armas Tradicionales) -->
+          <a href="https://www.instagram.com/shaolin_pechan/" target="_blank" rel="noopener noreferrer" class="ig-post-card group" title="Entrenamiento con Armas Tradicionales Shaolin • @shaolin_pechan">
+            <img src="assets/img/instagram/post_5.jpg" alt="Entrenamiento con Armas Tradicionales Shaolin" loading="lazy">
+            <div class="ig-overlay-icon ig-play-icon">
+              <div class="ig-play-badge">
+                <svg class="w-4 h-4 fill-current ml-0.5" viewBox="0 0 448 512" aria-hidden="true"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path></svg>
+              </div>
+            </div>
+            <div class="ig-hover-overlay">
+              <span class="text-white text-xs font-semibold flex items-center gap-1.5 text-center">
+                Ver Reel en IG
+              </span>
+            </div>
+          </a>
+
+          <!-- Post 6 (Reel: Budismo Chan y Meditación) -->
+          <a href="https://www.instagram.com/shaolin_pechan/" target="_blank" rel="noopener noreferrer" class="ig-post-card group" title="Budismo Chan y Meditación Silenciosa • @shaolin_pechan">
+            <img src="assets/img/instagram/post_6.jpg" alt="Budismo Chan y Meditación Silenciosa" loading="lazy">
+            <div class="ig-overlay-icon ig-play-icon">
+              <div class="ig-play-badge">
+                <svg class="w-4 h-4 fill-current ml-0.5" viewBox="0 0 448 512" aria-hidden="true"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path></svg>
+              </div>
+            </div>
+            <div class="ig-hover-overlay">
+              <span class="text-white text-xs font-semibold flex items-center gap-1.5 text-center">
+                Ver Reel en IG
+              </span>
+            </div>
+          </a>
+
+          <!-- Post 7 (Oculto inicial - Revelado con 'Cargar más' - Reel) -->
+          <a href="https://www.instagram.com/shaolin_pechan/" target="_blank" rel="noopener noreferrer" class="ig-extra-post hidden ig-post-card group" title="Práctica Marcial Tradicional Shaolin • @shaolin_pechan">
+            <img src="assets/img/instagram/post_7.jpg" alt="Práctica Marcial Tradicional Shaolin" loading="lazy">
+            <div class="ig-overlay-icon ig-play-icon">
+              <div class="ig-play-badge">
+                <svg class="w-4 h-4 fill-current ml-0.5" viewBox="0 0 448 512" aria-hidden="true"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path></svg>
+              </div>
+            </div>
+            <div class="ig-hover-overlay">
+              <span class="text-white text-xs font-semibold flex items-center gap-1.5 text-center">Ver Reel en IG</span>
+            </div>
+          </a>
+
+          <!-- Post 8 (Oculto inicial - Reel) -->
+          <a href="https://www.instagram.com/shaolin_pechan/" target="_blank" rel="noopener noreferrer" class="ig-extra-post hidden ig-post-card group" title="Formas y Técnicas de Shaolin Pechan • @shaolin_pechan">
+            <img src="assets/img/instagram/post_8.jpg" alt="Formas y Técnicas de Shaolin Pechan" loading="lazy">
+            <div class="ig-overlay-icon ig-play-icon">
+              <div class="ig-play-badge">
+                <svg class="w-4 h-4 fill-current ml-0.5" viewBox="0 0 448 512" aria-hidden="true"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path></svg>
+              </div>
+            </div>
+            <div class="ig-hover-overlay">
+              <span class="text-white text-xs font-semibold flex items-center gap-1.5 text-center">Ver Reel en IG</span>
+            </div>
+          </a>
+
+          <!-- Post 9 (Oculto inicial - Carousel) -->
+          <a href="https://www.instagram.com/shaolin_pechan/" target="_blank" rel="noopener noreferrer" class="ig-extra-post hidden ig-post-card group" title="Delegación y Linaje Tradicional Shaolin • @shaolin_pechan">
+            <img src="assets/img/instagram/post_9.jpg" alt="Delegación y Linaje Tradicional Shaolin" loading="lazy">
+            <div class="ig-overlay-icon ig-carousel-icon">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 512 512" aria-hidden="true"><path d="M464 0H144c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h320c26.51 0 48-21.49 48-48v-48h48c26.51 0 48-21.49 48-48V48c0-26.51-21.49-48-48-48zM362 464H54a6 6 0 0 1-6-6V150a6 6 0 0 1 6-6h42v224c0 26.51 21.49 48 48 48h224v42a6 6 0 0 1-6 6zm96-96H150a6 6 0 0 1-6-6V54a6 6 0 0 1 6-6h308a6 6 0 0 1 6 6v308a6 6 0 0 1-6 6z"></path></svg>
+            </div>
+            <div class="ig-hover-overlay">
+              <span class="text-white text-xs font-semibold flex items-center gap-1.5 text-center">Ver en Instagram</span>
+            </div>
+          </a>
+
+          <!-- Post 10 (Oculto inicial - Reel) -->
+          <a href="https://www.instagram.com/shaolin_pechan/" target="_blank" rel="noopener noreferrer" class="ig-extra-post hidden ig-post-card group" title="Entrenamiento al Aire Libre en la Naturaleza • @shaolin_pechan">
+            <img src="assets/img/instagram/post_10.jpg" alt="Entrenamiento al Aire Libre en la Naturaleza" loading="lazy">
+            <div class="ig-overlay-icon ig-play-icon">
+              <div class="ig-play-badge">
+                <svg class="w-4 h-4 fill-current ml-0.5" viewBox="0 0 448 512" aria-hidden="true"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path></svg>
+              </div>
+            </div>
+            <div class="ig-hover-overlay">
+              <span class="text-white text-xs font-semibold flex items-center gap-1.5 text-center">Ver Reel en IG</span>
+            </div>
+          </a>
+
+          <!-- Post 11 (Oculto inicial - Reel) -->
+          <a href="https://www.instagram.com/shaolin_pechan/" target="_blank" rel="noopener noreferrer" class="ig-extra-post hidden ig-post-card group" title="Chen Taijiquan y Enraizamiento • @shaolin_pechan">
+            <img src="assets/img/instagram/post_11.jpg" alt="Chen Taijiquan y Enraizamiento" loading="lazy">
+            <div class="ig-overlay-icon ig-play-icon">
+              <div class="ig-play-badge">
+                <svg class="w-4 h-4 fill-current ml-0.5" viewBox="0 0 448 512" aria-hidden="true"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path></svg>
+              </div>
+            </div>
+            <div class="ig-hover-overlay">
+              <span class="text-white text-xs font-semibold flex items-center gap-1.5 text-center">Ver Reel en IG</span>
+            </div>
+          </a>
+
+          <!-- Post 12 (Oculto inicial - Reel) -->
+          <a href="https://www.instagram.com/shaolin_pechan/" target="_blank" rel="noopener noreferrer" class="ig-extra-post hidden ig-post-card group" title="Disciplina y Cultivo Chan Shaolin • @shaolin_pechan">
+            <img src="assets/img/instagram/post_12.jpg" alt="Disciplina y Cultivo Chan Shaolin" loading="lazy">
+            <div class="ig-overlay-icon ig-play-icon">
+              <div class="ig-play-badge">
+                <svg class="w-4 h-4 fill-current ml-0.5" viewBox="0 0 448 512" aria-hidden="true"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"></path></svg>
+              </div>
+            </div>
+            <div class="ig-hover-overlay">
+              <span class="text-white text-xs font-semibold flex items-center gap-1.5 text-center">Ver Reel en IG</span>
+            </div>
+          </a>
+
+        </div>
+
+        <!-- Botones de Acción (Idénticos al Widget de Shaolin Argentina) -->
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+          <button id="ig-load-more-btn" type="button" class="px-6 py-2.5 rounded bg-[#2d3134] hover:bg-[#1a1c1e] text-white text-xs sm:text-sm font-semibold tracking-wide transition-all shadow-sm flex items-center justify-center gap-2 cursor-pointer">
+            <span class="ig-btn-text">Cargar más</span>
+            <span class="ig-spinner hidden w-3.5 h-3.5 border-2 border-white/30 border-t-white rounded-full animate-spin"></span>
+          </button>
+          
+          <a href="https://www.instagram.com/shaolin_pechan/" target="_blank" rel="noopener noreferrer" class="px-6 py-2.5 rounded bg-[#408bd1] hover:bg-[#317bbd] text-white text-xs sm:text-sm font-semibold tracking-wide transition-all shadow-sm flex items-center justify-center gap-2.5 group">
+            <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 448 512" aria-hidden="true">
+              <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+            </svg>
+            <span>Seguinos en Instagram</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+
+    <!-- PIE DE PÁGINA -->
+  <footer class="w-full bg-surface-container-lowest border-t border-surface-container-high text-on-surface" id="contacto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10 pb-12 border-b border-surface-container-high">
+        
+        <!-- Col 1: Marca & Linaje -->
+        <div class="lg:col-span-4 space-y-4">
+          <div class="flex items-center gap-3">
+            <img alt="Shaolin Pechan Emblema" class="h-10 w-10 rounded-full object-contain border border-stone-200 p-0.5" src="assets/img/logo.png">
+            <div>
+              <span class="font-display font-bold text-base text-on-surface block">Shaolin Pechan • 少林百禅</span>
+              <span class="text-xs text-secondary font-body">Filial Oficial Escuela Shaolin Argentina | Jiaolian Pablo Encinas</span>
+            </div>
+          </div>
+          <p class="text-xs text-secondary font-body leading-relaxed max-w-sm">
+            Preservamos la transmisión auténtica del Templo Shaolin y Chenjiagou bajo la tutela de Shifu Daniel Vera (Shi Xing Wu) y Shimu Yamila Melillo (Shi Xing Gong). Clases al aire libre en el Mástil del Parque Los Andes y Medicina Tradicional China.
+          </p>
+          <div class="flex flex-wrap items-center gap-2 pt-1">
+            <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-surface-container text-primary text-xs font-semibold">
+              <span class="text-[10px] tracking-widest uppercase">Linaje Oficial: Shi De Yang &amp; Chen Ziqiang</span>
+            </div>
+            <a href="https://www.instagram.com/shaolin_pechan/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container text-primary hover:text-primary-container text-xs font-semibold transition-colors">
+              <span class="text-[11px]">Instagram: @shaolin_pechan</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navegación -->
+        <div class="lg:col-span-2">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-on-surface mb-3 font-display">Navegación</h4>
+          <ul class="space-y-2 text-xs text-secondary font-body">
+            <li><a class="hover:text-primary transition-colors" href="index.html">Inicio</a></li>
+            <li><a class="hover:text-primary transition-colors" href="kung-fu.html">Shaolin Kung Fu</a></li>
+            <li><a class="hover:text-primary transition-colors" href="taijiquan.html">Taijiquan Chen</a></li>
+            <li><a class="hover:text-primary transition-colors" href="maestros-shaolin.html">Maestros Shaolin</a></li>
+            <li><a class="hover:text-primary transition-colors" href="clases.html">Horarios Parque Los Andes</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Todas las Sedes -->
+        <div class="lg:col-span-2">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-on-surface mb-3 font-display">Todas las Sedes</h4>
+          <ul class="space-y-2 text-xs text-secondary font-body">
+            <li>
+              <a href="clases.html" class="hover:text-primary transition-colors block">
+                <strong class="text-on-surface block text-[12px]">Sede Pechan · Chacarita</strong>
+                <span class="text-[11px] text-stone-500">Mástil Parque Los Andes</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.shaolin.ar" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors block">
+                <strong class="text-on-surface block text-[12px]">Sede Central · Almagro</strong>
+                <span class="text-[11px] text-stone-500">Fco. Acuña de Figueroa 833 (Escuela Matriz)</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://espacioyangtai.com/" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors block">
+                <strong class="text-on-surface block text-[12px]">Sede Floresta · Yang Tai</strong>
+                <span class="text-[11px] text-stone-500">Espacio Yang Tai (Baigorria 3373)</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.akarma.com.ar" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors block">
+                <strong class="text-on-surface block text-[12px]">Sede Caballito · Akarma</strong>
+                <span class="text-[11px] text-stone-500">Movimiento &amp; Salud Integrativa</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.patiosur.com.ar/" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors block">
+                <strong class="text-on-surface block text-[12px]">Sede Zona Sur · Patio Sur</strong>
+                <span class="text-[11px] text-stone-500">Valentín Alsina</span>
+              </a>
+            </li>
+            <li class="pt-1">
+              <a href="maestros-shaolin.html" class="inline-flex items-center gap-1 text-[11px] text-primary font-bold hover:underline">
+                <span>Ver Sedes &amp; Linaje Oficial</span>
+                <span class="material-symbols-outlined text-[13px]">arrow_forward</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Clínica & MTC -->
+        <div class="lg:col-span-2">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-on-surface mb-3 font-display">Clínica &amp; MTC</h4>
+          <ul class="space-y-2 text-xs text-secondary font-body">
+            <li><a class="hover:text-primary transition-colors" href="medicina-china.html">Acupuntura Clínica</a></li>
+            <li><a class="hover:text-primary transition-colors" href="medicina-china.html">Masaje Terapéutico Tuina</a></li>
+            <li><a class="hover:text-primary transition-colors" href="medicina-china.html">Moxibustión &amp; Ventosas</a></li>
+            <li><a class="hover:text-primary transition-colors" href="medicina-china.html">Fitoterapia China</a></li>
+            <li><a class="hover:text-primary transition-colors" href="contacto.html">Consultas &amp; Turnos</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 5: Ubicación & Horarios -->
+        <div class="lg:col-span-2">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-on-surface mb-3 font-display">Ubicación &amp; Horarios</h4>
+          <div class="space-y-2 text-xs text-secondary font-body">
+            <p class="flex items-start gap-1.5">
+              <span class="material-symbols-outlined text-[16px] text-primary shrink-0 mt-0.5">location_on</span>
+              <span>En el Mástil del Parque Los Andes<br>Av. Corrientes y Av. Dorrego (Chacarita, CABA)</span>
+            </p>
+            <div class="pt-1 text-[11px] text-secondary space-y-1">
+              <p><strong class="text-on-surface">Kung Fu:</strong> Mié./Vie. 08:30 • Jue. 10:30</p>
+              <p><strong class="text-on-surface">Infantil:</strong> Martes 16:30 hs</p>
+              <p><strong class="text-on-surface">Tai Chi:</strong> Lun./Jue. 08:30 hs</p>
+              <p><strong class="text-on-surface">Integrada:</strong> Domingos 11:00 AM</p>
+              <p><strong class="text-on-surface">WhatsApp:</strong> <a href="https://wa.me/541150629554" target="_blank" rel="noopener noreferrer" class="text-emerald-700 font-bold hover:underline">+54 11 5062-9554</a></p>
+            </div>
+            <p class="pt-1">
+              <a href="https://www.google.com/maps/search/?api=1&query=Mastil+Parque+Los+Andes+Chacarita+Buenos+Aires" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-[11px] text-ochre-deep font-semibold hover:underline">
+                <span class="material-symbols-outlined text-xs">open_in_new</span> Abrir en Google Maps
+              </a>
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Barra Inferior de Derechos -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-secondary font-body">
+        <div>© 2025-2026 Shaolin Pechan • Filial Oficial de la Escuela Shaolin Argentina. Todos los derechos reservados.</div>
+        <div class="flex items-center gap-6">
+          <a class="hover:text-primary transition-colors" href="https://www.shaolin.ar" target="_blank" rel="noopener noreferrer">Sede Central (shaolin.ar)</a>
+          <a class="hover:text-primary transition-colors" href="https://www.instagram.com/shaolin_pechan/" target="_blank" rel="noopener noreferrer">Instagram Oficial</a>
+          <a class="hover:text-primary transition-colors" href="contacto.html">Contacto Directo</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+  <a href="https://wa.me/541150629554?text=Hola%20Jiaolian%20Pablo,%20quisiera%20consultar%20por%20las%20clases%20en%20Shaolin%20Pechan" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current"><path d="M12.012 2c-5.506 0-9.989 4.478-9.989 9.984 0 1.76.459 3.474 1.33 4.988l-1.413 5.161 5.281-1.385c1.455.795 3.093 1.22 4.791 1.22h.004c5.504 0 9.986-4.478 9.986-9.984 0-2.668-1.039-5.176-2.926-7.062-1.887-1.887-4.394-2.924-7.064-2.924zm5.82 14.366c-.244.688-1.427 1.312-1.966 1.393-.505.076-1.156.108-1.861-.118-.431-.137-.986-.316-1.705-.626-3.003-1.3-4.962-4.34-5.112-4.54-.15-.2-1.225-1.63-1.225-3.109 0-1.48.775-2.209 1.05-2.508.275-.3.6-.375.8-.375.2 0 .4 0 .575.01.188.01.438-.071.688.528.25.6.85 2.075.925 2.225.075.15.125.325.025.525-.1.2-.15.325-.3.5-.15.175-.315.39-.45.525-.15.15-.306.315-.131.615.175.3 0.778 1.284 1.67 2.079 1.147 1.022 2.115 1.338 2.415 1.488.3.15.475.125.65-.075.175-.2.75-.875.95-1.175.2-.3.4-.25.675-.15.275.1 1.75.825 2.05.975.3.15.5.225.575.35.075.125.075.725-.169 1.413z"/></svg>
+    <span class="text">Consultar por WhatsApp</span>
+  </a>
+
+  <!-- Script global -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

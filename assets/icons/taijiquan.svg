@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Espiral de Seda y Movimiento Fluido de Taijiquan (Chan Si Jin) -->
+  <path d="M12 2.5C6.8 2.5 2.5 6.8 2.5 12S6.8 21.5 12 21.5c4.5 0 8.2-3.2 9.2-7.5" stroke-width="1.8"/>
+  <path d="M12 6.5c-3 0-5.5 2.5-5.5 5.5s2.5 5.5 5.5 5.5 5.5-2.5 5.5-5.5c0-1.8-1-3.4-2.5-4.3" stroke-width="1.7" fill="currentColor" fill-opacity="0.18"/>
+  <!-- Centro armónico y gota de energía interna -->
+  <circle cx="12" cy="12" r="2" fill="currentColor" stroke="none"/>
+</svg>

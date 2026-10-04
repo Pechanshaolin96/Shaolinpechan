@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Cuenco tradicional de té ceremonial (Cha Wan) -->
+  <path d="M4 10.5c0 4.5 3.5 8 8 8s8-3.5 8-8H4z" fill="currentColor" fill-opacity="0.2" stroke-width="1.8"/>
+  <!-- Plato o base de madera -->
+  <path d="M6 19.5h12M9 21.5h6" stroke-width="1.8"/>
+  <!-- Vapor aromático caligráfico ascendente -->
+  <path d="M9.5 7.5c-.8-1.5-.2-2.5.5-3.5M14.5 7.5c-.8-1.5-.2-2.5.5-3.5" stroke-width="1.6"/>
+</svg>
