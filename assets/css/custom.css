@@ -1333,6 +1333,12 @@ html body h1 { font-weight: 700; }
 .tl-card small { display: block; font-size: 12px; color: #57534e; }
 .tl-rest { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); padding: 0 12px; background: #fcf9f8; color: #a8a29e; font-size: 13px; }
 
+/* Días con dos clases: tarjeta debajo del sello */
+.tl-multi { height: 145px; }
+.tl-multi::before { top: 50px; }
+.tl-multi .tl-mark { top: 50px; flex-direction: column; gap: 6px; transform: translate(-50%, -29px); }
+.tl-multi .tl-card { text-align: center; }
+
 @media (max-width: 767px) {
   .tl-hours, .tl-row { grid-template-columns: 54px 1fr; }
   .tl-day { flex-direction: column; align-items: flex-start; gap: 2px; }
@@ -1346,8 +1352,22 @@ html body h1 { font-weight: 700; }
   .tl-mark.tl-flip { transform: translate(calc(-100% + 22px), -50%); }
   .tl-card { padding: 4px 8px; }
   .tl-card small { display: none; }
+  .tl-multi { height: 112px; }
+  .tl-multi::before, .tl-multi .tl-mark { top: 42px; }
+  .tl-multi .tl-mark { transform: translate(-50%, -19px); }
+  .tl-multi .tl-seal { width: 38px; height: 38px; font-size: 13px; }
+  .tl-multi .tl-card { padding: 3px 5px; font-size: 13px; }
 }
 @media (prefers-reduced-motion: no-preference) {
   .tl-seal { transition: transform .2s ease; }
   .tl-mark:hover .tl-seal { transform: rotate(0deg) scale(1.05); }
 }
+
+/* Página 404 */
+.nf-section { max-width: 40rem; margin: 0 auto; padding: 5rem 1.5rem 6rem; text-align: center; }
+.nf-char { font: 400 7rem/1 'Ma Shan Zheng', 'Noto Serif SC', serif; color: #8b181a; opacity: .9; }
+.nf-section h1 { margin-top: 1rem; font-size: clamp(2rem, 5vw, 2.75rem); line-height: 1.15; color: #1c1b1b; }
+.nf-section > p:not(.nf-char) { margin-top: 1rem; color: #57534e; line-height: 1.6; }
+.nf-actions { justify-content: center; }
+.nf-secondary { display: inline-flex; align-items: center; min-height: 48px; padding: 0 1.5rem; border-radius: 10px; font-weight: 700; color: #8b181a; border: 1.5px solid rgba(139,24,26,.4); }
+.nf-secondary:hover { border-color: #8b181a; }
