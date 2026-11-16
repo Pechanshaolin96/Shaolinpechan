@@ -1422,3 +1422,21 @@ html body h1 { font-weight: 700; }
 #arbol-maestros.lineage-ink .node-active-pill { border-radius: 2px; background: #a3161a; transform: rotate(-8deg); }
 #arbol-maestros.lineage-ink .tree-node-master .animate-pulse { animation: none; }
 #arbol-maestros.lineage-ink .tree-node-master div[class*="bg-amber-100/90"] { background: #f3e9dc; border-color: #e2d3bd; color: #6b4a12; }
+
+/* ============================================================
+   PORTADA: capas de tinta y niebla con parallax suave
+   ============================================================ */
+.hero-ink { position: absolute; left: 0; right: 0; bottom: -1px; height: 34%; min-height: 170px; z-index: 15; pointer-events: none; }
+.hero-ink svg { position: absolute; left: -2%; width: 104%; bottom: 0; will-change: transform; }
+.hero-ink-back { height: 100%; }
+.hero-ink-back path { fill: #1c1917; fill-opacity: .55; }
+.hero-ink-front { height: 62%; }
+.hero-ink-front path { fill: #0c0a09; }
+.hero-mist {
+  position: absolute; left: 0; right: 0; bottom: 30%; height: 45%;
+  background: linear-gradient(to top, rgba(245, 240, 232, 0) 0%, rgba(245, 240, 232, .22) 45%, rgba(245, 240, 232, 0) 100%);
+  filter: blur(6px); will-change: transform;
+}
+@media (max-width: 767px) {
+  .hero-ink { height: 22%; min-height: 120px; }
+}

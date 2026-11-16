@@ -321,6 +321,13 @@
 
       <!-- CAPAS DE CONTRASTE Y OSCURECIMIENTO ELEGANTE PARA LEGIBILIDAD ÓPTIMA -->
       <div class="absolute inset-0 z-10 bg-gradient-to-t from-stone-950/75 via-stone-950/40 to-stone-950/50 pointer-events-none"></div>
+      <!-- CAPAS DE TINTA Y NIEBLA (montañas de Songshan) -->
+      <div class="hero-ink" aria-hidden="true">
+        <svg class="hero-ink-back" viewBox="0 0 1600 260" preserveAspectRatio="none"><path d="M0,260 L0,183.9 Q30.8,183.9 30.8,141.1 Q92.3,98.3 92.3,103.3 Q153.8,108.3 153.8,138.9 Q215.4,169.4 215.4,155.0 Q276.9,140.5 276.9,143.3 Q338.5,146.1 338.5,133.9 Q400.0,121.8 400.0,113.6 Q461.5,105.4 461.5,147.0 Q523.1,188.7 523.1,192.7 Q584.6,196.6 584.6,148.1 Q646.2,99.6 646.2,123.4 Q707.7,147.3 707.7,125.7 Q769.2,104.2 769.2,143.9 Q830.8,183.5 830.8,143.9 Q892.3,104.3 892.3,70.7 Q953.8,37.1 953.8,56.9 Q1015.4,76.8 1015.4,40.0 Q1076.9,3.2 1076.9,22.4 Q1138.5,41.5 1138.5,108.4 Q1200.0,175.2 1200.0,183.0 Q1261.5,190.8 1261.5,162.3 Q1323.1,133.8 1323.1,110.5 Q1384.6,87.1 1384.6,120.7 Q1446.2,154.2 1446.2,164.1 Q1507.7,174.0 1507.7,161.7 Q1569.2,149.3 1569.2,172.9 L1600,196.5 L1600,260 Z"/></svg>
+        <div class="hero-mist"></div>
+        <svg class="hero-ink-front" viewBox="0 0 1600 200" preserveAspectRatio="none"><path d="M0,200 L0,126.9 Q23.5,126.9 23.5,132.6 Q70.6,138.2 70.6,120.0 Q117.6,101.7 117.6,120.5 Q164.7,139.2 164.7,120.7 Q211.8,102.1 211.8,104.9 Q258.8,107.6 258.8,114.8 Q305.9,121.9 305.9,102.9 Q352.9,83.9 352.9,98.4 Q400.0,112.9 400.0,99.0 Q447.1,85.2 447.1,99.9 Q494.1,114.5 494.1,117.1 Q541.2,119.6 541.2,111.6 Q588.2,103.5 588.2,92.6 Q635.3,81.8 635.3,108.7 Q682.4,135.6 682.4,133.6 Q729.4,131.6 729.4,118.2 Q776.5,104.9 776.5,94.0 Q823.5,83.2 823.5,96.3 Q870.6,109.4 870.6,115.8 Q917.6,122.2 917.6,101.9 Q964.7,81.6 964.7,114.2 Q1011.8,146.7 1011.8,118.3 Q1058.8,89.9 1058.8,109.8 Q1105.9,129.7 1105.9,134.8 Q1152.9,139.9 1152.9,140.8 Q1200.0,141.8 1200.0,135.1 Q1247.1,128.4 1247.1,110.6 Q1294.1,92.9 1294.1,115.1 Q1341.2,137.3 1341.2,123.3 Q1388.2,109.3 1388.2,107.3 Q1435.3,105.3 1435.3,114.6 Q1482.4,123.9 1482.4,117.8 Q1529.4,111.7 1529.4,128.6 Q1576.5,145.6 1576.5,145.7 L1600,145.8 L1600,200 Z"/></svg>
+      </div>
+
 
       <!-- CONTENIDO PRINCIPAL DEL HERO (Z-20) -->
       <div class="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center my-auto">
@@ -1139,5 +1146,22 @@
 
   <!-- Script global -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    /* Parallax de las capas de tinta de la portada */
+    (function () {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      var ink = document.querySelector('.hero-ink'); if (!ink) return;
+      var back = ink.querySelector('.hero-ink-back'), mist = ink.querySelector('.hero-mist');
+      var ticking = false;
+      function paint() {
+        var y = Math.min(window.scrollY, 900);
+        back.style.transform = 'translateY(' + (y * 0.22) + 'px)';
+        mist.style.transform = 'translate(' + (y * 0.1) + 'px,' + (y * 0.12) + 'px)';
+        ticking = false;
+      }
+      window.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(paint); } }, { passive: true });
+    })();
+  </script>
 </body>
 </html>
