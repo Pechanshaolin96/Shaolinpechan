@@ -1285,53 +1285,69 @@ html body h2 {
 html body h1 { font-weight: 700; }
 
 /* ============================================================
-   GRILLA SEMANAL DE HORARIOS (clases.html)
+   GRILLA SEMANAL DE HORARIOS (clases.html) — estilo "trazo del día"
    ============================================================ */
 .week-section { margin: 0 auto 4rem; max-width: 72rem; }
 .week-head { max-width: 40rem; margin-bottom: 1.25rem; }
 .week-head h2 { font-size: clamp(1.75rem, 3vw, 2.25rem); line-height: 1.2; color: #1c1b1b; }
 .week-head p { margin-top: .5rem; color: #57534e; line-height: 1.6; }
-.week-legend { display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; margin-bottom: 1rem; font-size: .875rem; color: #44403c; }
-.week-legend span { display: inline-flex; align-items: center; gap: .4rem; }
-.week-legend i { width: .9rem; height: .9rem; border-radius: 3px; display: inline-block; }
+.week-cta { margin-top: 1.75rem; }
 
-.week-grid {
-  display: grid;
-  grid-template-columns: 4.5rem repeat(7, minmax(0, 1fr));
-  border: 1px solid #e7e5e4; border-radius: 14px; overflow: hidden; background: #fff;
+.tl-seal {
+  display: inline-grid; place-items: center; flex-shrink: 0;
+  width: 58px; height: 58px; border-radius: 6px;
+  color: #f6ead6; font: 700 20px/1 'Noto Serif SC', serif;
+  box-shadow: inset 0 0 0 3px var(--seal), inset 0 0 0 5px #fcf9f8;
+  background: var(--seal); transform: rotate(-3deg);
 }
-.wg-corner, .wg-day, .wg-time, .wg-cell { border-right: 1px solid #f0eded; border-bottom: 1px solid #f0eded; }
-.wg-day {
-  padding: .75rem .5rem; text-align: center; font-weight: 700; font-size: .9rem; color: #1c1b1b;
-  background: #faf8f7; font-family: 'Noto Serif SC', Georgia, serif;
-}
-.wg-day span { display: block; font-size: .75rem; font-weight: 500; color: #9E650C; margin-top: 2px; }
-.wg-time {
-  display: flex; align-items: flex-start; justify-content: flex-end; padding: .75rem .6rem;
-  font-variant-numeric: tabular-nums; font-weight: 700; color: #57534e; font-size: .9rem; background: #faf8f7;
-}
-.wg-cell { padding: .4rem; min-height: 5.5rem; }
-.wg-slot {
-  height: 100%; border-radius: 9px; padding: .6rem .65rem; color: #fff;
-  display: flex; flex-direction: column; gap: 2px; line-height: 1.25;
-}
-.wg-slot strong { font-size: .875rem; }
-.wg-slot span { font-size: .75rem; opacity: .85; }
-.wg-slot time { font-weight: 700; font-variant-numeric: tabular-nums; }
-.wg-kungfu { background: #8b181a; }
-.wg-taiji { background: #292524; }
-.wg-infantil { background: #9E650C; }
-.wg-integrada { background: linear-gradient(135deg, #8b181a 0 50%, #292524 50% 100%); }
+.tl-kungfu { --seal: #a3161a; }
+.tl-taiji { --seal: #1f1b18; }
+.tl-infantil { --seal: #9E650C; }
+.tl-integrada { --seal: #a3161a; font-size: 24px; }
 
-.week-list { display: none; list-style: none; padding: 0; margin: 0; }
-.week-list li { padding: .9rem 0; border-bottom: 1px solid #e7e5e4; }
-.week-list h3 { font-family: 'Noto Serif SC', Georgia, serif; font-weight: 700; font-size: 1.05rem; margin-bottom: .5rem; color: #1c1b1b; }
-.week-list h3 span { font-size: .8rem; font-weight: 500; color: #9E650C; }
-.week-list .wg-slot { flex-direction: row; flex-wrap: wrap; align-items: baseline; gap: .25rem .6rem; }
-.wl-empty { color: #a8a29e; font-size: .9rem; }
-.week-cta { margin-top: 1.5rem; }
+.tl-legend { display: flex; flex-wrap: wrap; gap: .6rem 1.5rem; margin-bottom: 1.25rem; font-size: .875rem; color: #44403c; }
+.tl-legend span { display: inline-flex; align-items: center; gap: .5rem; }
+.tl-legend .tl-seal { width: 26px; height: 26px; font-size: 11px; border-radius: 4px; transform: none;
+  box-shadow: inset 0 0 0 1.5px var(--seal), inset 0 0 0 2.5px #fcf9f8; }
+
+.tl-hours, .tl-row { display: grid; grid-template-columns: 150px 1fr; }
+.tl-hours-track { position: relative; height: 20px; font-size: 12px; color: #8a7f73; font-variant-numeric: tabular-nums; }
+.tl-hours-track span { position: absolute; transform: translateX(-50%); white-space: nowrap; }
+.tl { list-style: none; margin: 0; padding: 0; }
+.tl-row { align-items: center; min-height: 88px; border-top: 1px solid #ece6e1; }
+.tl-row:last-child { border-bottom: 1px solid #ece6e1; }
+.tl-day { display: flex; align-items: baseline; gap: 10px; }
+.tl-day b { font: 400 44px/1 'Ma Shan Zheng', 'Noto Serif SC', serif; color: #1c1b1b; min-width: 1.1em; }
+.tl-es { font-size: 14px; color: #57534e; }
+.tl-ab { display: none; }
+
+.tl-track { position: relative; height: 88px; }
+.tl-track::before {
+  content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 8px; transform: translateY(-50%);
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 8' preserveAspectRatio='none'%3E%3Cpath d='M0 5 C200 2 400 3 600 4 C800 5 900 3 1000 4 L1000 6 C850 7 700 6 500 6 C300 6 150 7 0 7Z' fill='%231c1b1b' fill-opacity='.2'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+}
+.tl-mark { position: absolute; top: 50%; transform: translate(-29px, -50%); display: flex; align-items: center; gap: 10px; }
+.tl-mark.tl-flip { flex-direction: row-reverse; transform: translate(calc(-100% + 29px), -50%); }
+.tl-card { background: #fff; border: 1px solid #e7e0da; border-radius: 8px; padding: 6px 11px; white-space: nowrap; line-height: 1.25; }
+.tl-card time { display: block; font-weight: 800; font-size: 15px; font-variant-numeric: tabular-nums; color: #1c1b1b; }
+.tl-card small { display: block; font-size: 12px; color: #57534e; }
+.tl-rest { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); padding: 0 12px; background: #fcf9f8; color: #a8a29e; font-size: 13px; }
 
 @media (max-width: 767px) {
-  .week-grid { display: none; }
-  .week-list { display: block; }
+  .tl-hours, .tl-row { grid-template-columns: 54px 1fr; }
+  .tl-day { flex-direction: column; align-items: flex-start; gap: 2px; }
+  .tl-day b { font-size: 32px; }
+  .tl-es { display: none; }
+  .tl-ab { display: block; font-size: 12px; color: #57534e; }
+  .tl-hours-track span:nth-child(even) { display: none; }
+  .tl-track .tl-seal { width: 44px; height: 44px; font-size: 15px; }
+  .tl-track .tl-integrada { font-size: 19px; }
+  .tl-mark { transform: translate(-22px, -50%); gap: 6px; }
+  .tl-mark.tl-flip { transform: translate(calc(-100% + 22px), -50%); }
+  .tl-card { padding: 4px 8px; }
+  .tl-card small { display: none; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .tl-seal { transition: transform .2s ease; }
+  .tl-mark:hover .tl-seal { transform: rotate(0deg) scale(1.05); }
 }
