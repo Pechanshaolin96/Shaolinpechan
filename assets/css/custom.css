@@ -1371,3 +1371,54 @@ html body h1 { font-weight: 700; }
 .nf-actions { justify-content: center; }
 .nf-secondary { display: inline-flex; align-items: center; min-height: 48px; padding: 0 1.5rem; border-radius: 10px; font-weight: 700; color: #8b181a; border: 1.5px solid rgba(139,24,26,.4); }
 .nf-secondary:hover { border-color: #8b181a; }
+
+/* ============================================================
+   ÁRBOL DE LINAJE — estilo tinta y sellos (maestros-*.html)
+   ============================================================ */
+#arbol-maestros.lineage-ink { background: #f5f0e8; color: #1c1b1b; border-color: #e4dbcd; }
+#arbol-maestros.lineage-ink h2 { color: #1c1b1b; filter: none; }
+#arbol-maestros.lineage-ink h2 + p { color: #57534e; }
+#arbol-maestros.lineage-ink > div > div:first-child { border-color: #e2d9cc; }
+
+/* Trazos de pincel en lugar de líneas doradas */
+#arbol-maestros.lineage-ink div[class*="bg-gradient-to-b"] {
+  width: 8px; box-shadow: none; border-radius: 0;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 100' preserveAspectRatio='none'%3E%3Cpath d='M3 0 C4.5 20 3.5 45 4.2 70 C4.6 85 4 95 4 100 L4.6 100 C5.2 80 5.6 50 5 25 C4.8 12 5 4 5.2 0Z' fill='%231c1b1b' fill-opacity='.8'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+}
+#arbol-maestros.lineage-ink div[class*="bg-gradient-to-r"][class*="h-1.5"] {
+  height: 8px; box-shadow: none; border-radius: 0;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 8' preserveAspectRatio='none'%3E%3Cpath d='M0 4 C200 2 400 3 600 3.5 C800 4 900 3 1000 3.5 L1000 5.5 C850 6.5 700 5.5 500 5.6 C300 5.8 150 6.8 0 6Z' fill='%231c1b1b' fill-opacity='.8'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+}
+#arbol-maestros.lineage-ink div[class*="animate-pulse"] {
+  animation: none; box-shadow: none; background: #1c1b1b; width: 12px; height: 12px; top: -2px;
+}
+
+/* Etiquetas de generación como sellos rojos */
+#arbol-maestros.lineage-ink div[class*="bg-amber-100/90"][class*="tracking-widest"] {
+  background: #a3161a; color: #f6ead6; border: none; border-radius: 4px;
+  text-transform: none; letter-spacing: .01em; font: 700 13px/1.2 'Noto Serif SC', serif;
+  padding: 7px 14px; transform: rotate(-1.5deg);
+  box-shadow: inset 0 0 0 2px #a3161a, inset 0 0 0 3.5px #f5f0e8;
+}
+#arbol-maestros.lineage-ink div[class*="text-amber-300"][class*="tracking-widest"] {
+  color: #a3161a; text-transform: none; letter-spacing: .01em; font: 700 13px/1.2 'Noto Serif SC', serif;
+}
+#arbol-maestros.lineage-ink div[class*="from-amber-400"][class*="tracking-widest"] {
+  background: #1c1b1b; color: #f5f0e8; border: none; border-radius: 6px; box-shadow: none;
+  text-transform: none; letter-spacing: .01em; font: 700 14px/1.3 'Noto Serif SC', serif; text-align: center;
+}
+#arbol-maestros.lineage-ink div[class*="from-amber-400"] .text-primary { color: #e9b8a8; }
+
+/* Nodos: papel, borde de tinta, retrato en medallón */
+#arbol-maestros.lineage-ink .tree-node-master {
+  background: #fffdf9; background-image: none; border: 1.5px solid #d6cbbb; border-radius: 14px;
+  box-shadow: none; transition: border-color .2s ease, box-shadow .2s ease;
+}
+#arbol-maestros.lineage-ink .tree-node-master:hover { transform: none; border-color: #1c1b1b; }
+#arbol-maestros.lineage-ink .tree-node-master:focus-visible { outline: 3px solid #a3161a; outline-offset: 3px; }
+#arbol-maestros.lineage-ink .tree-node-master.active { border-color: #a3161a; box-shadow: 0 0 0 4px rgba(163, 22, 26, .12); }
+#arbol-maestros.lineage-ink .node-avatar-ring { border-radius: 9999px; border: 2px solid rgba(28, 27, 27, .25); box-shadow: none; }
+#arbol-maestros.lineage-ink .tree-node-master.active .node-avatar-ring { border-color: #a3161a; }
+#arbol-maestros.lineage-ink .node-active-pill { border-radius: 2px; background: #a3161a; transform: rotate(-8deg); }
+#arbol-maestros.lineage-ink .tree-node-master .animate-pulse { animation: none; }
+#arbol-maestros.lineage-ink .tree-node-master div[class*="bg-amber-100/90"] { background: #f3e9dc; border-color: #e2d3bd; color: #6b4a12; }
