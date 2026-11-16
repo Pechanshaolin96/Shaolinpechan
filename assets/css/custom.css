@@ -1272,3 +1272,66 @@ main > section:first-child .text-ochre-gold { color: #F3C77A !important; }
 .hero-cta-secondary { color: #fff; border: 1.5px solid rgba(255,255,255,.7); background: rgba(0,0,0,.25); }
 .hero-cta-secondary:hover { border-color: #fff; background: rgba(0,0,0,.4); }
 .hero-cta-primary:focus-visible, .hero-cta-secondary:focus-visible { outline: 3px solid #F3C77A; outline-offset: 3px; }
+
+/* ============================================================
+   TIPOGRAFÍA DE TÍTULOS v2: Noto Serif SC (latín + caracteres chinos)
+   ============================================================ */
+html body .font-display,
+html body h1,
+html body h2 {
+  font-family: 'Noto Serif SC', 'Songti SC', 'STSong', Georgia, serif;
+  letter-spacing: -0.005em;
+}
+html body h1 { font-weight: 700; }
+
+/* ============================================================
+   GRILLA SEMANAL DE HORARIOS (clases.html)
+   ============================================================ */
+.week-section { margin: 0 auto 4rem; max-width: 72rem; }
+.week-head { max-width: 40rem; margin-bottom: 1.25rem; }
+.week-head h2 { font-size: clamp(1.75rem, 3vw, 2.25rem); line-height: 1.2; color: #1c1b1b; }
+.week-head p { margin-top: .5rem; color: #57534e; line-height: 1.6; }
+.week-legend { display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; margin-bottom: 1rem; font-size: .875rem; color: #44403c; }
+.week-legend span { display: inline-flex; align-items: center; gap: .4rem; }
+.week-legend i { width: .9rem; height: .9rem; border-radius: 3px; display: inline-block; }
+
+.week-grid {
+  display: grid;
+  grid-template-columns: 4.5rem repeat(7, minmax(0, 1fr));
+  border: 1px solid #e7e5e4; border-radius: 14px; overflow: hidden; background: #fff;
+}
+.wg-corner, .wg-day, .wg-time, .wg-cell { border-right: 1px solid #f0eded; border-bottom: 1px solid #f0eded; }
+.wg-day {
+  padding: .75rem .5rem; text-align: center; font-weight: 700; font-size: .9rem; color: #1c1b1b;
+  background: #faf8f7; font-family: 'Noto Serif SC', Georgia, serif;
+}
+.wg-day span { display: block; font-size: .75rem; font-weight: 500; color: #9E650C; margin-top: 2px; }
+.wg-time {
+  display: flex; align-items: flex-start; justify-content: flex-end; padding: .75rem .6rem;
+  font-variant-numeric: tabular-nums; font-weight: 700; color: #57534e; font-size: .9rem; background: #faf8f7;
+}
+.wg-cell { padding: .4rem; min-height: 5.5rem; }
+.wg-slot {
+  height: 100%; border-radius: 9px; padding: .6rem .65rem; color: #fff;
+  display: flex; flex-direction: column; gap: 2px; line-height: 1.25;
+}
+.wg-slot strong { font-size: .875rem; }
+.wg-slot span { font-size: .75rem; opacity: .85; }
+.wg-slot time { font-weight: 700; font-variant-numeric: tabular-nums; }
+.wg-kungfu { background: #8b181a; }
+.wg-taiji { background: #292524; }
+.wg-infantil { background: #9E650C; }
+.wg-integrada { background: linear-gradient(135deg, #8b181a 0 50%, #292524 50% 100%); }
+
+.week-list { display: none; list-style: none; padding: 0; margin: 0; }
+.week-list li { padding: .9rem 0; border-bottom: 1px solid #e7e5e4; }
+.week-list h3 { font-family: 'Noto Serif SC', Georgia, serif; font-weight: 700; font-size: 1.05rem; margin-bottom: .5rem; color: #1c1b1b; }
+.week-list h3 span { font-size: .8rem; font-weight: 500; color: #9E650C; }
+.week-list .wg-slot { flex-direction: row; flex-wrap: wrap; align-items: baseline; gap: .25rem .6rem; }
+.wl-empty { color: #a8a29e; font-size: .9rem; }
+.week-cta { margin-top: 1.5rem; }
+
+@media (max-width: 767px) {
+  .week-grid { display: none; }
+  .week-list { display: block; }
+}

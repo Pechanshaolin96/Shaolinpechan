@@ -40,6 +40,7 @@
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;700;900&amp;display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
   
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -281,6 +282,62 @@
         "Entrenamiento tradicional al aire libre en el Mástil del Parque Los Andes (Chacarita, CABA). Cultivo de la fuerza interna, equilibrio, respiración consciente y salud integral."
       </p>
     </header>
+
+
+    <!-- SEMANA DE UN VISTAZO -->
+    <section class="week-section" aria-labelledby="semana-titulo">
+      <div class="week-head">
+        <h2 id="semana-titulo">La semana en el parque</h2>
+        <p>Todas las clases son en el Mástil del Parque Los Andes, Av. Corrientes y Av. Dorrego. Medicina China: turnos individuales a convenir.</p>
+      </div>
+      <div class="week-legend" aria-hidden="true">
+        <span><i class="wg-kungfu"></i>Shaolin Kung Fu</span><span><i class="wg-taiji"></i>Chen Taijiquan</span><span><i class="wg-infantil"></i>Kung Fu infantil</span><span><i class="wg-integrada"></i>Clase integrada</span>
+      </div>
+      <div class="week-grid" role="table" aria-label="Horarios semanales">
+        <div class="wg-corner" role="columnheader"></div>
+        <div class="wg-day" role="columnheader">Lunes<span lang="zh">周一</span></div>
+        <div class="wg-day" role="columnheader">Martes<span lang="zh">周二</span></div>
+        <div class="wg-day" role="columnheader">Miércoles<span lang="zh">周三</span></div>
+        <div class="wg-day" role="columnheader">Jueves<span lang="zh">周四</span></div>
+        <div class="wg-day" role="columnheader">Viernes<span lang="zh">周五</span></div>
+        <div class="wg-day" role="columnheader">Sábado<span lang="zh">周六</span></div>
+        <div class="wg-day" role="columnheader">Domingo<span lang="zh">周日</span></div>
+        <div class="wg-time" role="rowheader">8:30</div>
+        <div class="wg-cell" role="cell"><div class="wg-slot wg-taiji"><strong>Chen Taijiquan</strong><span>Adultos</span></div></div>
+        <div class="wg-cell" role="cell"></div>
+        <div class="wg-cell" role="cell"><div class="wg-slot wg-kungfu"><strong>Shaolin Kung Fu</strong><span>Adultos y jóvenes</span></div></div>
+        <div class="wg-cell" role="cell"><div class="wg-slot wg-taiji"><strong>Chen Taijiquan</strong><span>Adultos</span></div></div>
+        <div class="wg-cell" role="cell"><div class="wg-slot wg-kungfu"><strong>Shaolin Kung Fu</strong><span>Adultos y jóvenes</span></div></div>
+        <div class="wg-cell" role="cell"></div>
+        <div class="wg-cell" role="cell"></div>
+        <div class="wg-time" role="rowheader">11:00</div>
+        <div class="wg-cell" role="cell"></div>
+        <div class="wg-cell" role="cell"></div>
+        <div class="wg-cell" role="cell"></div>
+        <div class="wg-cell" role="cell"></div>
+        <div class="wg-cell" role="cell"></div>
+        <div class="wg-cell" role="cell"></div>
+        <div class="wg-cell" role="cell"><div class="wg-slot wg-integrada"><strong>Clase integrada</strong><span>Kung Fu y Taijiquan</span></div></div>
+        <div class="wg-time" role="rowheader">16:30</div>
+        <div class="wg-cell" role="cell"></div>
+        <div class="wg-cell" role="cell"><div class="wg-slot wg-infantil"><strong>Kung Fu infantil</strong><span>Desde 6 años</span></div></div>
+        <div class="wg-cell" role="cell"></div>
+        <div class="wg-cell" role="cell"></div>
+        <div class="wg-cell" role="cell"></div>
+        <div class="wg-cell" role="cell"></div>
+        <div class="wg-cell" role="cell"></div>
+      </div>
+      <ul class="week-list">
+        <li><h3>Lunes <span lang="zh">周一</span></h3><div class="wg-slot wg-taiji"><time>8:30</time><strong>Chen Taijiquan</strong><span>Adultos</span></div></li>
+        <li><h3>Martes <span lang="zh">周二</span></h3><div class="wg-slot wg-infantil"><time>16:30</time><strong>Kung Fu infantil</strong><span>Desde 6 años</span></div></li>
+        <li><h3>Miércoles <span lang="zh">周三</span></h3><div class="wg-slot wg-kungfu"><time>8:30</time><strong>Shaolin Kung Fu</strong><span>Adultos y jóvenes</span></div></li>
+        <li><h3>Jueves <span lang="zh">周四</span></h3><div class="wg-slot wg-taiji"><time>8:30</time><strong>Chen Taijiquan</strong><span>Adultos</span></div></li>
+        <li><h3>Viernes <span lang="zh">周五</span></h3><div class="wg-slot wg-kungfu"><time>8:30</time><strong>Shaolin Kung Fu</strong><span>Adultos y jóvenes</span></div></li>
+        <li><h3>Sábado <span lang="zh">周六</span></h3><p class="wl-empty">Sin clases</p></li>
+        <li><h3>Domingo <span lang="zh">周日</span></h3><div class="wg-slot wg-integrada"><time>11:00</time><strong>Clase integrada</strong><span>Kung Fu y Taijiquan</span></div></li>
+      </ul>
+      <div class="week-cta"><a class="hero-cta-primary" href="contacto.html#clase-prueba">Reservá tu clase de prueba</a></div>
+    </section>
 
     <!-- Grilla de Horarios y Disciplinas -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
